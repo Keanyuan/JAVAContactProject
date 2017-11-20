@@ -5,6 +5,8 @@ public class Users {
 	private String uname;
 	private String upass;
 	private int type;
+	public Users() {
+	}
 	public Users(String uname, String upass, int type) {
 		super();
 		this.uname = uname;

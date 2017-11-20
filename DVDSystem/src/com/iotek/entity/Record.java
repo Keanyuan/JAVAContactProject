@@ -51,6 +51,8 @@ public class Record {
 		this.lendTime = lendTime;
 		this.returnTime = returnTime;
 	}
+	public Record() {
+	}
 	
 
 

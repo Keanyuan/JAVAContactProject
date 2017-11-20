@@ -1,15 +1,22 @@
 package com.iotek.view;
 
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
+
+import com.iotek.biz.UserBiz;
+import com.iotek.biz.impl.UserBizImpl;
+import com.iotek.entity.Users;
 
 public class LoginView extends JFrame {
 
@@ -36,9 +43,14 @@ public class LoginView extends JFrame {
 	
 	private JComboBox<String> cb_type= null;//登录类型下拉列表框
 	
+	private UserBiz userBiz = null;
+	
 	
 	public LoginView() {
+		
+		userBiz = new UserBizImpl();
 		init();
+		registerListener();
 	}
 	private void init(){
 		this.setSize(320, 220);//设置窗体大小显示
@@ -87,5 +99,50 @@ public class LoginView extends JFrame {
 		this.pack();
 	}
 
+	private void registerListener(){
+		btn_login.addActionListener(new ActionListener() { //登录
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				String uname = tf_uname.getText().trim();
+				String upass = new String(pf_pass.getPassword());
+				
+				int type = cb_type.getSelectedIndex() + 1;//1 用户  2 管理员
+
+				if (uname.equals("")) {
+					JOptionPane.showMessageDialog(LoginView.this, "用户名不能为空");
+					return;
+				} else if (upass.equals("")) {
+					JOptionPane.showMessageDialog(LoginView.this, "密码不能为空");
+					return;
+				}
+				Users user = new Users(uname, upass, type);
+				user = userBiz.login(user);
+				if (user != null) {
+					if (user.getType() == 1) { //普通用户
+						new UserMainView(user);
+					} else { //管理员
+						new AdminMainView(user);
+					}
+					LoginView.this.dispose();
+				} else {
+					JOptionPane.showMessageDialog(LoginView.this, "用户名或密码不正确");
+					return;
+				}
+				
+			}
+		});
+		
+		btn_register.addActionListener(new ActionListener() {//注册
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				new UserRegisterView();
+				LoginView.this.dispose();
+			}
+		});
+		
+		
+	}
 	
 }

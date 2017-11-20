@@ -7,6 +7,8 @@ public class Record2 {
 	private String dname;//影碟名字
 	private String lendTime;//借出时间
 	private String returnTime;//归还时间
+	public Record2() {
+	}
 	public Record2(int id, int did, String uname, String dname, String lendTime, String returnTime) {
 		super();
 		this.id = id;
