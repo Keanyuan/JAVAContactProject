@@ -7,6 +7,8 @@ import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
@@ -14,6 +16,7 @@ import javax.swing.JButton;
 import javax.swing.JDesktopPane;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 import com.iotek.entity.Users;
@@ -38,12 +41,7 @@ public class UserMainView extends JFrame {
 		init();
 		registerListener();
 	}
-//	public UserMainView() {
-//		// TODO Auto-generated method stub
-//		init();
-//		registerListener();
-//
-//	}
+
 	private void init(){
 		main_panel = new JPanel(new BorderLayout());
 		btn_panel = new JPanel(new GridLayout(7, 1, 0, 35));
@@ -124,7 +122,7 @@ public class UserMainView extends JFrame {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				UserRentDVDView qdv = new UserRentDVDView();
+				UserRentDVDView qdv = new UserRentDVDView(user);
 				//把指定的视图添加到桌面
 				funcDesktop.add(qdv);
 				qdv.toFront();
@@ -135,13 +133,23 @@ public class UserMainView extends JFrame {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				UserQueryDVDView userQuery = new UserQueryDVDView();
+				UserQueryDVDView userQuery = new UserQueryDVDView(user);
 				//把指定的视图添加到桌面
 				funcDesktop.add(userQuery);
 				userQuery.toFront();
 			}
 		});
+		/**
+		 * 关闭窗口
+		 */
+		btn_exit.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				new LoginView();
+				UserMainView.this.dispose();
+			}
+		});
 	}
-	
 
 }

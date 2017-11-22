@@ -12,7 +12,7 @@ import java.util.List;
 
 public class BaseDao {
 	private static final String DRIVER="org.sqlite.JDBC";
-	private static final String URL = "jdbc:sqlite:/Users/qizhiyuan/Desktop/FASD/DVDTenancy/data.db";
+	private static final String URL = "jdbc:sqlite:/Users/qizhiyuan/Desktop/Anji-Allways/Java_Git/JAVAContactProject/DVDTenancy/data.db";
 //	private static final String URL = "jdbc:sqlite:/Users/Kean/Desktop/AllwaysWork/AllwaysGit/JAVAContactProject/DVDTenancy/data.db";
 
 	public Connection getConn(){

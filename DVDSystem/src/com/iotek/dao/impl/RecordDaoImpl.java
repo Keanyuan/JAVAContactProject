@@ -41,7 +41,7 @@ public class RecordDaoImpl extends BaseDao implements RecordDao {
 
 	@Override
 	public boolean updateRecord(Record record) {
-		String sql = "update dvds set uid=?,did=?,lendTime=?,returnTime=? where id=?";
+		String sql = "update record set uid=?,did=?,lendTime=?,returnTime=? where id=?";
 		List<Object> params = new ArrayList<Object>();
 		params.add(record.getUid());
 		params.add(record.getDid());
@@ -54,7 +54,7 @@ public class RecordDaoImpl extends BaseDao implements RecordDao {
 	@Override
 	public List<Record2> queryAllRecords() {
 		// TODO Auto-generated method stub
-		String sql = "select r.id,d.id as did,u.uname,d.dname,r.lendTime,r.returnTime from users u,dvds d,records r where u.id=r.uid and d.id=r.id";
+		String sql = "select r.id,d.id as did,u.uname,d.dname,r.lendTime,r.returnTime from users u,dvds d,record r where u.id=r.uid and d.id=r.did";
 		List<Record2> data = null;
 		try {
 			data = this.operQuery(sql, null, Record2.class);
@@ -68,7 +68,7 @@ public class RecordDaoImpl extends BaseDao implements RecordDao {
 
 	@Override
 	public List<Record2> queryRecordByUname(String uname) {
-		String sql = "select r.id,d.id as did,u.uname,d.dname,r.lendTime,r.returnTime from users u,dvds d,records r where u.id=r.uid and d.id=r.id and uname=?";
+		String sql = "select r.id,d.id as did,u.uname,d.dname,r.lendTime,r.returnTime from users u,dvds d,record r where u.id=r.uid and d.id=r.did and uname=?";
 		List<Record2> data = null;
 		List<Object> params = new ArrayList<Object>();
 		params.add(uname);
@@ -84,7 +84,7 @@ public class RecordDaoImpl extends BaseDao implements RecordDao {
 
 	@Override
 	public List<Record2> queryRecordByDname(String dname) {
-		String sql = "select r.id,d.id as did,u.uname,d.dname,r.lendTime,r.returnTime from users u,dvds d,records r where u.id=r.uid and d.id=r.id and dname=?";
+		String sql = "select r.id,d.id as did,u.uname,d.dname,r.lendTime,r.returnTime from users u,dvds d,record r where u.id=r.uid and d.id=r.did and dname=?";
 		List<Record2> data = null;
 		List<Object> params = new ArrayList<Object>();
 		params.add(dname);
@@ -110,9 +110,9 @@ public class RecordDaoImpl extends BaseDao implements RecordDao {
 		
 		String sql = null;
 		if (flag) {
-			sql = "select r.id,d.id as did,u.uname,d.dname,r.lendTime,r.returnTime from users u,dvds d,records r where u.id=r.uid and d.id=r.id and returnTime is not null and uname=?";
+			sql = "select r.id,d.id as did,u.uname,d.dname,r.lendTime,r.returnTime from users u,dvds d,record r where u.id=r.uid and d.id=r.did and returnTime is not null and uname=?";
 		} else {
-			sql = "select r.id,d.id as did,u.uname,d.dname,r.lendTime,r.returnTime from users u,dvds d,records r where u.id=r.uid and d.id=r.id and returnTime is null and uname=?";
+			sql = "select r.id,d.id as did,u.uname,d.dname,r.lendTime,r.returnTime from users u,dvds d,record r where u.id=r.uid and d.id=r.did and returnTime is null and uname=?";
 		}
 		List<Object> params = new ArrayList<>();
 		params.add(uname);

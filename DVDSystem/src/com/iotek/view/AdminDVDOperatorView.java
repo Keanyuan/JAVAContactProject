@@ -6,8 +6,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
+import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,6 +18,7 @@ import javax.swing.JInternalFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.event.TableModelListener;
@@ -59,7 +60,6 @@ public class AdminDVDOperatorView extends JInternalFrame {
 	private List<DVD> dvdList = null;
 
 	private DVDInfoTableModel infoTableModel = null;
-
 	
 	
 	public AdminDVDOperatorView() {
@@ -82,7 +82,7 @@ public class AdminDVDOperatorView extends JInternalFrame {
 		paneltabel = new JPanel(new BorderLayout());//创建面板
 		//给面板设置边框
 		paneltabel.setBorder(BorderFactory.createTitledBorder(BorderFactory.createEtchedBorder(null, null), "查询信息"));
-		paneltabel.add(table);
+		paneltabel.add(new JScrollPane(table), BorderLayout.CENTER);
 		this.add(paneltabel, BorderLayout.CENTER);
 		
 		panelButton = new JPanel(new GridLayout(9, 1, 10, 10));
@@ -134,6 +134,9 @@ public class AdminDVDOperatorView extends JInternalFrame {
 	
 	private void registerListener(){
 		
+		/**
+		 * 查询数据
+		 */
 		btn_search.addActionListener(new ActionListener() {
 			
 			@Override
@@ -184,7 +187,9 @@ public class AdminDVDOperatorView extends JInternalFrame {
 		});
 		
 		
-		
+		/**
+		 * 添加数据
+		 */
 		btn_insert.addActionListener(new ActionListener() {
 			
 			
@@ -227,7 +232,9 @@ public class AdminDVDOperatorView extends JInternalFrame {
 				}
 			}
 		});
-		
+		/**
+		 * 选择搜索选项
+		 */
 		cb_type.addItemListener(new ItemListener() {
 			
 			@Override
@@ -244,33 +251,10 @@ public class AdminDVDOperatorView extends JInternalFrame {
 			}
 		});
 		
-		
-		table.addMouseListener(new MouseListener() {
-			
-			@Override
-			public void mouseReleased(MouseEvent e) {
-				// TODO Auto-generated method stub
-				
-			}
-			
-			@Override
-			public void mousePressed(MouseEvent e) {
-				// TODO Auto-generated method stub
-				
-			}
-			
-			@Override
-			public void mouseExited(MouseEvent e) {
-				// TODO Auto-generated method stub
-				
-			}
-			
-			@Override
-			public void mouseEntered(MouseEvent e) {
-				// TODO Auto-generated method stub
-				
-			}
-			
+		/**
+		 * table列表点击事件
+		 */
+		table.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				// TODO Auto-generated method stub
@@ -287,9 +271,88 @@ public class AdminDVDOperatorView extends JInternalFrame {
 				tf_sendCount.setText(dcount);
 				cb_dvdStatus.setSelectedItem(status);
 				
+			
+			}
+		});
+		/**
+		 * 更新数据
+		 */
+		btn_update.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				String dname= tf_dvdName.getText().trim();
+				String dcount = tf_sendCount.getText().trim();
+				int status = cb_dvdStatus.getSelectedIndex();
+				if (dname.equals("")) {
+					JOptionPane.showMessageDialog(AdminDVDOperatorView.this, "DVD名字不能为空");
+					return;
+				}
+				
+				if (dcount.equals("")) {
+					JOptionPane.showMessageDialog(AdminDVDOperatorView.this, "借出次数不能为空");
+					return;
+				}
+				
+				if (!DVDUtil.isNumber(dcount)) {
+					JOptionPane.showMessageDialog(AdminDVDOperatorView.this, "借出次数只能为数字");
+					return;
+				}
+				
+				int flag = JOptionPane.showInternalConfirmDialog(AdminDVDOperatorView.this, "是否确定更新DVD?","确认信息",JOptionPane.YES_NO_OPTION);
+				if (flag == JOptionPane.YES_OPTION) {
+					int row = table.getSelectedRow();
+					boolean res = dvdbiz.modifyDVD(new DVD((Integer)table.getValueAt(row, 0), dname, new Integer(dcount), status));
+					if (res) {
+						JOptionPane.showMessageDialog(AdminDVDOperatorView.this, "更新成功");
+						return;
+					} else {
+						JOptionPane.showMessageDialog(AdminDVDOperatorView.this, "更新失败");
+						return;
+					}
+				}
+				
+			}
+		});
+		/**
+		 * 删除数据
+		 */
+		btn_del.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				int row = table.getSelectedRow();
+				int did = (Integer)table.getValueAt(row, 0);
+				int flag = JOptionPane.showInternalConfirmDialog(AdminDVDOperatorView.this, "是否确定删除DVD?","确认信息",JOptionPane.YES_NO_OPTION);
+				if (flag == JOptionPane.YES_OPTION) {
+					boolean res = dvdbiz.delDVD(did);
+					if (res) {
+						JOptionPane.showMessageDialog(AdminDVDOperatorView.this, "删除成功");
+						return;
+						} else {
+						JOptionPane.showMessageDialog(AdminDVDOperatorView.this, "删除失败");
+						return;
+						}
+					}
+				}
+		});
+		
+		/**
+		 * 关闭窗口
+		 */
+		btn_exit.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				int flag = JOptionPane.showInternalConfirmDialog(AdminDVDOperatorView.this, "是否确定退出窗口?","确认信息",JOptionPane.YES_NO_OPTION);
+				if (flag == JOptionPane.YES_OPTION) {
+					AdminDVDOperatorView.this.dispose();
+				}
 			}
 		});
 	}
+	
 	
 	private class DVDInfoTableModel implements TableModel {
 
@@ -340,7 +403,6 @@ public class AdminDVDOperatorView extends JInternalFrame {
 		//设置单元格是否可编辑
 		@Override
 		public boolean isCellEditable(int rowIndex, int columnIndex) {
-			// TODO Auto-generated method stub
 			return false;
 		}
 

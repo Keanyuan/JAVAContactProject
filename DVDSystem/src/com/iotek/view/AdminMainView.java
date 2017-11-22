@@ -14,6 +14,7 @@ import javax.swing.JButton;
 import javax.swing.JDesktopPane;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 import com.iotek.entity.Users;
@@ -136,6 +137,18 @@ public class AdminMainView extends JFrame {
 				//把指定的视图添加到桌面
 				funcDesktop.add(adminQuery);
 				adminQuery.toFront();
+			}
+		});
+		
+		/**
+		 * 关闭窗口
+		 */
+		btn_exit.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				new LoginView();
+				AdminMainView.this.dispose();
 			}
 		});
 	}
