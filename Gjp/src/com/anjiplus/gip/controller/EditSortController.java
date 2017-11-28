@@ -19,7 +19,7 @@ public class EditSortController extends AbstractOperationSortDialog {
 		titleLabel.setText("编辑分类");
 		super.setTitle("编辑分类");
 		//获取数据到对话框中
-		//将sort对象中封装的分类填充到下拉菜单中
+		//将sort对 象中封装的分类填充到下拉菜单中
 		//setSelectedItem将菜单中已有的项目作为默认项出现
 		this.sort = sort;
 		parentBox.setSelectedItem(sort.getParent());

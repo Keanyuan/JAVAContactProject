@@ -8,7 +8,15 @@ public class Ledger {
 	private String account ;
 	private String createtime ;
 	private String ldesc ;
-	public Ledger(int lid, String parent, double money, int sid, String account, String createtime, String ldesc) {
+	private String sname ;
+
+	
+	
+	public Ledger() {
+		super();
+	}
+
+	public Ledger(int lid, String parent, double money, int sid, String account, String createtime, String ldesc,String sname) {
 		super();
 		this.lid = lid;
 		this.parent = parent;
@@ -17,6 +25,7 @@ public class Ledger {
 		this.account = account;
 		this.createtime = createtime;
 		this.ldesc = ldesc;
+		this.sname = sname;
 	}
 	
 	public int getLid() {
@@ -66,6 +75,15 @@ public class Ledger {
 	public void setCreatetime(String createtime) {
 		this.createtime = createtime;
 	}
+	
+
+	public String getSname() {
+		return sname;
+	}
+
+	public void setSname(String sname) {
+		this.sname = sname;
+	}
 
 	public String getLdesc() {
 		return ldesc;
@@ -78,7 +96,8 @@ public class Ledger {
 	@Override
 	public String toString() {
 		return "Ledger [lid=" + lid + ", parent=" + parent + ", money=" + money + ", sid=" + sid + ", account="
-				+ account + ", createtime=" + createtime + ", ldesc=" + ldesc + "]";
+				+ account + ", createtime=" + createtime + ", ldesc=" + ldesc + ", sname=" + sname + "]";
 	}
+
 	
 }

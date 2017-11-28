@@ -15,6 +15,25 @@ public class SortService {
 
 	//创建Dao层对象
 	private SortDao sortDao = new SortDao();
+	
+	/**
+	 * 查询收入/支出 分类
+	 * 2017年11月27日 下午2:08:19 KeanQ
+	 * @param parent
+	 * @return
+	 */
+	public List<Object> querySortNamByParent(String parent){
+		return sortDao.querySortNamByParent(parent);
+	}
+	/**
+	 * 查询所有分类名称
+	 * 2017年11月27日 下午1:54:19 KeanQ
+	 * @return
+	 */
+	public List<Object> querySortNameAll(){
+		return sortDao.querySortNameAll();
+	}
+	
 	/**
 	 * 调用dao层SortDao#querySortAll获取数据
 	 */
@@ -49,4 +68,6 @@ public class SortService {
 	public void deleteSort(Sort sort){
 		sortDao.deleteSort(sort);
 	}
+	
+	
 }

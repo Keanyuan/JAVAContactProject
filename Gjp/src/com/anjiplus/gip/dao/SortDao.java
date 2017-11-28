@@ -5,6 +5,8 @@ import java.util.List;
 
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
+import org.apache.commons.dbutils.handlers.ColumnListHandler;
+import org.apache.commons.dbutils.handlers.ScalarHandler;
 
 import com.anjiplus.gip.domain.Sort;
 import com.anjiplus.gip.tools.JDBCUtils;
@@ -82,5 +84,56 @@ public class SortDao {
 		}
 	}
 	
+	
+	public List<Object> querySortNameAll(){
+		try {
+			String sql = "SELECT sname FROM gjp_sort";
+			List<Object> list = qr.query(sql, new ColumnListHandler<>());
+			return list;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			throw new RuntimeException(e);
+		}
+		
+	}
+
+	public List<Object> querySortNamByParent(String parent){
+		try {
+			String sql = "SELECT sname FROM gjp_sort where parent=?";
+			List<Object> list = qr.query(sql, new ColumnListHandler<>(),parent);
+			return list;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			throw new RuntimeException(e);
+		}
+	}
+	
+	/**
+	 * 定义一个方法 传递分类名称返回分类ID
+	 */
+	public int getSidBySname(String sname) {
+		try {
+			String sql = "SELECT sid FROM gjp_sort where sname=?";
+			return (int)qr.query(sql, new ScalarHandler<>(), sname);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			throw new RuntimeException(e);			
+		}
+
+	}
+
+	/**
+	 * 定义一个方法 传递分类ID返回分类名称
+	 */
+	public String getSnameBySid(int sid) {
+		try {
+			String sql = "SELECT sname FROM gjp_sort where sid=?";
+			return (String)qr.query(sql, new ScalarHandler<>(), sid);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			throw new RuntimeException(e);			
+		}
+
+	}
 
 }
