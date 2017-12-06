@@ -324,3 +324,93 @@ println("------DOM(document object model文档对象模型)----------");
 //DOM模型三种
 //1.将HTML文档封装成对象，2.将1基础上加入新功能，比如：解析名称空间 3.将XML文档封装成对象
 //--------DOM三级模型
+//DHTML + XMLHttpRequest = AJAX
+function windowObjectDemo01(){
+	var name =  window.navigator.appName;
+	var verasion = window.navigator.appVersion;
+	alert(name + " " +verasion);
+}
+
+function windowObjectDemo02(){
+
+	window.location.href = "https://www.baidu.com";
+
+//	alert(window.location.hash + "-- " + window.location.host + "-- " + window.location.hostname + "-- " + window.location.href + "-- " + window.location.pathname + "-- " + window.location.port + "--" + window.location.protocol + "--" + window.location.search);
+}
+//window常见方法
+function windowObjectDemo03(){
+//	var isConfirm =  confirm("哈哈");
+//	if (isConfirm) {
+//		alert(isConfirm);
+//	}
+	//延迟加载 function  time（毫秒）
+//	setTimeout("alert('time out run');",4000); 
+	//定时 每隔3000毫秒执行一次 
+//	timeId =  setInterval("alert('time out run');",3000);
+	//移动
+//	moveTo(40,40);
+//	moveBy(40,40);
+	//打卡新窗体
+//	open("html/add.html","_blank", "height=200,width=400,status=yes,toolbar=yes,menubar=yes,location=yes");
+	
+}
+/*
+//停止定时任务
+function stopTimeOout(){
+//	clearTimeout(timeId);
+}
+
+//窗体关闭触发
+onunload = function(){
+		alert("onunload");
+	}
+//窗体加载结束	
+onload = function() {
+		alert("onload");
+
+	}
+//窗体关闭结束触发
+onbeforeunload =  function() {
+		alert("onbeforeunload");
+	}
+*/
+//onload = function() {
+//	window.status = "已经加载结束";
+//}
+function documentObjc(){
+	var divNode = document.getElementById("divid");
+	//节点名称 节点类型 节点值
+//	alert(divNode.nodeName + ":" + divNode.nodeType + "-" + divNode.nodeValue + "--" + divNode.innerHTML);
+	divNode.innerHTML = "哈哈哈，这是一个新的div".fontcolor("red");
+}
+
+function getNodeDemo1(){
+	var userNode = document.getElementsByName("user")[0];
+	userNode.value = "hahahhha";
+}
+
+//Document对象Tagname
+function getNodeDemo2(){
+	var nodes = document.getElementsByTagName("a");
+	alert(nodes[1].innerHTML);
+//	nodes[1].target = "_blank";
+}
+
+function getNodeDemo3(){
+	var divNode = document.getElementById("newsLink");
+	var nodes = divNode.getElementsByTagName("a");
+	alert(nodes[0].innerHTML);
+//	nodes[1].target = "_blank";
+}
+function getNodeDemo4(){
+	//获取表格节点
+	var tabNode = document.getElementById("tabid");
+	//获取父节点 parentNode
+//	var node = tabNode.parentNode;
+//	alert(node.nodeName);]
+	//子节点
+//	var childNodes = tabNode.childNodes[1].childNodes[0].childNodes[2];
+//	alert(childNodes.nodeName);
+	
+	
+}
