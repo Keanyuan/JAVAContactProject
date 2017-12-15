@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/Table.css"/>
+		<style type="text/css">
+			table a:link, table a:visited{
+				color: #8080FF;
+				text-decoration: none;
+			}
+			table a:hover{
+				color: #00FFFF;
+			}
+		</style>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function addFile(){
+				var oTabNode = document.getElementById("fildid");
+				var oTrNode = oTabNode.insertRow();
+				var oTrNode_file = oTrNode.insertCell();				var oTrNode_file = oTrNode.insertCell();
+				var oTrNode_del = oTrNode.insertCell();
+				oTrNode_file.innerHTML = "<input type='file'/>";
+//				oTrNode_del.innerHTML = "<a href='javascript:void(0)' onclick='delFile(this)'>删除附件</a>";
+				oTrNode_del.innerHTML = "<img src='../img/1.png' alt='删除附件' onclick='delFile(this)'/>";
+			}
+			function delFile(node){
+				var oTrNode = node.parentNode.parentNode;
+				oTrNode.parentNode.removeChild(oTrNode);
+			}
+		</script>
+		<table id="fildid" >
+			<tr><th><a href="javascript:void(0)" onclick="addFile()">添加附件</a></th></tr>
+			<!--<tr>
+				<td>
+					<input type="file" />
+				</td>
+				<td>
+					<a href="javascript:void(0)">删除附件</a>
+				</td>
+			</tr>-->
+		</table>
+	</body>
+</html>

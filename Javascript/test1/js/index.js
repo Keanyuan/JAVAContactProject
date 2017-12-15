@@ -402,6 +402,7 @@ function getNodeDemo3(){
 	alert(nodes[0].innerHTML);
 //	nodes[1].target = "_blank";
 }
+//尽量少用节点，由于浏览器不同，会出现标签间的空白节点
 function getNodeDemo4(){
 	//获取表格节点
 	var tabNode = document.getElementById("tabid");
@@ -411,6 +412,88 @@ function getNodeDemo4(){
 	//子节点
 //	var childNodes = tabNode.childNodes[1].childNodes[0].childNodes[2];
 //	alert(childNodes.nodeName);
+	//下一个兄弟节点
+//	var nextNode = tabNode.nextSibling;
+//	alert(nextNode.nodeName);
+//	println(nextNode.nodeName);
+//	console.log(nextNode.nodeName);
+//	var childNodes = tabNode.childNodes;
+//	alert(childNodes[1].childNodes[0].nodeName);
+
+	//上一个兄弟节点
+	var topNode = tabNode.previousSibling;
+	alert(topNode.nodeName);
 	
 	
+	
+	
+	
+}
+//创建并添加节点
+function getNodeDemo5(){
+	//创建节点
+	 var oTextNode = document.createTextNode("这是一个新的文本");
+	 //获取节点
+	 var oDivNode = document.getElementById("div_1");
+	 //将文本添加到节点中
+	 oDivNode.appendChild(oTextNode);
+	 //添加按钮到节点中
+//	 var oButtonNode = document.createElement("input");
+//	 oButtonNode.type = "button";
+//	 oButtonNode.value = "一个新按钮";
+//	 oDivNode.appendChild(oButtonNode);
+//	 oDivNode.innerHTML = "<input type='button' value='又一个按钮' onclick='alert(\"哈哈\")'/>";
+	//添加标签到节点中
+//	 oDivNode.innerHTML = "<a href='https://www.baidu.com'>a标签</a>";
+	
+}
+//删除节点
+function getNodeDemo6(){
+	var oDivNode = document.getElementById("div_2");
+//	oDivNode.removeNode(true);
+//删除oDivNode父节点的子节点即oDivNode
+	oDivNode.parentNode.removeChild(oDivNode);
+
+}
+//修改节点
+function getNodeDemo7(){
+	var oDivNode_2 = document.getElementById("div_2");
+	var oDivNode_3 = document.getElementById("div_3");
+	//替换1节点和3节点 不保留3节点
+//		oDivNode_2.parentNode.replaceChild(oDivNode_3,oDivNode_2);
+	
+	var oCopyDivNode_3 = oDivNode_3.cloneNode(true);
+	oDivNode_2.parentNode.replaceChild(oCopyDivNode_3,oDivNode_2);
+	
+	
+}
+//-------------------------------------------
+function changeFont01(selectName){
+	var oNewsText = document.getElementById("newstext");
+//	oNewsText.style.fontSize = size;
+//	oNewsText.style.color = clr;
+	oNewsText.className = selectName;
+	
+}
+var flag = false;
+function listDemo(node){
+	 var od1Node = node.parentNode;
+//	 alert(od1Node.nodeName);
+//	var od1Node = document.getElementsByTagName("dl")[0];
+
+	
+	var collDlNodes = document.getElementsByTagName("dl");
+	for (var x=0;x<collDlNodes.length;x++) {
+		if (collDlNodes[x] == od1Node) {
+			if (od1Node.className == "open"){
+				od1Node.className = "close";
+		//		od1Node.style.overflow = "visible";
+		} else {
+			od1Node.className = "open";
+		//		od1Node.style.overflow = "hidden";
+		}
+		}else {
+			collDlNodes[x].className = "close";
+		}
+	}
 }

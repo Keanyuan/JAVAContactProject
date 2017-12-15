@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>表单校验</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//验证账户
+			function checkUser(){
+				var reg = new RegExp("^[a-z]{4}","i");
+				return checkInfo("user", reg, "sUser", "用户名不正确", "用户名正确");
+			}
+			//验证密码
+			function checkPsw(){
+				var reg = /^\d{4}$/;
+				return checkInfo("psw", reg, "sPsw", "密码不正确", "密码正确");
+			}
+			//验证邮箱
+			function checkMail(){
+				var reg = /^\w+@\w+(\.\w+)+$/i;
+				return checkInfo("mail",reg,"sMail","Email不正确","Email正确");
+			}
+			//验证确认密码
+			function checkRepsw(){
+				var psw = document.getElementsByName("psw")[0].value;
+				var rsw = document.getElementsByName("repsw")[0].value;
+				var oSpanNode = document.getElementById("sRepsw");
+				var flag = false;
+				if (psw == rsw && checkPsw()) {
+					oSpanNode.innerHTML = "两次密码一致".fontcolor("green");
+					flag = true;
+				}else if (psw == rsw && !checkPsw()) {
+					oSpanNode.innerHTML = "密码不正确".fontcolor("red");
+					flag = false;
+				}else {
+					oSpanNode.innerHTML = "两次密码不一致".fontcolor("red");
+					flag = false;
+				}
+				return flag;
+			}
+			//表单确认
+			function checkForm(){
+				if (checkUser() && checkPsw() && checkMail() && checkRepsw()) {
+					return true;
+				} else {
+					return false;
+				}
+			}
+			//按钮提交
+			function mySubmit(){
+				var oFormNode = document.getElementById("userInfo");
+				oFormNode.submit();
+			}
+			//公共方法
+			function checkInfo(name,reg,spanid,trueInfo,errInfo){
+				var val = document.getElementsByName(name)[0].value;
+				var flag = false;
+				var oSpanNode = document.getElementById(spanid);
+				if (!reg.test(val)) {
+					oSpanNode.innerHTML = trueInfo.fontcolor("red");
+					flag = false;
+				}else {
+					oSpanNode.innerHTML = errInfo.fontcolor("green");
+					flag = true;
+				}
+				return flag;
+			}
+		</script>
+		<form onsubmit="return checkForm()">
+		<!--<form id="userInfo">-->
+
+			<!--onblur失去焦点 onfocus获得焦点-->
+			用户名称：<input type="text" name="user" id="textUser" onblur="checkUser()"/><span id="sUser"></span><br />
+			输入密码：<input type="text" name="psw" id="textPsw" onblur="checkPsw()"/><span id="sPsw"></span><br />
+			确认密码：<input type="text" name="repsw" id="textrePsw" onblur="checkRepsw()"/><span id="sRepsw"></span><br />
+			输入邮箱：<input type="text" name="mail" id="textMail" onblur="checkMail()"/><span id="sMail"></span><br />
+			<input type="submit" value="提交" />
+		</form>
+		<!--自定义提交按钮-->
+		<!--<input type="button"  value="提交数据" onclick="mySubmit()"/>-->
+	</body>
+</html>

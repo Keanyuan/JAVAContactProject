@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>问卷调查内容</title>
+		<style type="text/css">
+			#contentid {
+				display: none;
+			}	
+			#nolul{
+				list-style: none;
+				margin: 0px;
+			}
+			.close{
+				display: none;
+			}
+			.open{
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function showContent(node){
+				var oDivNode = document.getElementById("contentid");
+				with (oDivNode.style){
+					if (node.value == "yes") {
+						display = "block";
+					} else {
+						display = "none";
+					}
+					document.getElementById("errinfo0").innerHTML = ""
+					document.getElementById("wenjuanDivid").className = "close"
+				}
+				
+			}
+			function showResult(){
+				var oNo1Nodes = document.getElementsByName("no1");
+				var flag = false;
+				var val;
+				for (var x= 0; x < oNo1Nodes.length; x++) {
+					if (oNo1Nodes[x].checked) {
+						flag = true;
+						val = parseInt(oNo1Nodes[x].value);
+						break;
+					}
+				}
+				if (!flag) {
+					document.getElementById("errinfo").innerHTML = "没有任何答案被选中".fontcolor("red");
+					return;
+				}
+				if (val>=1 && val<=3) {
+					document.getElementById("res_1").className = "open";					
+					document.getElementById("res_2").className = "close";
+				} else {
+					document.getElementById("res_2").className = "open";					
+					document.getElementById("res_1").className = "close";
+				}				
+			}
+			
+			function showDiv(){
+				var oNameNode = document.getElementById("name");
+				var oMailNode = document.getElementById("mail");
+				if (oNameNode.value.length==0 || oMailNode.value.length==0) {
+					document.getElementById("errinfo0").innerHTML = "请输入相关信息".fontcolor("red");
+					return
+				}
+				document.getElementById("wenjuanDivid").className = "open"
+			}
+		</script>
+		<div>
+			您要参与问卷调查吗？<br />
+			<input type="radio" name="wenjuan" value="yes" onclick="showContent(this)"/>是
+			<input type="radio" name="wenjuan" value="no" onclick="showContent(this)"/>否
+		</div>
+		<div id="contentid">
+			问卷调查内容 <br />
+			您的名字：<input type="text" id="name"/><br />
+			您的邮箱：<input type="text" id="mail"/><br />
+			<input type="button" value="确认" onclick= "showDiv()" />				
+			<span id="errinfo0"></span>
+
+		</div>
+		
+		<div id = "wenjuanDivid" class="close">
+			<h2>欢迎参加性格测试：</h2>
+			<div id="">
+				<h3>第一题：</h3>
+				<span>你喜欢的水果是什么？</span>
+				<ul id="nolul">
+					<li><input type="radio" name="no1" value="1" />葡萄</li>
+					<li><input type="radio" name="no1" value="2" />西瓜</li>
+					<li><input type="radio" name="no1" value="3" />苹果</li>
+					<li><input type="radio" name="no1" value="4" />芒果</li>
+					<li><input type="radio" name="no1" value="5" />樱桃</li>
+				</ul>
+				</div>
+			<div>
+				<input type="button" value="查看测试结果:" onclick="showResult()"/>
+				<span id="errinfo"></span>
+				<div id="res_1" class="close">1-3分：性格扭曲，建议……</div>
+				<div id="res_2" class="close">4分以上：性格外向并分裂，建议</div></div>
+		</div>
+		
+	</body>
+</html>

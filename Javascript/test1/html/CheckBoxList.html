@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>全选商品列表</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function getSum(){
+				var sum = 0;
+				var collItemNodes = document.getElementsByName("item");
+				for (var x=0; x< collItemNodes.length;x++) {
+					if (collItemNodes[x].checked) {
+						sum += parseFloat(collItemNodes[x].value);
+					}
+				}
+				document.getElementById("sumid").innerHTML = "	"+sum+"元";
+			}
+			function checkAll(node){
+				var collItemNodes = document.getElementsByName("item");
+				for (var x=0; x< collItemNodes.length;x++) {
+					collItemNodes[x].checked = node.checked;
+				}
+			}
+		</script>
+		<input type="checkbox" name="allItem" onclick="checkAll(this)" />全选 <br />
+		<input type="checkbox" name="item" value="4000"/>笔记本电脑：4000元 <br />
+		<input type="checkbox" name="item" value="3000"/>笔记本电脑：3000元 <br />
+		<input type="checkbox" name="item" value="4000.3"/>笔记本电脑：4000.3元 <br />
+		<input type="checkbox" name="item" value="4000.4"/>笔记本电脑：4000.4元 <br />
+		<input type="checkbox" name="item" value="4000"/>笔记本电脑：4000元 <br />
+		<input type="checkbox" name="item" value="4000"/>笔记本电脑：4000元 <br />
+		<input type="checkbox" name="item" value="4000"/>笔记本电脑：4000元 <br />
+		<input type="checkbox" name="item" value="4000"/>笔记本电脑：4000元 <br />
+		<input type="checkbox" name="item" value="4000"/>笔记本电脑：4000元 <br />
+		<input type="checkbox" name="item" value="4000"/>笔记本电脑：4000元 <br />
+		<input type="checkbox" name="item" value="4000"/>笔记本电脑：4000元 <br />
+		<input type="checkbox" name="item" value="4000"/>笔记本电脑：4000元 <br />
+		<input type="checkbox" name="item" value="4000"/>笔记本电脑：4000元 <br />
+		<input type="checkbox" name="item" value="4000"/>笔记本电脑：4000元 <br />
+		<input type="checkbox" name="item" value="4000"/>笔记本电脑：4000元 <br />
+		<input type="checkbox" name="item" value="4000"/>笔记本电脑：4000元 <br />
+		<input type="checkbox" name="item" value="4000"/>笔记本电脑：4000元 <br />
+		<input type="checkbox" name="allItem" onclick="checkAll(this)" />全选 <br />
+		<input type="button" value="总金额是：" onclick="getSum()"/><span id="sumid"></span>
+	</body>
+</html>

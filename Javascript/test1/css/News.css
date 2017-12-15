@@ -1,0 +1,41 @@
+#newsid ul{
+	list-style: none;
+}
+
+#newslist li{
+	float: left;
+	width: 130px;
+}
+#newslist li ul {
+	margin: 0px;
+	padding: 0px;
+}
+#newslist li ul li{
+	line-height: 25px;
+}
+
+#newslist li a{
+	display: block;
+	color: #ffffff;
+	background-color: #6495ED;
+	text-decoration: none;
+	line-height: 25px;
+	text-align: center;
+}
+
+#newslist li a:hover{
+	color: #0066cc;
+	background-color: #0099ff;
+}
+#newslist li ul li a{
+	color: #000000;
+	background-color: #0099ff;
+}
+
+#newslist li ul li a:hover{
+	color: #0066ff;
+	background-color: #999999;
+}
+#newslist li ul{
+	display: none;
+}

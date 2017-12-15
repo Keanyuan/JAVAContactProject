@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>下拉菜单选择</title>
+		<style type="text/css">
+			.clrclass{
+				width: 50px;
+				height: 50px;
+				float: left;
+				margin-left: 20px;
+			}
+			#text {
+				clear: left;
+				padding-top: 20px;
+			}
+			.ablack{
+				background-color: black;
+				color: #fff;
+			}
+			.ared{
+				background-color: red;
+				color: #fff;
+			}
+			.agreen{
+				background-color: green;
+				color: #fff;
+			}
+			.ablue{
+				background-color: blue;
+				color: #fff;
+			}
+		</style>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function changeColor(node){
+				document.getElementById("text").style.color = node.style.backgroundColor;
+			}
+		</script>
+		<div class="clrclass" id="clr1" style="background-color: red;" onclick="changeColor(this)"></div>
+		<div class="clrclass" id="clr2" style="background-color: green;" onclick="changeColor(this)"></div>
+		<div class="clrclass" id="clr3" style="background-color: blue;" onclick="changeColor(this)"></div>
+		<div id="text">
+			<ul style="list-style: none;">
+				<li>需要显示文字</li>
+				<li>需要显示文字</li>
+				<li>需要显示文字</li>
+				<li>需要显示文字</li>
+			</ul>
+		</div>
+		<hr />
+		<script type="text/javascript">
+			function changeColor2(){
+				var oSelectNode = document.getElementsByName("selectColor")[0];
+				document.getElementById("text").style.color = oSelectNode.options[oSelectNode.selectedIndex].value;
+			}
+		</script>
+		<select name="selectColor"  style="width: 200px;" onchange="changeColor2()">
+			<option value="black" class="ablack">--选择颜色--</option>
+			<option value="red" class="ared">--红色--</option>
+			<option value="green" class="agreen">--绿色--</option>
+			<option value="blue" class="ablue">--蓝色--</option>
+		</select>
+	</body>
+</html>

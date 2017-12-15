@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="../css/Table.css"/>
+		<style type="text/css">
+			table a:link, th a:visited{
+				color: #ADFF2F;
+				text-decoration: none;
+			}
+		</style>
+		<title>行颜色间隔显示并高亮并排序</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var aClassName;
+			var flag = true;
+			function trColor(){
+				var oTbaNode = document.getElementById("info");
+				var collTrNodes = oTbaNode.rows;
+				for (var x=1; x<collTrNodes.length; x++) {
+					if (x%2==1) {
+						collTrNodes[x].className = "one";
+					} else {
+						collTrNodes[x].className = "two";
+					}
+					
+					collTrNodes[x].onmouseover = function(){
+						aClassName = this.className;
+						this.className = "hight";
+					}
+					
+					collTrNodes[x].onmouseout = function(){
+						this.className = aClassName;
+
+					}
+					
+				}
+			}
+			//按年龄排序
+			function sortTable(){
+				var oTbaNode = document.getElementById("info");
+				var collTrNodes = oTbaNode.rows;
+				//定义临时容器
+				var trArr = [];
+				for (var x=1; x<collTrNodes.length; x++) {
+					trArr[x-1] = collTrNodes[x];
+				}
+				mySort(trArr);
+				if (flag) {
+					//将排完序的表格添加到表格
+					for (var i = 0; i < trArr.length; i++) {
+//					oTbaNode.childNodes[0].appendChild(trArr[i]);
+//					alert(trArr[i].cells[1].innerHTML);
+						//内存地址的添加 已存在的地址将会移动到最后一位
+						trArr[i].parentNode.appendChild(trArr[i]);
+					
+					}
+					flag = false;
+				}else {
+								//将排完序的表格添加到表格
+					for (var i = trArr.length-1; i >= 0; i--) {
+//					oTbaNode.childNodes[0].appendChild(trArr[i]);
+//					alert(trArr[i].cells[1].innerHTML);
+						trArr[i].parentNode.appendChild(trArr[i]);
+					
+					}
+					flag = true;
+				}
+
+			}
+			function mySort(arr){
+				for (var x = 0; x < arr.length - 1; x++) {
+					for (var y = x+1; y < arr.length; y++) {
+						if (parseInt(arr[x].cells[1].innerHTML) > parseInt(arr[y].cells[1].innerHTML)) {
+							var temp = arr[x];
+							arr[x] = arr[y];
+							arr[y] = temp;
+						}
+					}
+				}
+			}
+			
+			//加载完毕调用
+			onload = function(){
+				trColor();
+			}
+		</script>
+		<table id="info">
+			<tr>
+				<th>姓名</th>
+				<th><a href="javascript:void(0)" onclick="sortTable()">年龄</a></th>
+				<th>地址</th>
+			</tr>
+			<tr>
+				<td>张三</td>
+				<td>20</td>
+				<td>北京</td>
+			</tr>
+			<tr ">
+				<td>Rose</td>
+				<td>16</td>
+				<td>香港</td>
+			</tr>
+			<tr >
+				<td>Lilith</td>
+				<td>18</td>
+				<td>纽约</td>
+			</tr>
+			<tr >
+				<td>王大锤</td>
+				<td>33</td>
+				<td>上海</td>
+			</tr>
+			<tr >
+				<td>刘能</td>
+				<td>54</td>
+				<td>黑龙江</td>
+			</tr>
+			<tr >
+				<td>刘小三</td>
+				<td>56</td>
+				<td>湘西</td>
+			</tr>
+			<tr >
+				<td>Rosd</td>
+				<td>6</td>
+				<td>香港</td>
+			</tr>
+		</table>
+	</body>
+</html>

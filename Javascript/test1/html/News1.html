@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script type="text/javascript" src="../js/PrintLog.js" ></script>
+		<script type="text/javascript" src="../js/ArrayTools.js" ></script>
+		<script type="text/javascript" src="../js/StringTools.js" ></script>
+		<style type="text/css">
+			table ul{
+				list-style: none;
+				margin: 0px;
+				padding: 0px;
+				background-color: #FF26A1;
+				display: none;
+			}
+			table{
+				border: #8080ff;
+				width: 80px;
+				background-color: aquamarine;
+			}
+			table td{
+				border: #8080ff 1px solid;
+			}
+			table td a:link, table td a:visited {
+				color: #0066FF;
+				text-decoration: none;
+			}
+			table td a:hover {
+				color: white;
+			}
+			.open {
+				display: block;
+			}
+			.close {
+				display: none;
+			}
+		</style>
+		<title></title>
+	</head>
+	<body>
+		 <script type="text/javascript">
+		 	function listDemo(node){
+				var oTdNode = node.parentNode;
+				var oUlNode = oTdNode.getElementsByTagName("ul")[0];
+				var oTabNode = document.getElementById("goodlist");
+				var collUlNodes = oTabNode.getElementsByTagName("ul");
+				for (var x=0; x<collUlNodes.length; x++) {
+					if (collUlNodes[x] == oUlNode) {
+						if (oUlNode.className == "open") {
+						oUlNode.className = "close";
+						} else {
+							oUlNode.className = "open";
+						}
+					}else {
+						collUlNodes[x].className = "close";
+					}
+				}
+				
+			}
+		 </script>
+		<table id="goodlist">
+			<tr>
+				<td>
+					<a href="javascript:void(0)" onclick="listDemo(this)">好友菜单</a>
+					<div>
+						<ul>
+							<li>一个好友</li>
+							<li>一个好友</li>
+							<li>一个好友</li>
+							<li>一个好友</li>
+						</ul>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="javascript:void(0)" onclick="listDemo(this)">同事菜单</a>
+					<div>
+						<ul>
+							<li>一个同事</li>
+							<li>一个同事</li>
+							<li>一个同事</li>
+							<li>一个同事</li>
+						</ul>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="javascript:void(0)" onclick="listDemo(this)">黑		名	单</a>
+					<div>
+						<ul>
+							<li>一个黑名</li>
+							<li>一个黑名</li>
+							<li>一个黑名</li>
+							<li>一个黑名</li>
+						</ul>
+					</div>
+				</td>
+			</tr>
+		</table>
+		
+		
+		
+	</body>
+</html>

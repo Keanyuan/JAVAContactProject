@@ -5,6 +5,7 @@
 		<script type="text/javascript" src="js/PrintLog.js"></script>
 		<script type="text/javascript" src="js/StringTools.js"></script>
 		<script src="js/ArrayTools.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
 		<script src="js/index.js"></script>
 		<title></title>
 	</head>
@@ -36,18 +37,73 @@
 		 <input type="button" value="通过节点层次关系获取节点" onclick="getNodeDemo4()"/>
 
 		 <div>div地区</div>
+		 <span>span区域</span>
 		 <table id="tabid">
 		 	<tr>
 		 		<td>单元格一</td>
 		 		<td>单元格二</td>
 		 	</tr>
 		 </table>
-		 <dl>
+		 <!--<dl>
 		 	<dt>上层项目</dt>
 		 	<dd>下层项目</dd>
-		 </dl>
+		 </dl>-->
 		 <a href="">一个超链接</a>
+		 
+		 <hr />
+		 <input type="button" value="创建添加节点" onclick="getNodeDemo5()"/>
+		 <input type="button" value="删除节点" onclick="getNodeDemo6()"/>
+		 <input type="button" value="修改节点" onclick="getNodeDemo7()"/>
+		 <hr />
+		 <div id="div_1">
+		 	
+		 </div>
+		 <div id="div_2">
+		 	好好学习，day day up!
+		 </div>
+		 <div id="div_3">
+		 	div区域演示文字
+		 </div>
+		 <div id="div_4">
+		 	节点的增删改查
+		 </div>
+		  <hr />
+		  <p>新闻字体</p>	 
+		 <h1>这是一个标题</h1>
+		 <a href="javascript:void(0)" onclick="changeFont01('max')">大字体</a>
+		 <a href="javascript:void(0)" onclick="changeFont01('normal')">中字体</a>
+		 <a href="javascript:void(0)" onclick="changeFont01('min')">小字体</a>
+		 <div id="newstext" class="normal">
+		 	这是新闻内容，这是新闻内容，这是新闻内容，这是新闻内容，这是新闻内容，这是新闻内容，这是新闻内容，这是新闻内容，这是新闻内容，这是新闻内容，这是新闻内容，这是新闻内容，这是新闻内容，这是新闻内容，这是新闻内容。
+		 </div>
+		 <hr />
+		 <p>显示列表条目</p>
+		 <div>
+		 	<dl class="close">
+		 	<dt onclick="listDemo(this)">显示条目一</dt>
+		 	<dd>展开列表内容1</dd>
+		 	<dd>展开列表内容1</dd>
+			 <dd>展开列表内容1</dd>
+		 	<dd>展开列表内容1</dd> 
+		 	</dl>
+		 	
+		 	<dl class="close">
+		 	<dt onclick="listDemo(this)">显示条目2</dt>
+		 	<dd>展开列表内容2</dd>
+		 	<dd>展开列表内容2</dd>
+			 <dd>展开列表内容2</dd>
+		 	<dd>展开列表内容2</dd> 
+		 	</dl>
+		 	
+		 	<dl class="close">
+		 	<dt onclick="listDemo(this)">显示条目3</dt>
+		 	<dd>展开列表内容3</dd>
+		 	<dd>展开列表内容3</dd>
+			 <dd>展开列表内容3</dd>
+		 	<dd>展开列表内容3</dd> 
+		 	</dl>
+		 </div>
 
-		
+
 	</body>
 </html>

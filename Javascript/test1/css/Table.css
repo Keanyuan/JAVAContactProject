@@ -1,0 +1,24 @@
+table {
+	border: #FFD700 1px solid;
+	width: 600px;
+	border-collapse: collapse;
+}
+table td {
+	border: #FFD700 1px solid;
+	padding: 10px;
+}
+table th {
+	border: #FFD700 1px solid;
+	padding: 10px;
+	background-color: #999999;
+}
+
+.one {
+	background-color: #8080FF;
+	}
+.two {
+	background-color: #ADFF2F;
+	}
+.hight{
+	background-color: #FF4500;
+	}

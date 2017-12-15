@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>选择城市</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function selectCity(){
+				var collCities = [
+				['选择城市'],
+				['海淀区','朝阳区','东城区'],
+				['浦东区', '杨浦区', '长宁区'],
+				['济南', '青岛', '威海']
+				]
+//				var arr = {
+//					'beijing':['海淀区','朝阳区','东城区'],
+//				}
+				var oSelNode = document.getElementById("selid");
+				var oSubNode = document.getElementById("sublid");
+				var index = oSelNode.selectedIndex;
+				var arrCities = collCities[index];
+				//方法一
+//				for (var i = 0; i < oSubNode.length;) {
+//					//先删除对应的元素
+//					oSubNode.removeChild(oSubNode.options[i]);
+//				}
+				//方法二
+				oSubNode.length = 0;
+				for (var x = 0; x < arrCities.length; x++) {
+					var oOptionNode = document.createElement("option");
+					oOptionNode.innerHTML = arrCities[x];
+					oSubNode.appendChild(oOptionNode);
+				}
+			}
+		</script>
+		<select id="selid" onchange="selectCity()">
+			<option value="">选择省市</option>
+			<option value="">北京</option>
+			<option value="">上海</option>
+			<option value="">山东</option>
+		</select>
+		<select id="sublid">
+			<option value="">选择城市</option>
+		</select>
+	</body>
+</html>
