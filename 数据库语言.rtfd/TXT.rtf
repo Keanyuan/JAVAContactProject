@@ -1,12 +1,14 @@
-{\rtf1\ansi\ansicpg936\cocoartf1561\cocoasubrtf100
+{\rtf1\ansi\ansicpg936\cocoartf1561\cocoasubrtf200
 {\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Menlo-Regular;\f2\fnil\fcharset134 PingFangSC-Regular;
 \f3\fnil\fcharset0 Monaco;\f4\fnil\fcharset0 Consolas;}
 {\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;\red217\green11\blue5;
 \red252\green39\blue18;\red206\green59\blue5;\red0\green90\blue124;\red0\green68\blue254;\red0\green121\blue165;
-\red251\green2\blue7;\red149\green163\blue171;}
+\red251\green2\blue7;\red149\green163\blue171;\red0\green0\blue109;\red188\green235\blue193;\red109\green109\blue109;
+\red82\green0\blue103;\red0\green0\blue254;\red15\green112\blue3;}
 {\*\expandedcolortbl;;\csgray\c0;\csgray\c100000;\cssrgb\c88946\c14202\c0;
 \cssrgb\c100000\c25271\c7591;\cssrgb\c85233\c31565\c0;\csgenericrgb\c0\c35294\c48627;\csgenericrgb\c0\c26667\c99608;\csgenericrgb\c0\c47451\c64706;
-\cssrgb\c100000\c14913\c0;\csgenericrgb\c58431\c63922\c67059;}
+\cssrgb\c100000\c14913\c0;\csgenericrgb\c58431\c63922\c67059;\csgenericrgb\c0\c0\c42745;\csgenericrgb\c73725\c92157\c75686;\csgenericrgb\c42745\c42745\c42745;
+\csgenericrgb\c32157\c0\c40392;\csgenericrgb\c0\c0\c99608;\csgenericrgb\c5882\c43922\c1176;}
 \paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
 
@@ -343,6 +345,577 @@ Https 443\
 \
 
 \f2 //\'c9\'fa\'b3\'c9RSA\'c3\'d8\'d4\'bf\
+
+\f1 keytool -genkey -alias tomcat -keyalg RSA\
+\
+\
+\
+\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 
-\f1 keytool -genkey -alias tomcat -keyalg RSA}
+\f3\fs28 \cf12 \cb13 \CocoaLigature1 USE \cf0 gjp;\
+\
+\cf12 DROP DATABASE IF EXISTS \cf0 dUserDatabase; \cf14 -- 
+\f2 \'c9\'be\'b3\'fd\'ca\'fd\'be\'dd\'bf\'e2
+\f3 \
+\
+\cf12 CREATE DATABASE \cf0 dUserDatabase; \cf14 -- 
+\f2 \'b4\'b4\'bd\'a8\'ca\'fd\'be\'dd\'bf\'e2
+\f3 \
+\
+\cf12 USE \cf0 dUserDatabase; \cf14 -- 
+\f2 \'d3\'a6\'d3\'c3\'ca\'fd\'be\'dd\'bf\'e2
+\f3 \
+\
+\cf12 DROP TABLE IF EXISTS user\cf0 ; \cf14 -- 
+\f2 \'c9\'be\'b3\'fd\'b1\'ed
+\f3 \
+\
+-- 
+\f2 \'b4\'b4\'bd\'a8\'b1\'ed
+\f3 \
+\cf12 CREATE TABLE user\cf0 (\
+	\cf15 id \cf12 INT PRIMARY KEY AUTO_INCREMENT\cf0 ,\cf14 -- 
+\f2 \'b7\'d6\'c0\'e0
+\f3 id\
+	\cf15 name \cf12 VARCHAR\cf0 (\cf16 100\cf0 ) \cf12 NOT NULL DEFAULT \cf17 '' \cf12 COMMENT \cf17 '
+\f2 \'d3\'c3\'bb\'a7\'c3\'fb
+\f3 '\cf0 , \cf14 -- 
+\f2 \'d3\'c3\'bb\'a7\'c3\'fb
+\f3 \
+  \cf15 age \cf12 INT NOT NULL DEFAULT \cf16 0 \cf12 COMMENT \cf17 '
+\f2 \'c4\'ea\'c1\'e4
+\f3 '\cf0 , \cf14 -- 
+\f2 \'c4\'ea\'c1\'e4
+\f3 \
+	\cf15 tel \cf12 VARCHAR\cf0 (\cf16 100\cf0 ) \cf12 NOT NULL DEFAULT \cf17 '' \cf12 COMMENT \cf17 '
+\f2 \'b5\'e7\'bb\'b0\'ba\'c5\'c2\'eb
+\f3 '\cf0 , \cf14 -- 
+\f2 \'b5\'e7\'bb\'b0\'ba\'c5\'c2\'eb
+\f3 \
+	\cf15 password \cf12 VARCHAR\cf0 (\cf16 1000\cf0 ) \cf12 NOT NULL DEFAULT \cf17 '' \cf12 COMMENT \cf17 '
+\f2 \'c3\'dc\'c2\'eb
+\f3 '\cf14 -- 
+\f2 \'c3\'dc\'c2\'eb
+\f3 \
+\cf0 )\cf12 ENGINE\cf0 =InnoDB \cf12 DEFAULT CHARSET\cf0 =utf8; \cf14 -- InnoDB
+\f2 \'d6\'a7\'b3\'d6\'ca\'c2\'ce\'ef\'d7\'d6\'b7\'fb\'c0\'e0\'d0\'cd
+\f3 \
+\
+-- 
+\f2 \'b2\'e5\'c8\'eb\'b6\'e0\'cc\'f5\'ca\'fd\'be\'dd
+\f3 \
+\cf12 INSERT INTO user\cf0 (\cf15 name\cf0 , \cf15 age\cf0 , \cf15 tel\cf0 , \cf15 password\cf0 ) \cf12 VALUES \cf0 (\cf17 'Linda'\cf0 , \cf16 34\cf0 , \cf17 '13762979966'\cf0 , \cf17 '123456'\cf0 ),\
+	(\cf17 'zhengzhou'\cf0 , \cf16 13\cf0 , \cf17 '13762949966'\cf0 , \cf17 '123456'\cf0 ),\
+	(\cf17 'wanglin'\cf0 , \cf16 17\cf0 , \cf17 '18898987765'\cf0 , \cf17 '123456'\cf0 ),\
+	(\cf17 'Kean'\cf0 , \cf16 19\cf0 , \cf17 '13762979966'\cf0 , \cf17 '123456'\cf0 );\
+\
+\cf14 -- 
+\f2 \'b2\'e9\'d1\'af
+\f3 \
+\cf12 SELECT \cf0 * \cf12 FROM user\cf0 ;\
+\
+\cf14 -- 
+\f2 \'b2\'e9\'d1\'af\'b6\'d4\'d3\'a6\'ca\'fd\'be\'dd
+\f3 \
+\cf12 SELECT \cf15 name\cf0 , \cf15 age \cf12 FROM user WHERE \cf15 age \cf0 = \cf16 29\cf0 ;\
+\
+\cf12 SELECT \cf0 * \cf12 FROM user WHERE \cf15 age \cf0 = \cf16 29\cf0 ;\
+\
+\cf14 -- 
+\f2 \'b2\'e9\'d1\'af\'ca\'fd\'be\'dd\'bf\'e2\'d7\'dc\'ca\'fd
+\f3 \
+\cf12 SELECT  count\cf0 (*) \cf12 FROM user\cf0 ;\
+\
+\cf14 -- 
+\f2 \'b8\'fc\'d0\'c2
+\f3  
+\f2 \'ca\'fd\'be\'dd\'b1\'ed\'d6\'d0\'c4\'b3\'b2\'ce\'ca\'fd\'b5\'c4\'ca\'fd\'be\'dd
+\f3 \
+\cf12 UPDATE  user SET \cf15 age \cf0 = \cf16 38 \cf12 WHERE \cf15 name \cf0 = \cf17 'lisi'\cf0 ;\
+\
+\cf14 -- 
+\f2 \'bd\'ab\'d7\'d6\'b6\'ce\'d6\'d0\'b5\'c4\'cc\'d8\'b6\'a8\'d7\'d6\'b7\'fb\'b4\'ae\'c5\'fa\'c1\'bf\'d0\'de\'b8\'c4\'ce\'aa\'c6\'e4\'cb\'fb\'d7\'d6\'b7\'fb\'b4\'ae
+\f3 \
+\cf12 UPDATE  user SET \cf15 name \cf0 = \cf12 replace\cf0 (\cf15 name\cf0 , \cf17 'lisi'\cf0 , \cf17 'wangmang'\cf0 ) \cf12 WHERE \cf15 id \cf0 = \cf16 3\cf0 ;\
+\
+\cf14 -- 
+\f2 \'c9\'be\'b3\'fd
+\f3 id
+\f2 \'ce\'aa
+\f3 5 
+\f2 \'b5\'c4\'d2\'bb\'d0\'d0
+\f3 \
+\cf12 DELETE FROM user WHERE \cf15 id \cf0 = \cf16 5\cf0 ;\
+\
+\cf14 -- 
+\f2 \'c9\'be\'b3\'fd
+\f3 id > 5 
+\f2 \'b5\'c4\'ca\'fd\'be\'dd
+\f3 \
+\cf12 DELETE FROM user WHERE \cf15 id \cf0 > \cf16 5\cf0 ;\
+\
+\cf14 -- 
+\f2 \'c9\'be\'b3\'fd
+\f3 age > 30 
+\f2 \'b5\'c4\'ca\'fd\'be\'dd
+\f3 \
+\cf12 DELETE FROM user WHERE \cf15 age\cf0 >\cf16 30\cf0 ;\
+\
+\cf14 -- 
+\f2 \'b2\'e9\'d1\'af
+\f3  
+\f2 \'d2\'d4
+\f3 an
+\f2 \'bd\'e1\'ce\'b2\'b5\'c4\'ca\'fd\'be\'dd
+\f3 \
+\cf12 SELECT  \cf0 * \cf12 FROM user WHERE \cf15 name \cf12 LIKE \cf17 '%an'\cf0 ;\
+\
+\cf14 -- 
+\f2 \'b2\'e9\'d1\'af\'d2\'d4
+\f3 z
+\f2 \'bf\'aa\'cd\'b7\'b5\'c4\'ca\'fd\'be\'dd
+\f3 \
+\cf12 SELECT  \cf0 * \cf12 FROM user WHERE \cf15 name \cf12 LIKE \cf17 'z%'\cf0 ;\
+\
+\
+\cf14 -- ||-------------------------------------\
+\
+\cf12 DROP TABLE IF EXISTS \cf0 wbsites; \cf14 -- 
+\f2 \'c9\'be\'b3\'fd\'b1\'ed
+\f3 \
+-- 
+\f2 \'b4\'b4\'bd\'a8\'b1\'ed
+\f3 \
+\cf12 CREATE TABLE \cf0 wbsites(\
+	\cf15 wid \cf12 INT PRIMARY KEY AUTO_INCREMENT\cf0 ,\cf14 -- 
+\f2 \'b7\'d6\'c0\'e0
+\f3 id\
+	\cf15 name \cf12 VARCHAR\cf0 (\cf16 100\cf0 ) \cf12 NOT NULL DEFAULT \cf17 '' \cf12 COMMENT \cf17 '
+\f2 \'c3\'fb\'d7\'d6
+\f3 '\cf0 , \cf14 -- 
+\f2 \'c3\'fb\'d7\'d6
+\f3 \
+  \cf15 url \cf12 VARCHAR\cf0 (\cf16 100\cf0 ) \cf12 NOT NULL DEFAULT \cf17 '' \cf12 COMMENT \cf17 '
+\f2 \'cd\'f8\'d5\'be
+\f3 '\cf0 , \cf14 -- 
+\f2 \'cd\'f8\'d5\'be
+\f3 \
+	\cf15 alexa \cf12 VARCHAR\cf0 (\cf16 100\cf0 ) \cf12 NOT NULL DEFAULT \cf17 '' \cf12 COMMENT \cf17 '
+\f2 \'c5\'c5\'c3\'fb
+\f3 '\cf0 , \cf14 -- 
+\f2 \'c5\'c5\'c3\'fb
+\f3 \
+	\cf15 country \cf12 VARCHAR\cf0 (\cf16 100\cf0 ) \cf12 NOT NULL DEFAULT \cf17 '' \cf12 COMMENT \cf17 '
+\f2 \'b3\'c7\'ca\'d0
+\f3 '\cf14 -- 
+\f2 \'b3\'c7\'ca\'d0
+\f3 \
+\cf0 )\cf12 ENGINE\cf0 =InnoDB \cf12 DEFAULT CHARSET\cf0 =utf8; \cf14 -- InnoDB
+\f2 \'d6\'a7\'b3\'d6\'ca\'c2\'ce\'ef\'d7\'d6\'b7\'fb\'c0\'e0\'d0\'cd
+\f3 \
+\
+-- 
+\f2 \'b2\'e5\'c8\'eb\'b6\'e0\'cc\'f5\'ca\'fd\'be\'dd
+\f3 \
+\cf12 INSERT INTO \cf0 wbsites(\cf15 name\cf0 , \cf15 url\cf0 , \cf15 alexa\cf0 , \cf15 country\cf0 ) \cf12 VALUES \cf0 (\cf17 'Google'\cf0 , \cf17 'https://www.google.cm/'\cf0 , \cf17 '1'\cf0 , \cf17 'USA'\cf0 ),\
+	(\cf17 '
+\f2 \'cc\'d4\'b1\'a6
+\f3 '\cf0 , \cf17 'https://www.taobao.com/'\cf0 , \cf17 '13'\cf0 , \cf17 'CN'\cf0 ),\
+	(\cf17 '
+\f2 \'b2\'cb\'c4\'f1\'bd\'cc\'b3\'cc
+\f3 '\cf0 , \cf17 'http://www.runoob.com/'\cf0 , \cf17 '4689'\cf0 , \cf17 'CN'\cf0 ),\
+	(\cf17 '
+\f2 \'ce\'a2\'b2\'a9
+\f3 '\cf0 , \cf17 'http://weibo.com/'\cf0 , \cf17 '20'\cf0 , \cf17 'CN'\cf0 ),\
+	(\cf17 'Facebook'\cf0 , \cf17 'https://www.facebook.com/'\cf0 , \cf17 '3'\cf0 , \cf17 'USA'\cf0 ),\
+	(\cf17 'stackoverflow'\cf0 , \cf17 'http://stackoverflow.com/'\cf0 , \cf17 '0'\cf0 , \cf17 'IND'\cf0 );\
+\
+\
+\cf12 DROP TABLE IF EXISTS \cf0 apps; \cf14 -- 
+\f2 \'c9\'be\'b3\'fd\'b1\'ed
+\f3 \
+-- 
+\f2 \'b4\'b4\'bd\'a8\'b1\'ed
+\f3 \
+\cf12 CREATE TABLE \cf0 apps(\
+	\cf15 aid \cf12 INT PRIMARY KEY AUTO_INCREMENT\cf0 ,\cf14 -- 
+\f2 \'b7\'d6\'c0\'e0
+\f3 id\
+	\cf15 app_name \cf12 VARCHAR\cf0 (\cf16 100\cf0 ) \cf12 NOT NULL DEFAULT \cf17 '' \cf12 COMMENT \cf17 'app
+\f2 \'c3\'fb\'d7\'d6
+\f3 '\cf0 , \cf14 -- 
+\f2 \'c3\'fb\'d7\'d6
+\f3 \
+  \cf15 url \cf12 VARCHAR\cf0 (\cf16 100\cf0 ) \cf12 NOT NULL DEFAULT \cf17 '' \cf12 COMMENT \cf17 '
+\f2 \'cd\'f8\'d5\'be
+\f3 '\cf0 , \cf14 -- 
+\f2 \'cd\'f8\'d5\'be
+\f3 \
+	\cf15 country \cf12 VARCHAR\cf0 (\cf16 100\cf0 ) \cf12 NOT NULL DEFAULT \cf17 '' \cf12 COMMENT \cf17 '
+\f2 \'b3\'c7\'ca\'d0
+\f3 '\
+\cf0 )\cf12 ENGINE\cf0 =InnoDB \cf12 DEFAULT CHARSET\cf0 =utf8; \cf14 -- InnoDB
+\f2 \'d6\'a7\'b3\'d6\'ca\'c2\'ce\'ef\'d7\'d6\'b7\'fb\'c0\'e0\'d0\'cd
+\f3 \
+\
+-- 
+\f2 \'b2\'e5\'c8\'eb\'b6\'e0\'cc\'f5\'ca\'fd\'be\'dd
+\f3 \
+\cf12 INSERT INTO \cf0 apps(\cf15 app_name\cf0 , \cf15 url\cf0 , \cf15 country\cf0 )\
+\cf12 VALUES\
+	\cf0 (\cf17 'QQ APP'\cf0 , \cf17 'http://im.qq.com/'\cf0 , \cf17 'CN'\cf0 ),\
+	(\cf17 '
+\f2 \'ce\'a2\'b2\'a9
+\f3  APP'\cf0 , \cf17 'http://weibo.com/'\cf0 , \cf17 'CN'\cf0 ),\
+	(\cf17 '
+\f2 \'cc\'d4\'b1\'a6
+\f3  APP'\cf0 , \cf17 'https://www.taobao.com/'\cf0 , \cf17 'CN'\cf0 );\
+\
+\cf14 -- 
+\f2 \'b4\'d3
+\f3  "Websites" 
+\f2 \'ba\'cd
+\f3  "apps" 
+\f2 \'b1\'ed\'d6\'d0\'d1\'a1\'c8\'a1\'cb\'f9\'d3\'d0\'b2\'bb\'cd\'ac\'b5\'c4
+\f3 country
+\f2 \'a3\'a8\'d6\'bb\'d3\'d0\'b2\'bb\'cd\'ac\'b5\'c4\'d6\'b5
+\f3 )\
+\cf12 SELECT \cf15 country \cf12 FROM \cf0 wbsites\
+\cf12 UNION\
+SELECT \cf15 country \cf12 FROM \cf0 apps\
+\cf12 ORDER BY  \cf15 country\cf0 ;\
+\
+\cf14 -- 
+\f2 \'ca\'b9\'d3\'c3
+\f3  UNION ALL 
+\f2 \'b4\'d3
+\f3  "Websites" 
+\f2 \'ba\'cd
+\f3  "apps" 
+\f2 \'b1\'ed\'d6\'d0\'d1\'a1\'c8\'a1\'cb\'f9\'d3\'d0\'b5\'c4
+\f3 country
+\f2 \'a3\'a8\'d2\'b2\'d3\'d0\'d6\'d8\'b8\'b4\'b5\'c4\'d6\'b5\'a3\'a9
+\f3 \
+\cf12 SELECT \cf15 country \cf12 FROM \cf0 wbsites\
+\cf12 UNION ALL\
+SELECT \cf15 country \cf12 FROM \cf0 apps\
+\cf12 ORDER BY \cf15 country\cf0 ;\
+\
+\cf14 -- 
+\f2 \'ca\'b9\'d3\'c3
+\f3  UNION ALL 
+\f2 \'b4\'d3
+\f3  "Websites" 
+\f2 \'ba\'cd
+\f3  "apps" 
+\f2 \'b1\'ed\'d6\'d0\'d1\'a1\'c8\'a1\'cb\'f9\'d3\'d0\'b5\'c4\'d6\'d0\'b9\'fa
+\f3 (CN)
+\f2 \'b5\'c4\'ca\'fd\'be\'dd\'a3\'a8\'d2\'b2\'d3\'d0\'d6\'d8\'b8\'b4\'b5\'c4\'d6\'b5
+\f3 )\
+\cf12 SELECT \cf15 country\cf0 , \cf15 name \cf12 FROM \cf0 wbsites\
+\cf12 WHERE \cf15 country\cf0 =\cf17 'CN'\
+\cf12 UNION ALL\
+SELECT \cf15 country\cf0 , \cf15 app_name \cf12 FROM \cf0 apps\
+\cf12 WHERE \cf15 country\cf0 =\cf17 'CN'\
+\cf12 ORDER BY \cf15 country\cf0 ;\
+\
+\cf14 -- 
+\f2 \'c9\'fd\'d0\'f2\'c5\'c5\'c1\'d0
+\f3 \
+\cf12 SELECT \cf0 * \cf12 from user ORDER BY \cf15 age \cf12 ASC\cf0 ;\
+\cf14 -- 
+\f2 \'bd\'b5\'d0\'f2\'c5\'c5\'c1\'d0
+\f3 \
+\cf12 SELECT \cf0 * \cf12 from user ORDER BY \cf15 age \cf12 DESC\cf0 ;\
+\
+\cf14 -- 
+\f2 \'bd\'ab\'ca\'fd\'be\'dd\'b1\'ed\'b0\'b4\'c4\'ea\'c1\'e4\'bd\'f8\'d0\'d0\'b7\'d6\'d7\'e9\'a3\'ac\'b2\'a2\'cd\'b3\'bc\'c6\'c3\'bf\'b8\'f6\'c4\'ea\'c1\'e4\'d3\'d0\'b6\'e0\'c9\'d9\'cc\'f5\'bc\'c7\'c2\'bc
+\f3 \
+\cf12 SELECT  \cf15 age\cf0 ,\cf12 count\cf0 (*) \cf12 FROM user GROUP BY \cf15 age\cf0 ;\
+\
+\cf14 -- 
+\f2 \'bd\'ab\'d3\'c3\'bb\'a7
+\f3  
+\f2 \'ba\'cd\'c4\'ea\'c1\'e4\'bd\'f8\'d0\'d0\'b7\'d6\'d7\'e9
+\f3  
+\f2 \'b2\'a2\'cd\'b3\'bc\'c6\'c4\'ea\'c1\'e4\'d7\'dc\'ba\'cd
+\f3 \
+\cf12 SELECT \cf15 name\cf0 , SUM(\cf15 age\cf0 ) \cf12 AS \cf0 ages \cf12 FROM user GROUP BY  \cf15 name \cf12 WITH ROLLUP \cf0 ;\
+\
+\cf14 -- 
+\f2 \'bd\'ab\'d3\'c3\'bb\'a7
+\f3  
+\f2 \'ba\'cd\'c4\'ea\'c1\'e4\'bd\'f8\'d0\'d0\'b7\'d6\'d7\'e9
+\f3  
+\f2 \'b2\'a2\'cd\'b3\'bc\'c6\'c4\'ea\'c1\'e4\'d7\'dc\'ba\'cd
+\f3 \
+\cf12 SELECT  coalesce\cf0 (\cf15 name\cf0 , \cf17 '
+\f2 \'d7\'dc\'c4\'ea\'c1\'e4
+\f3 '\cf0 ), sum(\cf15 age\cf0 ) \cf12 AS \cf0 ages \cf12 FROM user GROUP BY \cf15 name \cf12 WITH ROLLUP \cf0 ;\
+\
+\cf14 -- 
+\f2 \'ca\'b9\'d3\'c3
+\f3 MySQL
+\f2 \'b5\'c4
+\f3 INNER JOIN(
+\f2 \'d2\'b2\'bf\'c9\'d2\'d4\'ca\'a1\'c2\'d4
+\f3  INNER 
+\f2 \'ca\'b9\'d3\'c3
+\f3  JOIN
+\f2 \'a3\'ac\'d0\'a7\'b9\'fb\'d2\'bb\'d1\'f9
+\f3 )
+\f2 \'c0\'b4\'c1\'ac\'bd\'d3\'d2\'d4\'c9\'cf\'c1\'bd\'d5\'c5\'b1\'ed\'c0\'b4\'b6\'c1\'c8\'a1
+\f3 wbsites
+\f2 \'b1\'ed\'d6\'d0\'cb\'f9\'d3\'d0
+\f3 url
+\f2 \'d7\'d6\'b6\'ce\'d4\'da
+\f3 apps
+\f2 \'b1\'ed\'d6\'d0\'b6\'d4\'d3\'a6\'b5\'c4
+\f3 app_name\
+\cf12 SELECT  \cf0 A.\cf15 name\cf0 , A.\cf15 url\cf0 , B.\cf15 app_name \cf12 FROM \cf0 wbsites A \cf12 INNER JOIN \cf0 apps B \cf12 ON \cf0 A.\cf15 url \cf0 = B.\cf15 url\cf0 ;\
+\
+\cf14 -- 
+\f2 \'d2\'d4
+\f3  wbsites 
+\f2 \'ce\'aa\'d7\'f3\'b1\'ed\'a3\'ac
+\f3 apps 
+\f2 \'ce\'aa\'d3\'d2\'b1\'ed\'a3\'ac\'b6\'c1\'c8\'a1\'d7\'f3\'b1\'df\'ca\'fd\'be\'dd\'b1\'ed\'b5\'c4\'c8\'ab\'b2\'bf\'ca\'fd\'be\'dd
+\f3 ,
+\f2 \'bc\'b4\'b1\'e3\'d3\'d2\'b1\'df\'b1\'ed\'ce\'de\'b6\'d4\'d3\'a6\'ca\'fd\'be\'dd
+\f3 \
+\cf12 SELECT  \cf0 A.\cf15 name\cf0 , A.\cf15 url\cf0 , B.\cf15 app_name \cf12 FROM \cf0 wbsites A \cf12 LEFT JOIN \cf0 apps B \cf12 ON \cf0 A.\cf15 url \cf0 = B.\cf15 url\cf0 ;\
+\
+\cf14 -- 
+\f2 \'d2\'d4
+\f3  wbsites 
+\f2 \'ce\'aa\'d7\'f3\'b1\'ed\'a3\'ac
+\f3 apps 
+\f2 \'ce\'aa\'d3\'d2\'b1\'ed\'a3\'ac\'b6\'c1\'c8\'a1\'d3\'d2\'b1\'df\'ca\'fd\'be\'dd\'b1\'ed\'b5\'c4\'c8\'ab\'b2\'bf\'ca\'fd\'be\'dd
+\f3 ,
+\f2 \'bc\'b4\'b1\'e3\'d7\'f3\'b1\'df\'b1\'ed\'ce\'de\'b6\'d4\'d3\'a6\'ca\'fd\'be\'dd
+\f3 \
+\cf12 SELECT  \cf0 A.\cf15 name\cf0 , A.\cf15 url\cf0 , B.\cf15 app_name \cf12 FROM \cf0 wbsites A \cf12 RIGHT JOIN \cf0 apps B \cf12 ON \cf0 A.\cf15 url \cf0 = B.\cf15 url\cf0 ;\
+\
+\cf14 -- 
+\f2 \'b2\'e9\'d5\'d2\'ca\'fd\'be\'dd\'b1\'ed\'d6\'d0
+\f3  age 
+\f2 \'c1\'d0\'b2\'bb\'ce\'aa
+\f3  NULL\
+\cf12 SELECT \cf0 * \cf12 from user WHERE \cf15 age \cf12 IS NOT NULL\cf0 ;\
+\cf14 -- 
+\f2 \'b2\'e9\'d5\'d2\'ca\'fd\'be\'dd\'b1\'ed\'d6\'d0
+\f3  age 
+\f2 \'c1\'d0\'ce\'aa
+\f3  NULL\
+\cf12 SELECT \cf0 * \cf12 from user WHERE \cf15 age \cf12 IS NULL\cf0 ;\
+\
+\cf14 -- 
+\f2 \'b2\'e9\'d5\'d2
+\f3 name
+\f2 \'d7\'d6\'b6\'ce\'d6\'d0\'d2\'d4
+\f3 'st'
+\f2 \'ce\'aa\'bf\'aa\'cd\'b7\'b5\'c4\'cb\'f9\'d3\'d0\'ca\'fd\'be\'dd
+\f3 \
+\cf12 SELECT \cf0 * \cf12 FROM user WHERE \cf15 name \cf12 REGEXP \cf17 '^li'\cf0 ;\
+\
+\cf14 -- 
+\f2 \'b2\'e9\'d5\'d2
+\f3 name
+\f2 \'d7\'d6\'b6\'ce\'d6\'d0\'d2\'d4
+\f3 'n'
+\f2 \'ce\'aa\'bd\'e1\'ce\'b2\'b5\'c4\'cb\'f9\'d3\'d0\'ca\'fd\'be\'dd
+\f3 \
+\cf12 SELECT \cf0 * \cf12 FROM user WHERE \cf15 name \cf12 REGEXP \cf17 'n$'\cf0 ;\
+\
+\cf14 -- 
+\f2 \'b2\'e9\'d5\'d2
+\f3 name
+\f2 \'d7\'d6\'b6\'ce\'d6\'d0\'b0\'fc\'ba\'ac
+\f3 ''
+\f2 \'ce\'aa\'bd\'e1\'ce\'b2\'b5\'c4\'cb\'f9\'d3\'d0\'ca\'fd\'be\'dd
+\f3 \
+\cf12 SELECT \cf0 * \cf12 FROM user WHERE \cf15 name \cf12 REGEXP \cf17 'i'\cf0 ;\
+\
+\cf14 -- 
+\f2 \'b2\'e9\'d5\'d2
+\f3 name
+\f2 \'d7\'d6\'b6\'ce\'d6\'d0\'d2\'d4\'d4\'aa\'d2\'f4\'d7\'d6\'b7\'fb\'bf\'aa\'cd\'b7\'bb\'f2\'d2\'d4
+\f3 'i'
+\f2 \'d7\'d6\'b7\'fb\'b4\'ae\'bd\'e1\'ce\'b2\'b5\'c4\'cb\'f9\'d3\'d0\'ca\'fd\'be\'dd\'a3\'ba
+\f3 \
+\cf12 SELECT \cf0 * \cf12 FROM user WHERE \cf15 name \cf12 REGEXP \cf17 '^[aeiou]|i$'\cf0 ;\
+\
+\cf14 -- ||-------------------------------------\
+\cf12 CREATE TABLE \cf0 runoob_transaction_test( \cf15 id \cf12 int\cf0 (\cf16 5\cf0 )) \cf12 engine\cf0 =innodb;\
+\cf12 select \cf0 * \cf12 from \cf0 runoob_transaction_test;\
+\cf12 begin\cf0 ;\cf14 -- 
+\f2 \'bf\'aa\'ca\'bc\'ca\'c2\'ce\'f1
+\f3 \
+\cf12 insert into \cf0 runoob_transaction_test \cf12 value\cf0 (\cf16 5\cf0 );\
+\cf12 insert into \cf0 runoob_transaction_test \cf12 value\cf0 (\cf16 6\cf0 );\
+\cf12 commit\cf0 ; \cf14 # 
+\f2 \'cc\'e1\'bd\'bb\'ca\'c2\'ce\'f1
+\f3 \
+\cf12 select \cf0 * \cf12 from \cf0 runoob_transaction_test;\cf14 # 
+\f2 \'d2\'f2\'ce\'aa\'bb\'d8\'b9\'f6\'cb\'f9\'d2\'d4\'ca\'fd\'be\'dd\'c3\'bb\'d3\'d0\'b2\'e5\'c8\'eb
+\f3 \
+\
+-- ||-------------------------------------\
+\cf12 create table IF NOT EXISTS \cf0 testalter_tbl  (\
+	\cf15 i \cf12 INT\cf0 ,\
+	\cf15 c \cf12 CHAR\cf0 (\cf16 1\cf0 )\
+);\
+\
+\cf14 -- 
+\f2 \'cf\'d4\'ca\'be\'cb\'f9\'d3\'d0\'c1\'d0
+\f3 \
+\cf12 SHOW  COLUMNS  FROM  \cf0 testalter_tbl;\
+\cf14 -- 
+\f2 \'cf\'d4\'ca\'be\'b6\'d4\'d3\'a6\'ca\'fd\'be\'dd
+\f3 \
+\cf12 SELECT \cf0 * \cf12 FROM \cf0 testalter_tbl;\
+\
+\cf14 -- 
+\f2 \'ca\'b9\'d3\'c3\'c1\'cb
+\f3  ALTER 
+\f2 \'c3\'fc\'c1\'ee\'bc\'b0
+\f3  DROP 
+\f2 \'d7\'d3\'be\'e4\'c0\'b4\'c9\'be\'b3\'fd\'d2\'d4\'c9\'cf\'b4\'b4\'bd\'a8\'b1\'ed\'b5\'c4
+\f3  i 
+\f2 \'d7\'d6\'b6\'ce
+\f3 \
+\cf12 ALTER TABLE \cf0 testalter_tbl \cf12 DROP  \cf15 i\cf0 ;\
+\
+\cf12 ALTER TABLE  \cf0 testalter_tbl \cf12 ADD \cf15 i \cf12 INT\cf0 ;\
+\
+\cf14 --  FIRST 
+\f2 \'ba\'cd
+\f3  AFTER 
+\f2 \'b9\'d8\'bc\'fc\'d7\'d6\'d6\'bb\'d5\'bc\'d3\'c3\'d3\'da
+\f3  ADD 
+\f2 \'d7\'d3\'be\'e4\'a3\'ac
+\f3 \
+-- 
+\f2 \'cb\'f9\'d2\'d4\'c8\'e7\'b9\'fb\'c4\'e3\'cf\'eb\'d6\'d8\'d6\'c3\'ca\'fd\'be\'dd\'b1\'ed\'d7\'d6\'b6\'ce\'b5\'c4\'ce\'bb\'d6\'c3\'be\'cd\'d0\'e8\'d2\'aa\'cf\'c8\'ca\'b9\'d3\'c3
+\f3  DROP 
+\f2 \'c9\'be\'b3\'fd\'d7\'d6\'b6\'ce\'c8\'bb\'ba\'f3\'ca\'b9\'d3\'c3
+\f3  ADD 
+\f2 \'c0\'b4\'cc\'ed\'bc\'d3\'d7\'d6\'b6\'ce\'b2\'a2\'c9\'e8\'d6\'c3\'ce\'bb\'d6\'c3\'a1\'a3
+\f3 \
+\cf12 ALTER TABLE \cf0 testalter_tbl \cf12 DROP \cf15 i\cf0 ;\
+\cf12 ALTER TABLE \cf0 testalter_tbl \cf12 ADD \cf15 i \cf12 INT FIRST\cf0 ;\
+\cf12 ALTER TABLE \cf0 testalter_tbl \cf12 DROP \cf15 i\cf0 ;\
+\cf12 ALTER TABLE \cf0 testalter_tbl \cf12 ADD \cf15 i \cf12 INT AFTER \cf15 c\cf0 ;\
+\
+\cf14 -- 
+\f2 \'b0\'d1\'d7\'d6\'b6\'ce
+\f3  c 
+\f2 \'b5\'c4\'c0\'e0\'d0\'cd\'b4\'d3
+\f3  CHAR(1) 
+\f2 \'b8\'c4\'ce\'aa
+\f3  CHAR(10)\
+\cf12 ALTER TABLE \cf0 testalter_tbl \cf12 MODIFY \cf15 c \cf12 CHAR\cf0 (\cf16 10\cf0 );\
+\
+\cf14 -- 
+\f2 \'d4\'da
+\f3  CHANGE 
+\f2 \'b9\'d8\'bc\'fc\'d7\'d6\'d6\'ae\'ba\'f3\'a3\'ac\'bd\'f4\'b8\'fa\'d7\'c5\'b5\'c4\'ca\'c7\'c4\'e3\'d2\'aa\'d0\'de\'b8\'c4\'b5\'c4\'d7\'d6\'b6\'ce\'c3\'fb\'a3\'ac\'c8\'bb\'ba\'f3\'d6\'b8\'b6\'a8\'d0\'c2\'d7\'d6\'b6\'ce\'c3\'fb\'bc\'b0\'c0\'e0\'d0\'cd\'a1\'a3
+\f3 \
+\cf12 ALTER TABLE \cf0 testalter_tbl \cf12 CHANGE \cf15 i j \cf12 BIGINT\cf0 ;\
+\
+\cf12 ALTER TABLE \cf0 testalter_tbl \cf12 CHANGE \cf15 j i \cf12 INT\cf0 ;\
+\cf14 -- 
+\f2 \'d6\'b8\'b6\'a8\'d7\'d6\'b6\'ce
+\f3  j 
+\f2 \'ce\'aa
+\f3  NOT NULL 
+\f2 \'c7\'d2\'c4\'ac\'c8\'cf\'d6\'b5\'ce\'aa
+\f3 100\
+\cf12 ALTER TABLE \cf0 testalter_tbl \cf12 MODIFY \cf15 i \cf12 BIGINT NOT NULL DEFAULT \cf16 100\cf0 ;\
+\
+\cf12 ALTER TABLE \cf0 testalter_tbl \cf12 ALTER \cf15 i \cf12 SET DEFAULT \cf16 1000\cf0 ;\
+\
+\cf14 -- 
+\f2 \'ca\'b9\'d3\'c3
+\f3  ALTER 
+\f2 \'c3\'fc\'c1\'ee\'bc\'b0
+\f3  DROP
+\f2 \'d7\'d3\'be\'e4\'c0\'b4\'c9\'be\'b3\'fd\'d7\'d6\'b6\'ce\'b5\'c4\'c4\'ac\'c8\'cf\'d6\'b5
+\f3 \
+\cf12 ALTER TABLE \cf0 testalter_tbl \cf12 ALTER \cf15 i \cf12 DROP DEFAULT\cf0 ;\
+\
+\cf12 SHOW  COLUMNS  FROM  \cf0 testalter_tbl;\
+\
+\cf14 -- 
+\f2 \'ca\'b9\'d3\'c3
+\f3  ALTER 
+\f2 \'c3\'fc\'c1\'ee\'bc\'b0
+\f3  TYPE 
+\f2 \'d7\'d3\'be\'e4\'c0\'b4\'cd\'ea\'b3\'c9
+\f3  
+\f2 \'bd\'ab\'b1\'ed
+\f3  testalter_tbl 
+\f2 \'b5\'c4\'c0\'e0\'d0\'cd\'d0\'de\'b8\'c4\'ce\'aa
+\f3  MYISAM\
+\cf12 ALTER TABLE \cf0 testalter_tbl \cf12 ENGINE \cf0 = MYISAM;\
+\
+\cf14 -- 
+\f2 \'b2\'e9\'bf\'b4\'ca\'fd\'be\'dd\'b1\'ed\'c0\'e0\'d0\'cd\'bf\'c9\'d2\'d4\'ca\'b9\'d3\'c3
+\f3  SHOW TABLE STATUS 
+\f2 \'d3\'ef\'be\'e4
+\f3 \
+\cf12 SHOW TABLE STATUS LIKE \cf17 'testalter_tbl'\cf0 ;\
+\
+\cf14 -- 
+\f2 \'d4\'da
+\f3  ALTER TABLE 
+\f2 \'d3\'ef\'be\'e4\'d6\'d0\'ca\'b9\'d3\'c3
+\f3  RENAME 
+\f2 \'d7\'d3\'be\'e4
+\f3  
+\f2 \'bd\'ab\'ca\'fd\'be\'dd\'b1\'ed
+\f3  testalter_tbl 
+\f2 \'d6\'d8\'c3\'fc\'c3\'fb\'ce\'aa
+\f3  alter_tbl\
+\cf12 ALTER TABLE \cf0 alter_tbl \cf12 RENAME TO \cf0 testalter_tbl;\
+\
+\cf14 -- 
+\f2 \'ca\'b9\'d3\'c3
+\f3 ALTER 
+\f2 \'c3\'fc\'c1\'ee\'cc\'ed\'bc\'d3\'ba\'cd\'c9\'be\'b3\'fd\'cb\'f7\'d2\'fd
+\f3 \
+\cf12 ALTER TABLE \cf0 testalter_tbl \cf12 ADD INDEX \cf0 (\cf15 c\cf0 );\
+\
+\cf12 ALTER TABLE \cf0 testalter_tbl \cf12 DROP INDEX \cf0 c;\
+\
+\cf14 -- 
+\f2 \'ca\'b9\'d3\'c3
+\f3  ALTER 
+\f2 \'c3\'fc\'c1\'ee\'cc\'ed\'bc\'d3\'ba\'cd\'c9\'be\'b3\'fd\'d6\'f7\'bc\'fc
+\f3  
+\f2 \'d0\'e8\'d2\'aa\'c8\'b7\'b1\'a3\'b8\'c3\'d6\'f7\'bc\'fc\'c4\'ac\'c8\'cf\'b2\'bb\'ce\'aa\'bf\'d5\'a3\'a8
+\f3 NOT NULL
+\f2 \'a3\'a9
+\f3 \
+\cf12 ALTER TABLE \cf0 testalter_tbl \cf12 MODIFY \cf15 i \cf12 INT NOT NULL\cf0 ;\
+\cf12 ALTER TABLE \cf0 testalter_tbl \cf12 ADD PRIMARY KEY \cf0 (\cf15 i\cf0 );\
+\cf12 ALTER TABLE \cf0 testalter_tbl \cf12 DROP PRIMARY KEY\cf0 ;\
+\cf14 -- 
+\f2 \'cf\'d4\'ca\'be\'cb\'f7\'d2\'fd\'d0\'c5\'cf\'a2
+\f3 \
+\cf12 SHOW INDEX FROM \cf0 testalter_tbl;\
+\
+\cf14 -- 
+\f2 \'ca\'b9\'d3\'c3
+\f3  LOAD DATA 
+\f2 \'b5\'bc\'c8\'eb\'ca\'fd\'be\'dd
+\f3 \
+-- LOAD DATA LOCAL INFILE 'dump.txt' INTO TABLE mytbl;\
+-- LOAD DATA LOCAL INFILE 'dump.txt' INTO TABLE mytbl FIELDS TERMINATED BY ':' LINES TERMINATED BY '\\r\\n';\
+\
+-- 
+\f2 \'c9\'e8\'d6\'c3\'d0\'f2\'c1\'d0\'b5\'c4\'bf\'aa\'ca\'bc\'d6\'b5
+\f3 \
+-- ALTER TABLE t AUTO_INCREMENT = 100;\
+}
