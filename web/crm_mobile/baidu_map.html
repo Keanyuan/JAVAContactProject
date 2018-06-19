@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>百度地图</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css">
+    <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=1.2"></script>
+    <script type="text/javascript">
+        function initialize() {
+            var  map = new BMap.Map('baiduMap');
+            map.addControl(new BMap.NavigationControl());
+            map.addControl(new BMap.ScaleControl());
+            map.addControl(new BMap.OverviewMapControl());
+            map.addControl(new  BMap.MapTypeControl());
+            map.setCurrentCity('上海'); //设置当前城市信息
+            var point = new BMap.Point(121.355798,31.267405);
+            map.centerAndZoom(point, 15);
+            var marker = new BMap.Marker(point);//创建标注
+            map.addOverlay(marker);//将标注加到地图中
+        }
+        function loadScript() {
+            var  script = document.createElement("script");
+            script.src = "http://api.map.baidu.com/api?v=1.2&callback=initialize";
+            document.body.appendChild(script);
+        }
+        window.onload = loadScript();
+    </script>
+</head>
+<body>
+<div data-role="page">
+    <div data-role="header">
+        <a href="user_list.html" data-role="button" data-theme="e" data-ajax="false">返回上一级</a>
+        <h1>百度地图</h1>
+    </div>
+    <div data-role="content" style="width: 100%;height: 420px" id="baiduMap">
+    </div>
+    <div data-role="footer" data-position="fixed" align="center">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="index.html" data-ajax="false" >景点介绍</a></li>
+                <li><a href="user_list.html" data-ajax="false" class="ui-btn-active">个人信息</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>
