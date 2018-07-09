@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery遍历</title>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <link href="//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <script src="//cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("button").click(function () {
+                //设置样式
+                $("#target1").css("color", "red");
+                //设置样式
+                $("#target1").prop("disabled", true);
+                //移除
+                $("#target4").remove();
+                //移动
+                $("#target2").appendTo("#right-well");
+                //复制
+                $("#target5").clone().appendTo("#left-well");
+                //设置父元素颜色
+                $("#target1").parent().css("background-color", "red");
+                //设置子元素的颜色
+                $("#right-well").children().css("color", "orange");
+                //选取选择器获取子元素
+                $(".target:nth-child(2)").addClass("animated bounce");
+                //选择器操作奇数索引元素
+                $(".target:odd").addClass("animated shake");
+                //操作偶数索引元素
+                $(".target:even").addClass("animated bounce");
+                //修改整个页面动画 fadeOut
+                $("body").addClass("animated hinge");
+            });
+
+        });
+    </script>
+</head>
+<body>
+<div class="container">
+    <div class="container-fluid">
+        <h3 class="text-primary text-center">jQuery Playground</h3>
+        <div class="row">
+            <div class="col-xs-6">
+                <h4>#left-well</h4>
+                <div class="well" id="left-well">
+                    <button class="btn btn-default target" id="target1">#target1</button>
+                    <button class="btn btn-default target" id="target2">#target2</button>
+                    <button class="btn btn-default target" id="target3">#target3</button>
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <h4>#right-well</h4>
+                <div class="well" id="right-well">
+                    <button class="btn btn-default target" id="target4">#target4</button>
+                    <button class="btn btn-default target" id="target5">#target5</button>
+                    <button class="btn btn-default target" id="target6">#target6</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

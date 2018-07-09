@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e075811f-0e39-4151-8722-4a8980edb49b" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jQueryAJAX.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jQuery遍历.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/my_jquery_conflict.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/test.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/test.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jQuery实战.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/my_jquery_css.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/my_jquery_css.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jQuery1.html" beforeDir="false" afterPath="$PROJECT_DIR$/jQuery1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/my_jquery_functions.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/my_jquery_functions.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -29,22 +20,22 @@
       <file leaf-file-name="my_jquery_css.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/my_jquery_css.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
+            <state relative-caret-position="316">
               <caret line="30" column="31" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="31" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="my_jquery_functions.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="my_jquery_functions.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/my_jquery_functions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="4" lean-forward="true" selection-start-line="1" selection-start-column="4" selection-end-line="3" selection-end-column="7" />
+            <state relative-caret-position="-6890">
+              <caret line="11" column="23" lean-forward="true" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="my_jquery_conflict.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="my_jquery_conflict.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/my_jquery_conflict.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
@@ -80,6 +71,15 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="jQuery实战.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jQuery实战.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="32" column="34" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -98,6 +98,7 @@
       <find>div2</find>
       <find>div</find>
       <find>div6</find>
+      <find>disabled</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -109,14 +110,15 @@
         <option value="$PROJECT_DIR$/js/jQuery1.js" />
         <option value="$PROJECT_DIR$/js/jquery.js" />
         <option value="$PROJECT_DIR$/jQuery1.html" />
-        <option value="$PROJECT_DIR$/css/my_jquery_css.css" />
         <option value="$PROJECT_DIR$/jQuery遍历.html" />
         <option value="$PROJECT_DIR$/static/demo_test.txt" />
         <option value="$PROJECT_DIR$/static/test.txt" />
         <option value="$PROJECT_DIR$/static/test.html" />
-        <option value="$PROJECT_DIR$/jQueryAJAX.html" />
         <option value="$PROJECT_DIR$/js/my_jquery_functions.js" />
         <option value="$PROJECT_DIR$/js/my_jquery_conflict.js" />
+        <option value="$PROJECT_DIR$/jQueryAJAX.html" />
+        <option value="$PROJECT_DIR$/css/my_jquery_css.css" />
+        <option value="$PROJECT_DIR$/jQuery实战.html" />
       </list>
     </option>
   </component>
@@ -152,6 +154,11 @@
             <path>
               <item name="jQuery" type="b2602c69:ProjectViewProjectNode" />
               <item name="jQuery" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jQuery" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jQuery" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -179,9 +186,9 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/js" />
       <recent name="$PROJECT_DIR$/static" />
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -213,21 +220,21 @@
       <workItem from="1530861617953" duration="729000" />
       <workItem from="1530864635928" duration="3365000" />
       <workItem from="1531026631930" duration="3852000" />
-      <workItem from="1531100671822" duration="13909000" />
+      <workItem from="1531100671822" duration="16582000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38372000" />
+    <option name="totallyTimeSpent" value="41045000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="158" y="23" width="1342" height="830" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26825634" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26825634" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5007452" side_tool="true" visible="true" weight="0.32936507" />
+      <window_info active="true" anchor="bottom" id="Event Log" order="10" sideWeight="0.5007452" side_tool="true" visible="true" weight="0.32936507" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49925485" weight="0.32936507" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -406,16 +413,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/jquery.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jQuery1.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="448">
@@ -448,17 +445,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/my_jquery_css.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="31" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/test.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/jquery.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="1" column="7647" selection-start-line="1" selection-start-column="7639" selection-end-line="1" selection-end-column="7647" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/my_jquery_css.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="30" column="31" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jQuery实战.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="32" column="34" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -469,17 +483,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/my_jquery_functions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="4" lean-forward="true" selection-start-line="1" selection-start-column="4" selection-end-line="3" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/my_jquery_conflict.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="3" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/my_jquery_functions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6890">
+          <caret line="11" column="23" lean-forward="true" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
         </state>
       </provider>
     </entry>
