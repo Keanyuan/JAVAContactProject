@@ -2,7 +2,7 @@
 {
     padding:5px;
     text-align:center;
-    background-color:#e5eecc;
+    background-color:#e0efef;
     border:solid 1px #c3c3c3;
 }
 .panel
@@ -19,4 +19,20 @@
 .blue
 {
     color:blue;
+}
+
+div{
+    padding: 10px;
+    margin: 10px;
+}
+
+.ancestors * {
+    display: block;
+    border: 2px solid lightgray;
+    color: lightgray;
+    padding: 5px;
+    margin: 15px;
+}
+btn {
+    border: dashed 1px;
 }

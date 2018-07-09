@@ -233,4 +233,259 @@ $(function () {
     $(".setcss1").click(function () {
         $("#div8").css({"background-color": "chocolate", "border": "solid 1px #c3c3c3"});
     });
+
+    //  get size
+    $(".div-size").click(function () {
+        var txt = "";
+        txt += "width(): " + $("#div8").width() + "px<br>";
+        txt += "height(): " + $("#div8").height() + "px<br>";
+        txt += "包括内边距: <br>";
+        txt += "innerWidth(): " + $("#div8").innerWidth() + "px<br>";
+        txt += "innerHeight(): " + $("#div8").innerHeight() + "px<br>";
+        txt += "包括内边距和边框: <br>";
+        txt += "outerWidth(): " + $("#div8").outerWidth() + "px<br>";
+        txt += "outerHeight(): " + $("#div8").outerHeight() + "px<br>";
+        txt += "包括内边距、边框和外边距: <br>";
+        txt += "outerWidth(true): " + $("#div8").outerWidth(true) + "px<br>";
+        txt += "outerHeight(true): " + $("#div8").outerHeight(true) + "px<br>";
+        $("#div8").html(txt);
+    });
+
+    //parent
+    $(".parent").click(function () {
+        $("span").parent().css({
+            "color" : "red",
+            "border" : "2px solid red"
+        });
+    });
+    //parents
+    $(".parents").click(function () {
+        $("span").parents().css({
+            "color" : "#ff26c9",
+            "border" : "2px solid #ff26c9"
+        });
+    });
+    //parentsUntil
+    $(".parentsUntil").click(function () {
+        $("span").parentsUntil("div").css({
+            "color" : "green",
+            "border" : "2px solid green"
+        });
+    });
+
+    //children
+    $(".children").click(function () {
+        $("div").children().css(
+            {
+                "color" : "orange",
+                "border" : "2px solid orange"
+            }
+        );
+    });
+    //find
+    $(".find").click(function () {
+        $("div").find("span").css(
+            {
+                "color" : "blue",
+                "border" : "2px solid blue"
+            }
+        );
+    });
+    //siblings
+    $(".siblings").click(function () {
+        $("h2").siblings("p").css(
+            {
+                "color" : "blue",
+                "border" : "2px solid blue"
+            }
+        );
+    });
+    //next
+    $(".next").click(function () {
+        $("h2").next().css(
+            {
+                "color" : "blue",
+                "border" : "2px solid blue"
+            }
+        );
+    });
+    //nextAll
+    $(".nextAll").click(function () {
+        $("h2").nextAll().css(
+            {
+                "color" : "blue",
+                "border" : "2px solid blue"
+            }
+        );
+    });
+    //nextUntil
+    $(".nextUntil").click(function () {
+        $("h2").nextUntil("h6").css(
+            {
+                "color" : "blue",
+                "border" : "2px solid blue"
+            }
+        );
+    });
+    //prev
+    $(".prev").click(function () {
+        $("h2").prev().css(
+            {
+                "color" : "orange",
+                "border" : "2px solid orange"
+            }
+        );
+    });
+    //prevAll
+    $(".prevAll").click(function () {
+        $("h2").prevAll().css(
+            {
+                "color" : "orange",
+                "border" : "2px solid orange"
+            }
+        );
+    });
+    //prevUntil
+    $(".prevUntil").click(function () {
+        $("h2").prevUntil("h6").css(
+            {
+                "color" : "orange",
+                "border" : "2px solid orange"
+            }
+        );
+    });
+    //first
+    $(".first").click(function () {
+        $("div span").first().css(
+            {
+                "color" : "orange",
+                "border" : "2px solid orange"
+            }
+        );
+    });
+    //last
+    $(".last").click(function () {
+        $("div span").last().css(
+            {
+                "color" : "orange",
+                "border" : "2px solid orange"
+            }
+        );
+    });
+    //eq
+    $(".eq").click(function () {
+        $("p").eq(2).css(
+            {
+                "color" : "orange",
+                "border" : "2px solid orange"
+            }
+        );
+    });
+    //filter
+    $(".filter").click(function () {
+        $("p").filter(".paina").css(
+            {
+                "color" : "orange",
+                "border" : "2px solid orange"
+            }
+        );
+    });
+    //not
+    $(".not").click(function () {
+        $("p").not(".paina").css(
+            {
+                "color" : "orange",
+                "border" : "2px solid orange"
+            }
+        );
+    });
+    //ajax1
+    $(".cls-ajax").click(function () {
+        //http://httpbin.org/get
+        $("#div9").load("./static/test.html",function (responseTxt,statusTxt,xhr) {
+            $("#div10").append("<hr>responseTxt: " + responseTxt);
+            $("#div10").append("<br>statusTxt: " + statusTxt);
+            if (statusTxt == "success")
+                $("#div10").append("<br>xhr: " + "External content loaded successfully!");
+            if (statusTxt == "error")
+                $("#div10").append("<br>xhr: " + xhr.statusText);
+        });
+    });
+
+    //cls-ajax-get
+    $(".cls-ajax-get").click(function () {
+        // $.get("http://httpbin.org/get", function (data, status) {
+        //     alert("数据： " + data + "\n状态： " + status)
+        // });
+        var url = "http://mobile.ximalaya.com/mobile/discovery/v2/rankingList/group"
+        var param = {
+            "device": "iPhone",
+            "channel": "ios-b1",
+            "includeActivity": "true",
+            "includeSpecial": "true",
+            "scale": "2",
+            "version": "5.4.21",
+            "channel": "ios-b1"
+        }
+        $.get(url, param, function (data, status) {
+            if (status == "success")
+                $("#div11").append("<br>data: " + JSON.stringify(data));
+            if (status == "error")
+                alert("Error: request error")
+
+        });
+
+    });
+
+    //cls-ajax-post
+    $(".cls-ajax-post").click(function () {
+        // $.post("https://m.w3cschool.cn/statics/demosource/demo_test_post.php",{
+        //     name:"百度",
+        //     url:"http://www.baidu.com"
+        // },function (data,status) {
+        //     if (status == "success")
+        //         $("#div11").append("<br>data: " + JSON.stringify(data));
+        //     if (status == "error")
+        //         alert("Error: request error")
+        // });
+        $.post("http://example.com",{
+            "foo": "bar",
+            "baz": [1,2,3]
+        },function (data,status) {
+            if (status == "success")
+                $("#div11").append("<br>data: " + JSON.stringify(data));
+            if (status == "error")
+                alert("Error: request error")
+        });
+    });
+    //cls-ajax-ajax
+    $(".cls-ajax-ajax").click(function () {
+        var params = {
+            "foo": "bar",
+            "baz": [1,2,3]
+        }
+        $.ajax({
+            url: "http://example.com",
+            type: "POST",
+            data: JSON.stringify(params),
+            dataType: "json",
+            success: function (data) {
+                console.info("success.");
+                if (data["status"] == "ok"){
+                    alert("Settings is Ok. The Machine is rebooting.");
+                }
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                console.info("error.");
+                if (xhr.status == 200) {
+
+                    alert(ajaxOptions);
+                }
+                else {
+                    alert(xhr.status);
+                    alert(thrownError);
+                }
+            }
+        });
+    });
 });

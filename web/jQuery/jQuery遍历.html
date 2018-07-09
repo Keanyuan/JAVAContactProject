@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery遍历</title>
+    <link rel="stylesheet" href="css/my_jquery_css.css" type="text/css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/my_jquery_functions.js"></script>
+</head>
+<body>
+<div class="ancestors">body (曾曾祖父元素)
+    <div style="width: 500px">div (曾祖父元素)
+        <ul>ul(祖父元素)
+            <li>li(父元素)
+                <span>span</span>
+            </li>
+        </ul>
+    </div>
+    <div style="width: 500px">div (祖父元素)
+        <p>p (父元素)
+            <span>span</span>
+        </p>
+    </div>
+    <div>div (父元素)
+        <p class="paina">p</p>
+        <span>span</span>
+        <h6>h6</h6>
+        <h5>h5</h5>
+        <h4>h4</h4>
+        <h3>h3</h3>
+        <h2>h2</h2>
+        <h3>h3</h3>
+        <h4>h4</h4>
+        <h5>h5</h5>
+        <h6>h6</h6>
+        <p class="paina">p</p>
+        <p>p</p>
+
+    </div>
+</div>
+<button class="parent">设置父元素样式</button>
+<button class="parents">设置所有祖先元素样式</button>
+<button class="parentsUntil">设置介于两个给定元素之间的所有祖先元素样式</button>
+<br>
+<button class="children">设置子元素样式</button>
+<button class="find">设置被选元素的后代元素，一路向下直到最后一个后代样式</button>
+<br>
+<button class="siblings">设置同胞元素样式</button>
+<button class="next">设置下一个同胞元素样式</button>
+<button class="nextAll">设置所有跟随的同胞元素样式</button>
+<button class="nextUntil">设置介于两个给定参数之间的所有跟随的同胞元素样式</button>
+<br>
+<button class="prev">设置上一个同胞元素样式</button>
+<button class="prevAll">设置所有跟随的同胞元素样式</button>
+<button class="prevUntil">设置介于两个给定参数之间的所有跟随的同胞元素样式</button>
+<br>
+<button class="first">设置被选元素的首个元素样式</button>
+<button class="last">设置被选元素的最后一个元素样式</button>
+<button class="eq">被选元素中带有指定索引号的元素</button>
+<br>
+<button class="filter">规定一个标准不匹配删除,匹配返回</button>
+<button class="not">规定一个标准不匹配返回,匹配删除</button>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>
