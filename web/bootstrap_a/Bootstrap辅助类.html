@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>详情页</title>
+    <link rel="stylesheet" href="//apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css">
+    <script src="//apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="//apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>背景</h2>
+        <p class="bg-primary">该段落使用了类 "bg-primary"。</p>
+        <a class="bg-success" href="#">该链接使用了类 "bg-success"。</a>
+        <a class="bg-info" href="#">该链接使用了类 "bg-info"。</a>
+        <a class="bg-warning" href="#">该链接使用了类 "bg-warning"。</a>
+        <a class="bg-danger" href="#">该链接使用了类 "bg-danger"。</a>
+        <p></p>
+        <div class="pull-left bg-info">元素浮动到左侧</div>
+        <div class="center-block" style="width:150px;background-color:#ccc;">该 div 显示在中间</div>
+        <div class="pull-right bg-info">元素浮动到右侧</div>
+        <br>
+        <div class="col-xs-6 col-sm-3" style="background-color:lavender;">
+            列 1<br>
+            重置窗口大小，查看效果。也尝试删除有 clearfix  的 div 查看效果。
+        </div>
+        <div class="col-xs-6 col-sm-3" style="background-color:lavenderblush;">列 2</div>
+        <!-- Add clearfix for only the required viewport -->
+        <div class="clearfix visible-xs"></div>
+        <div class="col-xs-6 col-sm-3" style="background-color:lightcyan;">列 3</div>
+        <div class="col-xs-6 col-sm-3" style="background-color:lightgray;">列 4</div>
+        <br>
+        <h2>实例</h2>
+        <p> .sr-only 类除了屏幕阅读器外，其他设备上都隐藏元素:</p>
+        <a class="sr-only" href="#">跳转到主要内容</a>
+        <p>与 .sr-only 类结合使用，在元素获取焦点时显示(如：键盘操作的用户):</p>
+        <a class="sr-only sr-only-focusable" href="#">跳转到主要内容</a>
+
+        <h2>实例</h2>
+        <p> .caret 类显示了一个下拉的功能: <span class="caret"></span></p>
+        <p> .caret 类在按钮中使用：</p>
+        <div class="btn-group">
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Menu <span class="caret"></span></button>
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="#">一个链接</a></li>
+                <li><a href="#">另一个链接 link</a></li>
+                <li><a href="#">其他功能</a></li>
+            </ul>
+        </div>
+
+        <p>关闭图标实例
+            <button type="button" class="close" aria-hidden="true">
+                &times;  </button>
+        </p>
+        <p>插入符实例   <span class="caret"></span></p>
+        <div class="clearfix"  style="background: #D8D8D8;border: 1px solid #000;padding: 10px;">
+            <div class="pull-left" style="background:#58D3F7;">
+                向左快速浮动   </div>
+            <div class="pull-right" style="background: #DA81F5;">
+                向右快速浮动   </div>
+        </div>
+        <div class="row" style="padding: 91px 100px 19px 50px;">
+            <div class="show" style="left-margin:10px;width:300px;background-color:#ccc;">
+                这是 show class 的实例   </div>
+            <div class="hidden" style="width:200px;background-color:#ccc;">
+                这是 hide class 的实例   </div>
+        </div>
+        <div class="row" style="padding: 91px 100px 19px 50px;">
+            <form class="form-inline" role="form">
+                <div class="form-group">
+                    <label class="sr-only" for="email">Email 地址</label>
+                    <input type="email" class="form-control" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                    <label class="sr-only" for="pass">密码</label>
+                    <input type="password" class="form-control" placeholder="Password">
+                </div>
+            </form>
+        </div>
+
+        <div class="row visible-on">
+            <div class="col-xs-6 col-sm-3" style="background-color: #dedef8;          box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+                <span class="hidden-xs">特别小型</span>
+                <span class="visible-xs">✔ 在特别小型设备上可见</span>
+            </div>
+            <div class="col-xs-6 col-sm-3" style="background-color: #dedef8;          box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+                <span class="hidden-sm">小型</span>
+                <span class="visible-sm">✔ 在小型设备上可见</span>
+            </div>
+            <div class="clearfix visible-xs"></div>
+            <div class="col-xs-6 col-sm-3" style="background-color: #dedef8;          box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+                <span class="hidden-md">中型</span>
+                <span class="visible-md">✔ 在中型设备上可见</span>
+            </div>
+            <div class="col-xs-6 col-sm-3" style="background-color: #dedef8;          box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+                <span class="hidden-lg">大型</span>
+                <span class="visible-lg">✔ 在大型设备上可见</span>
+            </div>
+    </div>
+</body>
+</html>
