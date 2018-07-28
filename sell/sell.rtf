@@ -122,4 +122,60 @@ CREATE TABLE order_detail (\
 KEY idx_order_id ( order_id ) \
 ) ENGINE = MyISAM DEFAULT CHARSET = utf8 COMMENT '
 \f1 \'b6\'a9\'b5\'a5\'cf\'ea\'c7\'e9\'b1\'ed
-\f0 ';}
+\f0 ';\
+\
+\
+\
+Src - \
+	- main	-java		-package\
+	- test		-java 	-package\
+	- resource\
+	- target\
+pom.xml\
+\
+mvn -v 
+\f1 \'b2\'e9\'bf\'b4\'b0\'e6\'b1\'be\
+
+\f0 mvn compile 
+\f1 \'b1\'e0\'d2\'eb\'d4\'b4\'b4\'fa\'c2\'eb \'b9\'b9\'bd\'a8 \'c9\'fa\'b3\'c9target
+\f0 \
+mvn test 
+\f1 \'b2\'e2\'ca\'d4\
+mvn package \'b4\'f2\'b0\'fc\
+
+\f0 mvn clean 
+\f1 \'c9\'be\'b3\'fd
+\f0  target\
+mvn install 
+\f1 \'b0\'b2\'d7\'b0
+\f0 jar
+\f1 \'b0\'fc\'b5\'bd\'b1\'be\'b5\'d8\'b2\'d6\'bf\'e2
+\f0 \
+\
+//
+\f1 \'b4\'b4\'bd\'a8\'c4\'bf\'c2\'bc\'b5\'c4\'c1\'bd\'d6\'d6\'b7\'bd\'ca\'bd\
+\'d2\'bb\'a1\'a2
+\f0 \
+mvn archetype:generate\
+6\
+groupId: com.xxx.xxx\
+artifactId: xxx\
+Version: 1.x.x\
+package: com.xxx.xxx.xxx\
+Y\
+
+\f1 \'b6\'fe\'a1\'a2\'d2\'bb\'b4\'ce\'d0\'d4
+\f0 \
+mvn archetype:generate	-DgroupId=
+\f1 \'d7\'e9\'d6\'af\'c3\'fb\'a3\'ac\'b9\'ab\'cb\'be\'cd\'f8\'d6\'b7\'b7\'b4\'d0\'b4+\'cf\'ee\'c4\'bf\'c3\'fb \
+					
+\f0 -DartifactId=
+\f1 \'cf\'ee\'c4\'bf\'c3\'fb
+\f0 -
+\f1 \'c4\'a3\'bf\'e9\'c3\'fb\
+					
+\f0 -Dversion=
+\f1 \'b0\'e6\'b1\'be\'ba\'c5
+\f0 \
+					-Dpackage=
+\f1 \'b4\'fa\'c2\'eb\'cb\'f9\'b4\'e6\'d4\'da\'b5\'c4\'b0\'fc\'c3\'fb}
