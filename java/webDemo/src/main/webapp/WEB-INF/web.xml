@@ -5,5 +5,8 @@
 <web-app>
 
 
-
+    <context-param>
+        <param-name/>
+        <param-value/>
+    </context-param>
 </web-app>

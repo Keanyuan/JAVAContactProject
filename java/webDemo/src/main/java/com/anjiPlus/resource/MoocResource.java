@@ -16,7 +16,7 @@ public class MoocResource implements ApplicationContextAware {
     }
 
     public void resource()throws IOException {
-        Resource resource = applicationContext.getResource("config.txt");
+        Resource resource = applicationContext.getResource("classpath:config.txt");
 //        "classpath:config.txt"
 //        "file:/Users/Kean/Desktop/JAVA/webDemo/src/main/resources/config.txt"
         System.out.println(resource.getFilename());
