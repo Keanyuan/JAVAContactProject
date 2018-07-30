@@ -7,41 +7,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5768f9b5-f0f1-49e2-a7fc-dbd604915159" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/anjiPlus/SimpleMove/MoveFinder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/anjiPlus/SimpleMove/SimpleMoveLister.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/anjiPlus/beanannotation/BeanAnnotation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/anjiPlus/beanannotation/dao/InjectionDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/anjiPlus/beanannotation/dao/InjectionDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/anjiPlus/beanannotation/javabased/MyDirverManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/anjiPlus/beanannotation/javabased/Store.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/anjiPlus/beanannotation/javabased/StoreConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/anjiPlus/beanannotation/javabased/StringStore.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/anjiPlus/beanannotation/multibean/BeanImplOne.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/anjiPlus/beanannotation/multibean/BeanImplTwo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/anjiPlus/beanannotation/multibean/BeanInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/anjiPlus/beanannotation/multibean/BeanInvoker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/anjiPlus/beanannotation/service/InjectionService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/anjiPlus/beanannotation/service/InjectionServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/config.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/spring-beanTest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/spring-beanannotation.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/config.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/anjiPlus/test/beanannotation/TestBeanAnnotation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/anjiPlus/test/beanannotation/TestInjection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/anjiPlus/test/beanannotation/TestJavabased.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/anjiPlus/beanannotation/javabased/IntegerStore.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/anjiPlus/beanannotation/jsr/JsrDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/anjiPlus/beanannotation/jsr/JsrService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/anjiPlus/test/TestJsr/TestJsr.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/anjiPlus/resource/MoocResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/anjiPlus/resource/MoocResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/anjiPlus/resource/MoocResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/anjiPlus/resource/MoocResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/webDemo.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/webDemo.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/webDemo/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/webDemo/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/webDemo/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/anjiPlus/beanannotation/javabased/Store.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/anjiPlus/beanannotation/javabased/Store.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/anjiPlus/beanannotation/javabased/StoreConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/anjiPlus/beanannotation/javabased/StoreConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/anjiPlus/beanannotation/javabased/StringStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/anjiPlus/beanannotation/javabased/StringStore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/anjiPlus/test/beanannotation/TestJavabased.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/anjiPlus/test/beanannotation/TestJavabased.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/anjiPlus/beanannotation/javabased/Store.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/anjiPlus/beanannotation/javabased/Store.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/anjiPlus/beanannotation/javabased/StoreConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/anjiPlus/beanannotation/javabased/StoreConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/anjiPlus/beanannotation/javabased/StringStore.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/anjiPlus/beanannotation/javabased/StringStore.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/anjiPlus/test/beanannotation/TestJavabased.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/anjiPlus/test/beanannotation/TestJavabased.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -163,51 +143,50 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="-1989216155">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.12" value="1" />
+          <entry key="project.open.time.15" value="2" />
+          <entry key="project.open.time.25" value="1" />
+          <entry key="project.opened" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="class" value="2" />
+          <entry key="java" value="13" />
+          <entry key="xml" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CLASS" value="2" />
+          <entry key="JAVA" value="13" />
+          <entry key="XML" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="462" />
+          <entry key="xml" value="16" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="462" />
+          <entry key="XML" value="16" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/beanannotation/multibean/BeanInvoker.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/beanannotation/jsr/JsrService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="9" column="10" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="10" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/anjiPlus/test/beanannotation/TestJavabased.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="25" column="39" lean-forward="true" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
-              <folding>
-                <element signature="e#542#543#0" expanded="true" />
-                <element signature="e#602#603#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/beanannotation/multibean/BeanImplOne.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="24" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="24" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/beanannotation/javabased/StoreConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
+            <state relative-caret-position="267">
+              <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -216,31 +195,32 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/config.xml">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/anjiPlus/test/TestJsr/TestJsr.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="8" lean-forward="true" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
+            <state relative-caret-position="150">
+              <caret line="19" column="28" lean-forward="true" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/beanannotation/multibean/BeanImplTwo.java">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="1560">
+              <caret line="104" column="18" selection-start-line="104" selection-start-column="18" selection-end-line="104" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/beanannotation/jsr/JsrDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#155#156#0" expanded="true" />
+                <element signature="e#207#208#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/beanannotation/javabased/MyDirverManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -251,10 +231,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="Tag Library Descriptor" />
         <option value="XML Properties File" />
         <option value="spring-beans.schema" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -263,6 +243,7 @@
       <find>resources</find>
       <find>log4j</find>
       <find>junit</find>
+      <find>destory</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -280,7 +261,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/resources/applicationContext.xml" />
         <option value="$PROJECT_DIR$/src/test/java/com/anjiPlus/test/base/UnitTestBase.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/anjiPlus/bean/BeanScope.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/anjiPlus/test/bean/TestBeanScope.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
@@ -304,13 +284,18 @@
         <option value="$PROJECT_DIR$/src/main/java/com/anjiPlus/beanannotation/multibean/BeanImplTwo.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/anjiPlus/beanannotation/multibean/BeanImplOne.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/anjiPlus/beanannotation/multibean/BeanInvoker.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/anjiPlus/beanannotation/javabased/StringStore.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/anjiPlus/beanannotation/javabased/Store.java" />
         <option value="$PROJECT_DIR$/src/main/resources/config.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/anjiPlus/beanannotation/javabased/MyDirverManager.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/config.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/anjiPlus/beanannotation/javabased/Store.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/anjiPlus/beanannotation/javabased/StringStore.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/anjiPlus/beanannotation/javabased/IntegerStore.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/anjiPlus/test/beanannotation/TestJavabased.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/anjiPlus/beanannotation/javabased/StoreConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/config.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/anjiPlus/beanannotation/jsr/JsrDao.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/anjiPlus/test/TestJsr/TestJsr.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/anjiPlus/beanannotation/jsr/JsrService.java" />
       </list>
     </option>
   </component>
@@ -348,10 +333,9 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="50" />
     <option name="y" value="23" />
-    <option name="width" value="1390" />
-    <option name="height" value="829" />
+    <option name="width" value="1280" />
+    <option name="height" value="739" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -361,6 +345,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -438,6 +423,17 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="anjiPlus" type="462c0819:PsiDirectoryNode" />
               <item name="beanannotation" type="462c0819:PsiDirectoryNode" />
+              <item name="jsr" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webDemo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="anjiPlus" type="462c0819:PsiDirectoryNode" />
+              <item name="beanannotation" type="462c0819:PsiDirectoryNode" />
               <item name="multibean" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -450,28 +446,6 @@
               <item name="anjiPlus" type="462c0819:PsiDirectoryNode" />
               <item name="beanannotation" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="webDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webDemo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="webDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webDemo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="webDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webDemo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="webDemo" type="b2602c69:ProjectViewProjectNode" />
@@ -555,8 +529,7 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="anjiPlus" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="beanannotation" type="462c0819:PsiDirectoryNode" />
-              <item name="TestJavabased" type="1a9f42e2:ClassTreeNode" />
+              <item name="resource" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="webDemo" type="b2602c69:ProjectViewProjectNode" />
@@ -567,21 +540,21 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="anjiPlus" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="resource" type="462c0819:PsiDirectoryNode" />
+              <item name="TestJsr" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="Qualifier&#9;PSI&#9;JAVA://org.springframework.beans.factory.annotation.QualifierAnnotationAutowireCandidateResolver" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1532945282564" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1532963371335" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -589,10 +562,12 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.36150235" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.anjiPlus.test.TestJsr" />
+      <recent name="com.anjiPlus.beanannotation.javabased" />
       <recent name="com.anjiPlus.test.beanannotation" />
       <recent name="com.anjiPlus.beanannotation.multibean" />
       <recent name="com.anjiPlus.test.resource" />
@@ -613,7 +588,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TestJavabased.testMyDriverManager">
+  <component name="RunManager" selected="JUnit.TestJsr.testSave">
     <configuration name="TestBeanAnnotation.testSay" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="webDemo" />
       <extension name="coverage">
@@ -630,7 +605,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestBeanAnnotation.testScope" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestJavabased.testG" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="webDemo" />
       <extension name="coverage">
         <pattern>
@@ -639,40 +614,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.anjiPlus.test.beanannotation" />
-      <option name="MAIN_CLASS_NAME" value="com.anjiPlus.test.beanannotation.TestBeanAnnotation" />
-      <option name="METHOD_NAME" value="testScope" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestInjection.testAutowried" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="webDemo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.anjiPlus.test.beanannotation.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.anjiPlus.test.beanannotation" />
-      <option name="MAIN_CLASS_NAME" value="com.anjiPlus.test.beanannotation.TestInjection" />
-      <option name="METHOD_NAME" value="testAutowried" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestInjection.testMultiBean" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="webDemo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.anjiPlus.test.beanannotation.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.anjiPlus.test.beanannotation" />
-      <option name="MAIN_CLASS_NAME" value="com.anjiPlus.test.beanannotation.TestInjection" />
-      <option name="METHOD_NAME" value="testMultiBean" />
+      <option name="MAIN_CLASS_NAME" value="com.anjiPlus.test.beanannotation.TestJavabased" />
+      <option name="METHOD_NAME" value="testG" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -694,6 +637,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestJavabased.testScope" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="webDemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.anjiPlus.test.beanannotation.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.anjiPlus.test.beanannotation" />
+      <option name="MAIN_CLASS_NAME" value="com.anjiPlus.test.beanannotation.TestJavabased" />
+      <option name="METHOD_NAME" value="testScope" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TestJavabased.testStore" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="webDemo" />
       <extension name="coverage">
@@ -705,6 +664,22 @@
       <option name="PACKAGE_NAME" value="com.anjiPlus.test.beanannotation" />
       <option name="MAIN_CLASS_NAME" value="com.anjiPlus.test.beanannotation.TestJavabased" />
       <option name="METHOD_NAME" value="testStore" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestJsr.testSave" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="webDemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.anjiPlus.test.TestJsr.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.anjiPlus.test.TestJsr" />
+      <option name="MAIN_CLASS_NAME" value="com.anjiPlus.test.TestJsr.TestJsr" />
+      <option name="METHOD_NAME" value="testSave" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -848,19 +823,19 @@
     <list>
       <item itemvalue="JUnit.TestBeanAnnotation.testSay" />
       <item itemvalue="Tomcat Server.tomact" />
-      <item itemvalue="JUnit.TestBeanAnnotation.testScope" />
-      <item itemvalue="JUnit.TestInjection.testAutowried" />
-      <item itemvalue="JUnit.TestInjection.testMultiBean" />
       <item itemvalue="JUnit.TestJavabased.testStore" />
       <item itemvalue="JUnit.TestJavabased.testMyDriverManager" />
+      <item itemvalue="JUnit.TestJavabased.testScope" />
+      <item itemvalue="JUnit.TestJavabased.testG" />
+      <item itemvalue="JUnit.TestJsr.testSave" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestJavabased.testMyDriverManager" />
+        <item itemvalue="JUnit.TestJsr.testSave" />
+        <item itemvalue="JUnit.TestJavabased.testScope" />
+        <item itemvalue="JUnit.TestJavabased.testG" />
         <item itemvalue="JUnit.TestJavabased.testStore" />
-        <item itemvalue="JUnit.TestInjection.testMultiBean" />
-        <item itemvalue="JUnit.TestInjection.testAutowried" />
-        <item itemvalue="JUnit.TestBeanAnnotation.testScope" />
+        <item itemvalue="JUnit.TestJavabased.testMyDriverManager" />
       </list>
     </recent_temporary>
   </component>
@@ -912,43 +887,47 @@
       <workItem from="1532940914716" duration="937000" />
       <workItem from="1532943316888" duration="1165000" />
       <workItem from="1532944643954" duration="896000" />
+      <workItem from="1532959669038" duration="985000" />
+      <workItem from="1532960893553" duration="998000" />
+      <workItem from="1532962098409" duration="1163000" />
+      <workItem from="1532963318557" duration="53000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestInjection_testMultiBean - 2018.07.30 at 16h 19m 53s.xml">
-      <configuration name="TestInjection.testMultiBean" configurationId="JUnit" />
+    <history-entry file="TestJavabased_testG - 2018.07.30 at 22h 37m 04s.xml">
+      <configuration name="TestJavabased.testG" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestInjection_testMultiBean - 2018.07.30 at 16h 20m 14s.xml">
-      <configuration name="TestInjection.testMultiBean" configurationId="JUnit" />
+    <history-entry file="TestJavabased_testG - 2018.07.30 at 22h 37m 50s.xml">
+      <configuration name="TestJavabased.testG" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestJavabased_testStore - 2018.07.30 at 16h 35m 36s.xml">
-      <configuration name="TestJavabased.testStore" configurationId="JUnit" />
+    <history-entry file="TestJavabased_testG - 2018.07.30 at 22h 40m 07s.xml">
+      <configuration name="TestJavabased.testG" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestJavabased_testStore - 2018.07.30 at 16h 36m 03s.xml">
-      <configuration name="TestJavabased.testStore" configurationId="JUnit" />
+    <history-entry file="TestJavabased_testScope - 2018.07.30 at 22h 44m 05s.xml">
+      <configuration name="TestJavabased.testScope" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestJavabased_testStore - 2018.07.30 at 16h 36m 32s.xml">
-      <configuration name="TestJavabased.testStore" configurationId="JUnit" />
+    <history-entry file="TestJavabased_testScope - 2018.07.30 at 22h 44m 14s.xml">
+      <configuration name="TestJavabased.testScope" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestJavabased_testStore - 2018.07.30 at 16h 38m 32s.xml">
-      <configuration name="TestJavabased.testStore" configurationId="JUnit" />
+    <history-entry file="TestJavabased_testScope - 2018.07.30 at 22h 44m 43s.xml">
+      <configuration name="TestJavabased.testScope" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestJavabased_testStore - 2018.07.30 at 17h 03m 47s.xml">
-      <configuration name="TestJavabased.testStore" configurationId="JUnit" />
+    <history-entry file="TestJsr_testSave - 2018.07.30 at 22h 57m 35s.xml">
+      <configuration name="TestJsr.testSave" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestJavabased_testMyDriverManager - 2018.07.30 at 17h 52m 21s.xml">
-      <configuration name="TestJavabased.testMyDriverManager" configurationId="JUnit" />
+    <history-entry file="TestJsr_testSave - 2018.07.30 at 22h 58m 25s.xml">
+      <configuration name="TestJsr.testSave" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestJavabased_testMyDriverManager - 2018.07.30 at 17h 58m 45s.xml">
-      <configuration name="TestJavabased.testMyDriverManager" configurationId="JUnit" />
+    <history-entry file="TestJsr_testSave - 2018.07.30 at 23h 00m 35s.xml">
+      <configuration name="TestJsr.testSave" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestJavabased_testMyDriverManager - 2018.07.30 at 17h 59m 32s.xml">
-      <configuration name="TestJavabased.testMyDriverManager" configurationId="JUnit" />
+    <history-entry file="TestJsr_testSave - 2018.07.30 at 23h 06m 32s.xml">
+      <configuration name="TestJsr.testSave" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24254000" />
+    <option name="totallyTimeSpent" value="27453000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -960,10 +939,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="50" y="23" width="1390" height="829" extended-state="0" />
+    <frame x="0" y="23" width="1280" height="739" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49902913" visible="true" weight="0.38872403" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49902913" visible="true" weight="0.41437802" />
       <window_info id="Structure" order="1" sideWeight="0.5009709" side_tool="true" weight="0.3360534" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info id="Image Layers" order="3" />
@@ -973,8 +952,8 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.3283582" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49943757" weight="0.39755768" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39891452" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49943757" weight="0.39721793" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39876354" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49943757" weight="0.3294893" />
@@ -1036,9 +1015,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$USER_HOME$/MavenBuild/repo/org/eclipse/jetty/websocket/javax-websocket-server-impl/9.4.9.v20180320/javax-websocket-server-impl-9.4.9.v20180320.jar!/org/eclipse/jetty/websocket/jsr356/server/deploy/WebSocketServerContainerInitializer.class" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.tld" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml.tld" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
@@ -1065,13 +1041,6 @@
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/MavenBuild/repo/org/springframework/spring-context/4.3.10.RELEASE/spring-context-4.3.10.RELEASE.jar!/org/springframework/context/ApplicationContext.class" />
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="43" column="41" selection-start-line="43" selection-start-column="41" selection-end-line="43" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/standardSchemas/XMLSchema-instance.xsd">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1168,13 +1137,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/beanannotation/multibean/BeanInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/resource/MoocResource.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -1211,13 +1173,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/beanannotation/javabased/Store.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/spring-beanScope.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -1232,13 +1187,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/beanannotation/javabased/StringStore.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="35" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/config.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1246,30 +1194,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/beanannotation/multibean/BeanImplTwo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/beanannotation/javabased/MyDirverManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/beanannotation/multibean/BeanInvoker.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="9" column="10" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1283,31 +1211,128 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/anjiPlus/test/beanannotation/TestJavabased.java">
+    <entry file="jar://$USER_HOME$/MavenBuild/repo/org/springframework/spring-context/4.3.10.RELEASE/spring-context-4.3.10.RELEASE.jar!/org/springframework/context/annotation/ScopedProxyMode.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="25" column="39" lean-forward="true" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
-          <folding>
-            <element signature="e#542#543#0" expanded="true" />
-            <element signature="e#602#603#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/beanannotation/javabased/StoreConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="120">
+          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/config.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
-          <caret line="13" column="8" lean-forward="true" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
+          <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/beanannotation/multibean/BeanInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/beanannotation/multibean/BeanImplTwo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/beanannotation/javabased/MyDirverManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/MavenBuild/repo/org/springframework/spring-beans/4.3.10.RELEASE/spring-beans-4.3.10.RELEASE.jar!/org/springframework/beans/factory/annotation/QualifierAnnotationAutowireCandidateResolver.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/beanannotation/javabased/StringStore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="48" selection-start-line="2" selection-start-column="48" selection-end-line="2" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/beanannotation/javabased/Store.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/beanannotation/javabased/StoreConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="38" column="67" selection-start-line="38" selection-start-column="67" selection-end-line="38" selection-end-column="67" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/anjiPlus/test/beanannotation/TestJavabased.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="32" column="29" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/MavenBuild/repo/org/springframework/spring-context/4.3.10.RELEASE/spring-context-4.3.10.RELEASE-sources.jar!/org/springframework/context/annotation/ScopedProxyMode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="35" column="11" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/beanannotation/javabased/IntegerStore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="50" selection-start-line="2" selection-start-column="50" selection-end-line="2" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/beanannotation/jsr/JsrService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1560">
+          <caret line="104" column="18" selection-start-line="104" selection-start-column="18" selection-end-line="104" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/beanannotation/jsr/JsrDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+          <folding>
+            <element signature="e#155#156#0" expanded="true" />
+            <element signature="e#207#208#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/anjiPlus/test/TestJsr/TestJsr.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="19" column="28" lean-forward="true" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
         </state>
       </provider>
     </entry>

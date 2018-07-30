@@ -1,4 +1,4 @@
 package com.anjiPlus.beanannotation.javabased;
 
-public interface Store {
+public interface Store<T> {
 }

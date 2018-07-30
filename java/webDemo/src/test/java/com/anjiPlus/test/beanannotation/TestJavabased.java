@@ -2,6 +2,7 @@ package com.anjiPlus.test.beanannotation;
 
 import com.anjiPlus.beanannotation.javabased.MyDirverManager;
 import com.anjiPlus.beanannotation.javabased.Store;
+import com.anjiPlus.beanannotation.javabased.StringStore;
 import com.anjiPlus.beanannotation.multibean.BeanInvoker;
 import com.anjiPlus.beanannotation.service.InjectionService;
 import com.anjiPlus.test.base.UnitTestBase;
@@ -28,6 +29,19 @@ public class TestJavabased extends UnitTestBase {
         System.out.println(myDirverManager.getClass().getName());
     }
 
-    
+    @Test
+    public void testScope() {
+        Store store = super.getBean("stringStore");
+        System.out.println(store.hashCode());
+
+        store = super.getBean("stringStore");
+        System.out.println(store.hashCode());
+    }
+
+    @Test
+    public void testG(){
+        StringStore store = super.getBean("stringStoreTest");
+
+    }
 
 }

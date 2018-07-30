@@ -1,6 +1,6 @@
 package com.anjiPlus.beanannotation.javabased;
 
-public class StringStore implements Store<String> {
+public class IntegerStore implements Store<Integer> {
     public void init() {
         System.out.println("init");
     }
