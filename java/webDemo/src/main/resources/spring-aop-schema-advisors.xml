@@ -10,7 +10,14 @@
        http://www.springframework.org/schema/aop
        http://www.springframework.org/schema/aop/spring-aop-4.0.xsd">
     <context:component-scan base-package="com.anjiPlus.aopAdvice.schema"/>
-    <bean id="beanScope" class="com.anjiPlus.bean.BeanScope" scope="singleton"></bean>
-    <bean id="moocResource" class="com.anjiPlus.resource.MoocResource" scope="singleton"></bean>
-
+    <aop:config>
+        <aop:aspect id="conturrentOperationRetry" ref="conturrentOperationExecutor">
+            <aop:pointcut id="idempotentOperation" expression="execution(* com.anjiPlus.aopAdvice.schema.advisors.service.*.*(..))"/>
+            <aop:around method="doConcurrentOperation" pointcut-ref="idempotentOperation"/>
+        </aop:aspect>
+    </aop:config>
+    <bean id="conturrentOperationExecutor" class="com.anjiPlus.aopAdvice.schema.advisors.ConcurrentOperationExecutor">
+        <property name="maxRetries" value="3"/>
+        <property name="order" value="100"/>
+    </bean>
 </beans>
