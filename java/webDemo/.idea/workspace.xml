@@ -7,33 +7,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5768f9b5-f0f1-49e2-a7fc-dbd604915159" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/anjiPlus/aopAdvice/Fit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/anjiPlus/aopAdvice/FitImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/anjiPlus/aopAdvice/MoocAspect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/anjiPlus/aopAdvice/biz/AspectBiz.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/anjiPlus/aopAdvice/schema/advisors/ConcurrentOperationExecutor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/anjiPlus/aopAdvice/schema/advisors/Ordered.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/anjiPlus/aopAdvice/schema/advisors/service/InvokeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/anjiPlus/api/BizLogic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/anjiPlus/api/BizLogicImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/anjiPlus/api/MoocAfterReturningAdvice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/anjiPlus/api/MoocBeforeAdvice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/anjiPlus/api/MoocMethodInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/anjiPlus/api/MoocThrowsAdvice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/anjiPlus/api/introduction/LockMixin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/anjiPlus/api/introduction/LockMixinAdvisor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/anjiPlus/api/introduction/Lockable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/anjiPlus/support/DefaultPointcutAdvisor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/anjiPlus/support/NameMatchMethodPointcut.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/spring-aop-advice.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/spring-aop-api.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/spring-aop-schema-advisors.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/anjiPlus/test/aop/TestAOPAPI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/anjiPlus/test/aop/TestAOPSchemaAdvice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/anjiPlus/test/aop/TestAOPSchemaAdvisors.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/anjiPlus/aopAspectj/MoocAspect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/anjiPlus/aopAspectj/MoocMethod.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/anjiPlus/aopAspectj/Sample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/anjiPlus/aopAspectj/SampleImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/anjiPlus/aopAspectj/biz/MookBiz.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/spring-aop-aspectj.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/anjiPlus/test/aop/aspectj/TestAspectj.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/spring-beanScope.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring-beanScope.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/anjiPlus/api/MoocBeforeAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/anjiPlus/api/MoocBeforeAdvice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/anjiPlus/api/MoocMethodInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/anjiPlus/api/MoocMethodInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/spring-aop-api.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring-aop-api.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/anjiPlus/test/aop/TestAOPAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/anjiPlus/test/aop/TestAOPAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/anjiPlus/api/MoocBeforeAdvice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/anjiPlus/api/MoocBeforeAdvice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/anjiPlus/api/MoocMethodInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/anjiPlus/api/MoocMethodInterceptor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/spring-aop-api.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spring-aop-api.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/anjiPlus/test/aop/TestAOPAPI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/anjiPlus/test/aop/TestAOPAPI.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -102,35 +91,37 @@
     <session id="1868650284">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
+          <entry key="project.closed" value="6" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="5" />
           <entry key="project.open.time.11" value="3" />
-          <entry key="project.open.time.12" value="9" />
-          <entry key="project.open.time.13" value="1" />
+          <entry key="project.open.time.12" value="15" />
+          <entry key="project.open.time.13" value="4" />
           <entry key="project.open.time.14" value="2" />
           <entry key="project.open.time.15" value="3" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.21" value="1" />
           <entry key="project.open.time.7" value="2" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="29" />
+          <entry key="project.opened" value="38" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="1" />
-          <entry key="java" value="3016" />
+          <entry key="dummy" value="2" />
+          <entry key="java" value="4043" />
+          <entry key="pointcutExpression" value="2" />
           <entry key="properties" value="66" />
-          <entry key="xml" value="1351" />
+          <entry key="xml" value="1526" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3016" />
-          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="JAVA" value="4043" />
+          <entry key="PLAIN_TEXT" value="2" />
+          <entry key="Pointcut Expression" value="2" />
           <entry key="Properties" value="66" />
-          <entry key="XML" value="1351" />
+          <entry key="XML" value="1526" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.spring.core.usages.trigger">
@@ -140,20 +131,24 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="7" />
-          <entry key="java" value="54" />
+          <entry key="aj" value="1" />
+          <entry key="class" value="9" />
+          <entry key="java" value="78" />
+          <entry key="pointcutExpression" value="1" />
           <entry key="properties" value="2" />
           <entry key="tld" value="1" />
-          <entry key="xml" value="17" />
+          <entry key="xml" value="21" />
           <entry key="xsd" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="7" />
-          <entry key="JAVA" value="54" />
+          <entry key="AspectJ" value="1" />
+          <entry key="CLASS" value="9" />
+          <entry key="JAVA" value="78" />
+          <entry key="Pointcut Expression" value="1" />
           <entry key="Properties" value="2" />
-          <entry key="XML" value="28" />
+          <entry key="XML" value="32" />
         </counts>
       </usages-collector>
     </session>
@@ -196,65 +191,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/api/MoocMethodInterceptor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/api/introduction/Lockable.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/api/introduction/LockMixin.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="28" column="41" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/api/introduction/LockMixinAdvisor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/spring-aop-api.xml">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/aopAspectj/MoocAspect.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="59" column="52" lean-forward="true" selection-start-line="59" selection-start-column="52" selection-end-line="59" selection-end-column="52" />
+            <state relative-caret-position="206">
+              <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#670#671#0" expanded="true" />
+                <element signature="e#725#726#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/api/BizLogic.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/aopAspectj/SampleImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="25" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="25" />
+            <state relative-caret-position="270">
+              <caret line="24" column="105" selection-start-line="24" selection-start-column="105" selection-end-line="24" selection-end-column="105" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -262,8 +220,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/api/MoocBeforeAdvice.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="44" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="44" />
+            <state relative-caret-position="150">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/spring-aop-advice.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/spring-aop-schema-advisors.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/aopAspectj/biz/MookBiz.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="8" column="40" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -272,19 +257,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/anjiPlus/test/aop/TestAOPAPI.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/anjiPlus/test/aop/aspectj/TestAspectj.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
-              <caret line="17" column="28" lean-forward="true" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/support/DefaultPointcutAdvisor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
+              <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -297,6 +276,8 @@
         <option value="Tag Library Descriptor" />
         <option value="XML Properties File" />
         <option value="spring-beans.schema" />
+        <option value="FxmlFile" />
+        <option value="Aspect" />
         <option value="Interface" />
         <option value="Class" />
       </list>
@@ -308,10 +289,15 @@
       <find>log4j</find>
       <find>junit</find>
       <find>destory</find>
-      <find>moocBeforeAdvice</find>
       <find>proxyInterfaces</find>
       <find>target</find>
+      <find>defaultAdvisor</find>
       <find>bizLogic</find>
+      <find>defaultAdvisot</find>
+      <find>bizLogicImplTarget</find>
+      <find>moocBeforeAdvice</find>
+      <find>moocAfterReturningAdvice</find>
+      <find>moocMethodInterceptor</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -326,14 +312,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/anjiPlus/resource/MoocResource.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/spring-beanTest.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/spring-beanannotation.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/com/anjiPlus/test/beanannotation/TestBeanAnnotation.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/anjiPlus/beanannotation/BeanAnnotation.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/anjiPlus/SimpleMove/SimpleMoveLister.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/anjiPlus/dao/InjectionDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/anjiPlus/service/InjectionService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/anjiPlus/dao/InjectionDaoImplements.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/anjiPlus/dao/InjectionDaoImplement.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/anjiPlus/dao/InjectionDaoImpl.java" />
@@ -368,15 +346,23 @@
         <option value="$PROJECT_DIR$/src/main/java/com/anjiPlus/aopAdvice/schema/advisors/ConcurrentOperationExecutor.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/anjiPlus/api/BizLogic.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/anjiPlus/api/BizLogicImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/anjiPlus/api/MoocBeforeAdvice.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/anjiPlus/api/MoocThrowsAdvice.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/anjiPlus/api/MoocAfterReturningAdvice.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/anjiPlus/api/MoocMethodInterceptor.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/anjiPlus/api/introduction/Lockable.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/anjiPlus/api/introduction/LockMixin.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/anjiPlus/api/introduction/LockMixinAdvisor.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/anjiPlus/test/aop/TestAOPAPI.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/anjiPlus/api/MoocBeforeAdvice.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/anjiPlus/api/MoocMethodInterceptor.java" />
         <option value="$PROJECT_DIR$/src/main/resources/spring-aop-api.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/spring-aop-aspectj.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/com/anjiPlus/test/aop/aspectj/TestAspectj.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/anjiPlus/aopAspectj/MoocMethod.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/anjiPlus/aopAspectj/biz/MookBiz.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/anjiPlus/aopAspectj/MoocAspect.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/anjiPlus/aopAspectj/Sample.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/anjiPlus/aopAspectj/SampleIml.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/anjiPlus/aopAspectj/SampleImpl.java" />
       </list>
     </option>
   </component>
@@ -414,7 +400,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="95" />
+    <option name="x" value="30" />
+    <option name="y" value="64" />
     <option name="width" value="1369" />
     <option name="height" value="739" />
   </component>
@@ -426,7 +413,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -478,7 +465,18 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="anjiPlus" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="aopAspectj" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webDemo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="anjiPlus" type="462c0819:PsiDirectoryNode" />
+              <item name="aopAspectj" type="462c0819:PsiDirectoryNode" />
+              <item name="biz" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="webDemo" type="b2602c69:ProjectViewProjectNode" />
@@ -489,7 +487,6 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="anjiPlus" type="462c0819:PsiDirectoryNode" />
               <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="introduction" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="webDemo" type="b2602c69:ProjectViewProjectNode" />
@@ -569,6 +566,31 @@
               <item name="anjiPlus" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="aop" type="462c0819:PsiDirectoryNode" />
+              <item name="aspectj" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webDemo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="anjiPlus" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="aop" type="462c0819:PsiDirectoryNode" />
+              <item name="aspectj" type="462c0819:PsiDirectoryNode" />
+              <item name="TestAspectj" type="1a9f42e2:ClassTreeNode" />
+            </path>
+            <path>
+              <item name="webDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webDemo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="anjiPlus" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="aop" type="462c0819:PsiDirectoryNode" />
               <item name="TestAOPAPI" type="1a9f42e2:ClassTreeNode" />
             </path>
             <path>
@@ -598,14 +620,14 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/kean_qi/Desktop/AllwaysWork/AllwaysGit/GitHub/JAVAContactProject/java/webDemo/src/main/java/com/anjiPlus/api/MoocMethodInterceptor.java&#10;Qualifier&#9;PSI&#9;JAVA://org.springframework.beans.factory.annotation.QualifierAnnotationAutowireCandidateResolver" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533118404137" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533191863799" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -617,11 +639,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.anjiPlus.test.aop.aspectj" />
       <recent name="com.anjiPlus.test.aop" />
       <recent name="com.anjiPlus.test.TestJsr" />
       <recent name="com.anjiPlus.beanannotation.javabased" />
       <recent name="com.anjiPlus.test.beanannotation" />
-      <recent name="com.anjiPlus.beanannotation.multibean" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources" />
@@ -639,7 +661,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TestAOPAPI.testSave">
+  <component name="RunManager" selected="JUnit.TestAspectj.testSave">
     <configuration name="TestAOPAPI.testSave" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="webDemo" />
       <extension name="coverage">
@@ -651,22 +673,6 @@
       <option name="PACKAGE_NAME" value="com.anjiPlus.test.aop" />
       <option name="MAIN_CLASS_NAME" value="com.anjiPlus.test.aop.TestAOPAPI" />
       <option name="METHOD_NAME" value="testSave" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestAOPSchemaAdvice.testBiz" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="webDemo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.anjiPlus.test.aop.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.anjiPlus.test.aop" />
-      <option name="MAIN_CLASS_NAME" value="com.anjiPlus.test.aop.TestAOPSchemaAdvice" />
-      <option name="METHOD_NAME" value="testBiz" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -714,6 +720,22 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.anjiPlus.test.aop" />
       <option name="MAIN_CLASS_NAME" value="com.anjiPlus.test.aop.TestAOPSchemaAdvisors" />
+      <option name="METHOD_NAME" value="testSave" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestAspectj.testSave" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="webDemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.anjiPlus.test.aop.aspectj.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.anjiPlus.test.aop.aspectj" />
+      <option name="MAIN_CLASS_NAME" value="com.anjiPlus.test.aop.aspectj.TestAspectj" />
       <option name="METHOD_NAME" value="testSave" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -874,19 +896,19 @@
     <list>
       <item itemvalue="JUnit.TestBeanAnnotation.testSay" />
       <item itemvalue="Tomcat Server.tomact" />
-      <item itemvalue="JUnit.TestAOPSchemaAdvice.testBiz" />
       <item itemvalue="JUnit.TestAOPSchemaAdvice.testInit" />
       <item itemvalue="JUnit.TestAOPSchemaAdvice.testFit" />
       <item itemvalue="JUnit.TestAOPSchemaAdvisors.testSave" />
       <item itemvalue="JUnit.TestAOPAPI.testSave" />
+      <item itemvalue="JUnit.TestAspectj.testSave" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestAspectj.testSave" />
         <item itemvalue="JUnit.TestAOPAPI.testSave" />
         <item itemvalue="JUnit.TestAOPSchemaAdvisors.testSave" />
         <item itemvalue="JUnit.TestAOPSchemaAdvice.testFit" />
         <item itemvalue="JUnit.TestAOPSchemaAdvice.testInit" />
-        <item itemvalue="JUnit.TestAOPSchemaAdvice.testBiz" />
       </list>
     </recent_temporary>
   </component>
@@ -955,43 +977,52 @@
       <workItem from="1533115092616" duration="811000" />
       <workItem from="1533116306013" duration="814000" />
       <workItem from="1533117544611" duration="982000" />
+      <workItem from="1533175678258" duration="969000" />
+      <workItem from="1533177510158" duration="1137000" />
+      <workItem from="1533178781762" duration="997000" />
+      <workItem from="1533180002282" duration="156000" />
+      <workItem from="1533188398394" duration="1121000" />
+      <workItem from="1533189612725" duration="880000" />
+      <workItem from="1533190850477" duration="1137000" />
+      <workItem from="1533192059631" duration="540000" />
+      <workItem from="1533196789884" duration="83000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestAOPSchemaAdvice_testInit - 2018.08.01 at 14h 55m 21s.xml">
-      <configuration name="TestAOPSchemaAdvice.testInit" configurationId="JUnit" />
+    <history-entry file="TestAspectj_testSave - 2018.08.02 at 13h 45m 25s.xml">
+      <configuration name="TestAspectj.testSave" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestAOPSchemaAdvice_testInit - 2018.08.01 at 14h 56m 02s.xml">
-      <configuration name="TestAOPSchemaAdvice.testInit" configurationId="JUnit" />
+    <history-entry file="TestAspectj_testSave - 2018.08.02 at 13h 48m 45s.xml">
+      <configuration name="TestAspectj.testSave" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestAOPSchemaAdvice_testFit - 2018.08.01 at 15h 10m 51s.xml">
-      <configuration name="TestAOPSchemaAdvice.testFit" configurationId="JUnit" />
+    <history-entry file="TestAspectj_testSave - 2018.08.02 at 13h 48m 52s.xml">
+      <configuration name="TestAspectj.testSave" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestAOPSchemaAdvisors_testSave - 2018.08.01 at 15h 48m 05s.xml">
-      <configuration name="TestAOPSchemaAdvisors.testSave" configurationId="JUnit" />
+    <history-entry file="TestAspectj_testSave - 2018.08.02 at 13h 52m 02s.xml">
+      <configuration name="TestAspectj.testSave" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestAOPSchemaAdvisors_testSave - 2018.08.01 at 15h 48m 24s.xml">
-      <configuration name="TestAOPSchemaAdvisors.testSave" configurationId="JUnit" />
+    <history-entry file="TestAspectj_testSave - 2018.08.02 at 13h 53m 07s.xml">
+      <configuration name="TestAspectj.testSave" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestAOPSchemaAdvisors_testSave - 2018.08.01 at 15h 48m 56s.xml">
-      <configuration name="TestAOPSchemaAdvisors.testSave" configurationId="JUnit" />
+    <history-entry file="TestAspectj_testSave - 2018.08.02 at 13h 53m 37s.xml">
+      <configuration name="TestAspectj.testSave" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestAOPSchemaAdvisors_testSave - 2018.08.01 at 15h 49m 04s.xml">
-      <configuration name="TestAOPSchemaAdvisors.testSave" configurationId="JUnit" />
+    <history-entry file="TestAspectj_testSave - 2018.08.02 at 13h 55m 13s.xml">
+      <configuration name="TestAspectj.testSave" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestAOPAPI_testSave - 2018.08.01 at 18h 02m 32s.xml">
-      <configuration name="TestAOPAPI.testSave" configurationId="JUnit" />
+    <history-entry file="TestAspectj_testSave - 2018.08.02 at 13h 58m 08s.xml">
+      <configuration name="TestAspectj.testSave" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestAOPAPI_testSave - 2018.08.01 at 18h 10m 27s.xml">
-      <configuration name="TestAOPAPI.testSave" configurationId="JUnit" />
+    <history-entry file="TestAspectj_testSave - 2018.08.02 at 14h 02m 04s.xml">
+      <configuration name="TestAspectj.testSave" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestAOPAPI_testSave - 2018.08.01 at 18h 10m 36s.xml">
-      <configuration name="TestAOPAPI.testSave" configurationId="JUnit" />
+    <history-entry file="TestAspectj_testSave - 2018.08.02 at 14h 13m 31s.xml">
+      <configuration name="TestAspectj.testSave" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39872000" />
+    <option name="totallyTimeSpent" value="46892000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1003,10 +1034,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="95" width="1369" height="739" extended-state="0" />
-    <editor active="true" />
+    <frame x="30" y="64" width="1369" height="739" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49902913" visible="true" weight="0.25470987" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49902913" visible="true" weight="0.28862095" />
       <window_info id="Structure" order="1" sideWeight="0.5009709" side_tool="true" weight="0.3360534" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info id="Image Layers" order="3" />
@@ -1016,7 +1046,7 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.3283582" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49943757" visible="true" weight="0.39721793" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49943757" weight="0.39721793" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39876354" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1079,97 +1109,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring-beanannotation.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" selection-start-line="1" selection-end-line="10" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/config.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="5" selection-start-column="5" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/beanannotation/multibean/BeanInvoker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="9" column="10" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/beanannotation/multibean/BeanImplOne.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="24" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/MavenBuild/repo/org/springframework/spring-context/4.3.10.RELEASE/spring-context-4.3.10.RELEASE.jar!/org/springframework/context/annotation/ScopedProxyMode.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/beanannotation/multibean/BeanInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/beanannotation/multibean/BeanImplTwo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/beanannotation/javabased/MyDirverManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/MavenBuild/repo/org/springframework/spring-beans/4.3.10.RELEASE/spring-beans-4.3.10.RELEASE.jar!/org/springframework/beans/factory/annotation/QualifierAnnotationAutowireCandidateResolver.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/beanannotation/javabased/StringStore.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="48" selection-start-line="2" selection-start-column="48" selection-end-line="2" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/beanannotation/javabased/Store.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/beanannotation/javabased/StoreConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="38" column="67" selection-start-line="38" selection-start-column="67" selection-end-line="38" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/anjiPlus/test/beanannotation/TestJavabased.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="32" column="29" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/MavenBuild/repo/org/springframework/spring-context/4.3.10.RELEASE/spring-context-4.3.10.RELEASE-sources.jar!/org/springframework/context/annotation/ScopedProxyMode.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/beanannotation/javabased/IntegerStore.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1219,10 +1158,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="6" column="42" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
-          <folding>
-            <element signature="e#111#112#0" expanded="true" />
-            <element signature="e#163#164#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1231,20 +1166,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1650">
           <caret line="110" column="17" selection-start-line="110" selection-start-column="17" selection-end-line="110" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/aopAdvice/biz/AspectBiz.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/aopAdvice/MoocAspect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="43" column="53" selection-start-line="43" selection-start-column="53" selection-end-line="43" selection-end-column="53" />
         </state>
       </provider>
     </entry>
@@ -1297,102 +1218,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring-aop-schema-advisors.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" selection-start-line="1" selection-end-line="11" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring-aop-advice.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/aopAdvice/schema/advisors/ConcurrentOperationExecutor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="35" column="45" selection-start-line="35" selection-start-column="45" selection-end-line="35" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/support/NameMatchMethodPointcut.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="8" selection-start-column="8" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/api/MoocThrowsAdvice.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/api/MoocAfterReturningAdvice.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/api/BizLogicImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="28" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/api/MoocMethodInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/api/introduction/Lockable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/api/introduction/LockMixin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="28" column="41" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/support/DefaultPointcutAdvisor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/api/introduction/LockMixinAdvisor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1403,34 +1232,224 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/api/MoocBeforeAdvice.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/api/introduction/Lockable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="44" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="75">
+          <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/api/BizLogic.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
-          <caret line="2" column="25" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="25" />
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/api/MoocMethodInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="50" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/api/BizLogicImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/support/NameMatchMethodPointcut.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/support/DefaultPointcutAdvisor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/api/introduction/LockMixin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="28" column="41" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/api/introduction/LockMixinAdvisor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/api/MoocAfterReturningAdvice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/MavenBuild/repo/org/springframework/spring-aop/4.3.10.RELEASE/spring-aop-4.3.10.RELEASE-sources.jar!/org/springframework/aop/framework/ProxyFactoryBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="135" column="16" selection-start-line="135" selection-start-column="16" selection-end-line="135" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/anjiPlus/test/aop/TestAOPAPI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="17" column="28" lean-forward="true" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+        <state relative-caret-position="285">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/spring-aop-api.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="59" column="52" lean-forward="true" selection-start-line="59" selection-start-column="52" selection-end-line="59" selection-end-column="52" />
+        <state relative-caret-position="1185">
+          <caret line="79" column="19" selection-start-line="79" selection-start-column="19" selection-end-line="79" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/aopAspectj/MoocMethod.aj" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring-aop-aspectj.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/aopAspectj/Sample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/aopAspectj/MoocMethod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/aopAdvice/schema/advisors/ConcurrentOperationExecutor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/aopAdvice/biz/AspectBiz.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/aopAdvice/MoocAspect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="43" column="53" selection-start-line="43" selection-start-column="53" selection-end-line="43" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/MavenBuild/repo/org/springframework/spring-context/4.3.10.RELEASE/spring-context-4.3.10.RELEASE.jar!/org/springframework/stereotype/Component.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home/src.zip!/java/lang/annotation/Target.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="78" column="18" selection-start-line="78" selection-start-column="18" selection-end-line="78" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home/src.zip!/java/lang/annotation/Retention.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="44" column="4" lean-forward="true" selection-start-line="44" selection-start-column="4" selection-end-line="44" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/MavenBuild/repo/org/aspectj/aspectjweaver/1.8.10/aspectjweaver-1.8.10.jar!/org/aspectj/lang/annotation/Aspect.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="12" column="6" lean-forward="true" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/aopAspectj/MoocAspect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#670#671#0" expanded="true" />
+            <element signature="e#725#726#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/aopAspectj/SampleImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="24" column="105" selection-start-line="24" selection-start-column="105" selection-end-line="24" selection-end-column="105" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/api/MoocBeforeAdvice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring-aop-advice.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring-aop-schema-advisors.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/anjiPlus/aopAspectj/biz/MookBiz.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="8" column="40" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/anjiPlus/test/aop/aspectj/TestAspectj.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

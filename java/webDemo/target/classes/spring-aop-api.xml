@@ -46,19 +46,43 @@
 
 
 
-    <bean id="defaultAdvisor" class="com.anjiPlus.support.DefaultPointcutAdvisor"></bean>
+    <!--<bean id="defaultAdvisor" class="com.anjiPlus.support.DefaultPointcutAdvisor"></bean>-->
 
-    <bean id="bizLogicImpl" class="org.springframework.aop.framework.ProxyFactoryBean">
+    <!--<bean id="bizLogicImpl" class="org.springframework.aop.framework.ProxyFactoryBean">-->
+        <!--<property name="proxyInterfaces">-->
+            <!--<value>com.anjiPlus.api.BizLogic</value>-->
+        <!--</property>-->
+        <!--<property name="target" ref="bizLogicImplTarget"/>-->
+        <!--<property name="interceptorNames">-->
+            <!--<list>-->
+                <!--<value>moocBeforeAdvice</value>-->
+                <!--<value>moocAfterReturningAdvice</value>-->
+                <!--<value>moocMethodInterceptor</value>-->
+                <!--<value>moocThrowsAdvice</value>-->
+                <!--&lt;!&ndash;<value>mooc*</value>&ndash;&gt;-->
+            <!--</list>-->
+        <!--</property>-->
+    <!--</bean>-->
+
+
+    <bean id="baseProxyBean" class="org.springframework.aop.framework.ProxyFactoryBean" lazy-init="true" abstract="true"></bean>
+
+    <!--指定父类 baseProxyBean-->
+    <bean id="bizLogicImpl" parent="baseProxyBean">
+        <!--设置target 目标-->
+        <property name="target">
+            <bean class="com.anjiPlus.api.BizLogicImpl"></bean>
+        </property>
+        <!--设置接口代理-->
         <property name="proxyInterfaces">
             <value>com.anjiPlus.api.BizLogic</value>
         </property>
-        <property name="target" ref="bizLogicImplTarget"/>
+        <!--设置拦截器名称-->
         <property name="interceptorNames">
             <list>
                 <value>moocBeforeAdvice</value>
                 <value>moocAfterReturningAdvice</value>
                 <value>moocMethodInterceptor</value>
-                <value>defaultAdvisot</value>
                 <value>moocThrowsAdvice</value>
             </list>
         </property>

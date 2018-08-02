@@ -1,0 +1,10 @@
+server:
+  port: 8082
+
+girl:
+  cupSize: F
+  age: 18
+  
+content: "cupSize: ${girl.cupSize}, age: ${girl.age}"
+#  servlet:
+#    context-path: /springboot

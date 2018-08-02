@@ -16,7 +16,7 @@ public class TestAOPAPI extends UnitTestBase {
 
     @Test
     public void testSave() {
-        BizLogic logic = super.getBean("bizLogic");
+        BizLogic logic = super.getBean("bizLogicImpl");
         logic.save();
 
     }
