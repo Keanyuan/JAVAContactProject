@@ -11,3 +11,49 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
+#    关闭缓存，及时刷新
+#  静态资源配置
+  freemarker:
+    template-loader-path: classpath:/templates/
+    charset: UTF-8
+    check-template-location: true
+    content-type: text/html
+    suffix: .ftl
+    expose-request-attributes: true
+    expose-session-attributes: true
+    request-context-attribute: request
+  #    cache: false
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates
+    suffix: .htlm
+    mode: HTML5
+    encoding: UTF-8
+    servlet:
+      content-type: text/html
+  devtools:
+    restart:
+#      热部署生效
+      enabled: true
+#      设置重启目录，添加那个目录的文件需要restart
+      additional-paths: src/main/java
+#      排除不需要restart的目录
+#      exclude: templates/**
+mybatis:
+  type-aliases-package: tk.mybatis.springboot.model
+  mapper-locations: classpath:mapper/*.xml
+mapper:
+#  mappers: - tk.mybatis.springboot.util.MyMapper
+  not-empty: false
+  identity: MYSQL
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+  params: count=countSql
+restart:
+  include:
+    mapper: /mapper-[\\w-\\.]+jar
+restart:
+  include:
+    pagehelper: /pagehelper-[\\w-\\.]+ja
