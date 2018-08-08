@@ -154,19 +154,19 @@ PRIMARY KEY ( id ) \
 \f0 \
 CREATE TABLE sys_user (\
 	id VARCHAR ( 32 ) NOT NULL,\
-	username VARCHAR ( 32 ) NOT NULL COMMENT '
+	username VARCHAR ( 512 ) COMMENT '
 \f1 \'d3\'c3\'bb\'a7\'c3\'fb\'a3\'ac\'b5\'c7\'c2\'bc\'c3\'fb
 \f0 ',\
-	password VARCHAR ( 32 ) NOT NULL COMMENT '
+	password VARCHAR ( 512 ) COMMENT '
 \f1 \'c3\'dc\'c2\'eb
 \f0 ',\
-	nickname VARCHAR ( 32 ) NOT NULL COMMENT '
+	nickname VARCHAR ( 512 ) COMMENT '
 \f1 \'ea\'c7\'b3\'c6
 \f0 ',\
-	age INTEGER NOT NULL COMMENT '
+	age INTEGER  COMMENT '
 \f1 \'c4\'ea\'c1\'e4
 \f0 ',\
-	sex INTEGER NOT NULL COMMENT '
+	sex INTEGER  COMMENT '
 \f1 \'d0\'d4\'b1\'f0
 \f0 \
 	0
@@ -178,7 +178,7 @@ CREATE TABLE sys_user (\
 	2
 \f1 \'a3\'ba\'b1\'a3\'c3\'dc
 \f0 ',\
-	job INTEGER NOT NULL COMMENT '
+	job INTEGER COMMENT '
 \f1 \'d6\'b0\'d2\'b5\'c0\'e0\'d0\'cd\'a3\'ba
 \f0 \
 	1
