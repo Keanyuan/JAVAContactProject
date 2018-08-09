@@ -39,6 +39,20 @@ spring:
       additional-paths: src/main/java
 #      排除不需要restart的目录
 #      exclude: templates/**
+
+#REDIS配置
+  redis:
+    database: 0
+    host: 192.168.214.215
+    port: 6379
+    password:
+    timeout: 0
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: -1
+        max-idle: 10
+        min-idle: 2
 mybatis:
   type-aliases-package: tk.mybatis.springboot.model
   mapper-locations: classpath:mapper/*.xml

@@ -13,7 +13,7 @@ public class GirlService {
     @Autowired
     private GirlRepository girlRepository;
 
-    @Transactional(propagation = Propagation.REQUIRED, readOnly = false)
+    @Transactional(propagation = Propagation.REQUIRED)
     public void insertTwo(){
         Girl girla = new Girl();
         girla.setCupSize("A");
