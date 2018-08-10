@@ -26,7 +26,7 @@ public class GirlReqController {
         return AjJSONResult.ok(list);
     }
 
-//新增
+//新增aa
     @PostMapping(value = "/add")
     public AjJSONResult girlAdd(@RequestParam("cupSize") String cupSize, @RequestParam("age") Integer age) {
         Girl girl = new Girl();
