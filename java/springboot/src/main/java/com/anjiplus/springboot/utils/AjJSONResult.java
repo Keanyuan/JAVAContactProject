@@ -42,6 +42,10 @@ public class AjJSONResult {
         return new AjJSONResult(null);
     }
 
+    public static AjJSONResult error(Integer status,String msg) {
+        return new AjJSONResult(status, msg, null);
+    }
+
     public static AjJSONResult errorMsg(String msg) {
         return new AjJSONResult(500, msg, null);
     }

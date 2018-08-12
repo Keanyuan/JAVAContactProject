@@ -3,6 +3,7 @@ package com.anjiplus.springboot.controller;
 import com.anjiplus.springboot.Interface.GirlRepository;
 import com.anjiplus.springboot.dao.Girl;
 import com.anjiplus.springboot.service.GirlService;
+import com.anjiplus.springboot.utils.AjJSONResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
@@ -23,21 +24,25 @@ public class GirlController {
 //    查询
     @GetMapping(value = "/girls")
     public List<Girl> girlList(){
+        System.out.println("girl list");
         return girlRepository.findAll();
     }
 
 //新增
     @PostMapping(value = "/girls")
-    public Girl girlAdd(@Valid Girl girl, BindingResult bindingResult) {
+    public AjJSONResult girlAdd(@Valid Girl girl, BindingResult bindingResult) {
 //    public Girl girlAdd(@RequestParam("cupSize") String cupSize, @RequestParam("age") Integer age) {
         if (bindingResult.hasErrors()){
-            System.out.println(bindingResult.getFieldError().getDefaultMessage());
-            return null;
+            return AjJSONResult.errorMsg(bindingResult.getFieldError().getDefaultMessage());
+        }
+        if (girl.getAge() == null){
+            return AjJSONResult.errorMsg("数据不能为空");
+
         }
         girl.setCupSize(girl.getCupSize());
         girl.setAge(girl.getAge());
 
-        return girlRepository.save(girl);
+        return AjJSONResult.ok(girlRepository.save(girl));
     }
 
 //    通过ID查询
@@ -73,5 +78,10 @@ public class GirlController {
     @PostMapping(value = "girls/two")
     public void girlTwo(){
         girlService.insertTwo();
+    }
+
+    @GetMapping(value = "/girls/getAge/{id}")
+    public void getAge(@PathVariable("id") Integer id) throws Exception {
+        girlService.getAge(id);
     }
 }
