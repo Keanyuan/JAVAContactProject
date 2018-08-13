@@ -2,6 +2,7 @@ package com.anjiplus.sell.service.impl;
 
 import com.anjiplus.sell.dataobject.ProductInfo;
 import com.anjiplus.sell.enums.ProductStatusEnum;
+import lombok.extern.slf4j.Slf4j;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -19,6 +20,7 @@ import static org.junit.Assert.*;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
+@Slf4j
 public class ProductServiceImplTest {
 
     @Autowired
@@ -33,6 +35,7 @@ public class ProductServiceImplTest {
     @Test
     public void findUpAll() throws Exception{
         List<ProductInfo> productInfoList = productService.findUpAll();
+        log.info("productInfoList.size :{}",productInfoList.size());
         Assert.assertNotEquals(0, productInfoList.size());
     }
 
@@ -40,7 +43,7 @@ public class ProductServiceImplTest {
     public void findAll() throws Exception{
         PageRequest request = PageRequest.of(1, 2);
         Page<ProductInfo> productInfoPage = productService.findAll(request);
-        System.out.println(productInfoPage.getTotalElements());
+        log.info("productInfoPage " + productInfoPage.getContent().size());
         Assert.assertNotEquals(0, productInfoPage.getTotalElements());
 
 
@@ -49,14 +52,14 @@ public class ProductServiceImplTest {
     @Test
     public void save() throws Exception{
         ProductInfo productInfo = new ProductInfo();
-        productInfo.setProductId("123455");
-        productInfo.setProductName("金丝有条");
-        productInfo.setProductPrice(new BigDecimal(3.2));
+        productInfo.setProductId("1000003");
+        productInfo.setProductName("豆浆");
+        productInfo.setProductPrice(new BigDecimal(1.0));
         productInfo.setProductStock(100);
         productInfo.setProductDescription("很好吃的虾");
         productInfo.setProductIcon("http://xxxxx.jpg");
         productInfo.setProductStatus(ProductStatusEnum.UP.getCode());
-        productInfo.setCategoryType(2);
+        productInfo.setCategoryType(1);
 
         ProductInfo result = productService.save(productInfo);
         Assert.assertNotNull(result);

@@ -1,6 +1,7 @@
 package com.anjiplus.sell.service.impl;
 
 import com.anjiplus.sell.dataobject.ProductCategory;
+import lombok.extern.slf4j.Slf4j;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -15,6 +16,7 @@ import static org.junit.Assert.*;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
+@Slf4j
 public class CategoryServiceImplTest {
 
     @Autowired
@@ -23,25 +25,28 @@ public class CategoryServiceImplTest {
     @Test
     public void findOne() {
         ProductCategory productCategory = categoryService.findOne(3);
-        Assert.assertEquals(new Integer(4), productCategory.getCategoryType());
+        log.info(productCategory.toString());
+        Assert.assertEquals(new Integer(3), productCategory.getCategoryType());
     }
 
     @Test
     public void findAll() {
         List<ProductCategory> productCategoryList = categoryService.findAll();
+        log.info(""+productCategoryList.toString());
         Assert.assertNotEquals(0, productCategoryList.size());
     }
 
     @Test
     public void findByCategoryTypeIn() {
         List<ProductCategory> productCategoryList = categoryService.findByCategoryTypeIn(Arrays.asList(3,4,6));
+        log.info(""+productCategoryList.toString());
         Assert.assertNotEquals(0, productCategoryList.size());
 
     }
 
     @Test
-    public void save() {
-        ProductCategory productCategory =  new ProductCategory("今日最佳", 10);
+    public void save() throws Exception{
+        ProductCategory productCategory =  new ProductCategory("简餐便当", 6);
         ProductCategory result = categoryService.save(productCategory);
         Assert.assertNotNull(result);
     }

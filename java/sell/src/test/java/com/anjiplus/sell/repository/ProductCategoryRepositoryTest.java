@@ -1,6 +1,7 @@
 package com.anjiplus.sell.repository;
 
 import com.anjiplus.sell.dataobject.ProductCategory;
+import lombok.extern.slf4j.Slf4j;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -17,6 +18,7 @@ import static org.junit.Assert.*;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
+@Slf4j
 public class ProductCategoryRepositoryTest {
 
     @Autowired
