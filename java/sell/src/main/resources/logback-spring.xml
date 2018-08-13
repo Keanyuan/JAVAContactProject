@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<configuration>
+    <appender name="consoleLog" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <pattern>
+                %d - %msg%n
+            </pattern>
+        </layout>
+    </appender>
+    <!--info-->
+    <appender name="fileInfoLog" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!--根据Level级别过滤配置 -->
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>ERROR</level>
+            <onMatch>DENY</onMatch>
+            <onMismatch>ACCEPT</onMismatch>
+        </filter>
+        <encoder>
+            <pattern>
+                [%c] %m%n
+            </pattern>
+        </encoder>
+        <!--滚动策略 按天配置-->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!--路径-->
+            <fileNamePattern>/Users/kean_qi/Logger/sell/info.%d.log</fileNamePattern>
+        </rollingPolicy>
+    </appender>
+
+    <!--error-->
+    <appender name="fileErrorLog" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!--按工具范围 过滤配置-->
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>ERROR</level>
+        </filter>
+        <!--输出error信息配置-->
+        <encoder>
+            <pattern>
+                [%c] %msg%n
+            </pattern>
+        </encoder>
+        <!--滚动策略 按天配置-->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!--路径-->
+            <fileNamePattern>/Users/kean_qi/Logger/sell/error.%d.log</fileNamePattern>
+        </rollingPolicy>
+    </appender>
+<!--使用上边配置-->
+    <root level="info">
+        <appender-ref ref="consoleLog" />
+        <appender-ref ref="fileInfoLog" />
+        <appender-ref ref="fileErrorLog" />
+    </root>
+</configuration>

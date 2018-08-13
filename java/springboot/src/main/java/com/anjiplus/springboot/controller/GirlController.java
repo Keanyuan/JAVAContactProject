@@ -23,9 +23,8 @@ public class GirlController {
 
 //    查询
     @GetMapping(value = "/girls")
-    public List<Girl> girlList(){
-        System.out.println("girl list");
-        return girlRepository.findAll();
+    public AjJSONResult girlList(){
+        return AjJSONResult.ok(girlRepository.findAll());
     }
 
 //新增

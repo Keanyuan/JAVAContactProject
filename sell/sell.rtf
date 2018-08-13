@@ -5,7 +5,10 @@
 \paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
 
-\f0\fs24 \cf0 CREATE TABLE product_info (\
+\f0\fs24 \cf0 -- 
+\f1 \'c9\'cc\'c6\'b7\'b1\'ed
+\f0 \
+CREATE TABLE product_info (\
 	product_id VARCHAR ( 32 ) NOT NULL,\
 	product_name VARCHAR ( 64 ) NOT NULL COMMENT '
 \f1 \'c9\'cc\'c6\'b7\'c3\'fb\'b3\'c6
@@ -22,6 +25,13 @@
 	product_icon VARCHAR ( 512 ) COMMENT '
 \f1 \'d0\'a1\'cd\'bc
 \f0 ',\
+	product_status tinyint(3) DEFAULT '0' COMMENT '
+\f1 \'c9\'cc\'c6\'b7\'d7\'b4\'cc\'ac
+\f0 ,0
+\f1 \'d5\'fd\'b3\'a3
+\f0 1
+\f1 \'cf\'c2\'bc\'dc
+\f0 ',\
 	category_type INT NOT NULL COMMENT '
 \f1 \'c0\'e0\'c4\'bf\'b1\'e0\'ba\'c5
 \f0 ',\
@@ -35,6 +45,10 @@
 ) ENGINE = MyISAM DEFAULT CHARSET = utf8 COMMENT '
 \f1 \'c9\'cc\'c6\'b7\'b1\'ed
 \f0 ';\
+\
+-- 
+\f1 \'c0\'e0\'c4\'bf\'b1\'ed
+\f0 \
 CREATE TABLE product_category (\
 	category_id INT NOT NULL AUTO_INCREMENT,\
 	category_name VARCHAR ( 64 ) NOT NULL COMMENT '
@@ -54,6 +68,10 @@ CREATE TABLE product_category (\
 ) ENGINE = MyISAM DEFAULT CHARSET = utf8 COMMENT '
 \f1 \'c0\'e0\'c4\'bf\'b1\'ed
 \f0 ';\
+\
+-- 
+\f1 \'b6\'a9\'b5\'a5\'b1\'ed
+\f0 \
 CREATE TABLE order_master (\
 	order_id VARCHAR ( 32 ) NOT NULL,\
 	buyer_name VARCHAR ( 32 ) NOT NULL COMMENT '
@@ -96,6 +114,10 @@ CREATE TABLE order_master (\
 ) ENGINE = MyISAM DEFAULT CHARSET = utf8 COMMENT '
 \f1 \'b6\'a9\'b5\'a5\'b1\'ed
 \f0 ';\
+\
+-- 
+\f1 \'b6\'a9\'b5\'a5\'cf\'ea\'c7\'e9\'b1\'ed
+\f0 \
 CREATE TABLE order_detail (\
 	detail_id VARCHAR ( 32 ) NOT NULL,\
 	order_id VARCHAR ( 32 ) NOT NULL,\
@@ -125,7 +147,7 @@ CREATE TABLE order_detail (\
 \f0 ';\
 \
 -- 
-\f1 \'c2\'f4\'bc\'d2
+\f1 \'c2\'f4\'d0\'c5\'cf\'a2\'b1\'ed\'bc\'d2
 \f0 (
 \f1 \'b5\'c7\'c2\'bc\'ba\'f3\'cc\'a8\'ca\'b9\'d3\'c3
 \f0 , 
@@ -148,6 +170,13 @@ PRIMARY KEY ( id ) \
 ) ENGINE = MyISAM DEFAULT CHARSET = utf8 COMMENT '
 \f1 \'c2\'f4\'bc\'d2\'d0\'c5\'cf\'a2\'b1\'ed
 \f0 ';\
+\
+\
+\
+\
+\
+\
+\
 \
 -- SpringBoot
 \f1 \'ca\'fd\'be\'dd\'bf\'e2\'bd\'a8\'b1\'ed
