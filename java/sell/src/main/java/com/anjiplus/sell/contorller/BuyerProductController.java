@@ -7,6 +7,7 @@ import com.anjiplus.sell.service.ProductService;
 import com.anjiplus.sell.utils.ResultVOUtil;
 import com.anjiplus.sell.vo.ProductInfoVO;
 import com.anjiplus.sell.vo.ProductVO;
+import com.anjiplus.sell.vo.ProductVO1;
 import com.anjiplus.sell.vo.ResultVO;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;

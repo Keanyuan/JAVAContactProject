@@ -25,4 +25,11 @@ public class ResultVOUtil {
         resultVO.setMsg(msg);
         return resultVO;
     }
+
+    public static ResultVO error() {
+        ResultVO resultVO = new ResultVO();
+        resultVO.setCode(500);
+        resultVO.setMsg("系统异常");
+        return resultVO;
+    }
 }

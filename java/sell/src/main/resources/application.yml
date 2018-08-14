@@ -7,7 +7,7 @@ spring:
   jpa:
     show-sql: true
   jackson:
-    default-property-inclusion: non_null
+#    default-property-inclusion: non_null
 # url 前缀
 server:
   servlet:

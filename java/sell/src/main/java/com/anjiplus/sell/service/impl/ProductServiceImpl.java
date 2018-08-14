@@ -1,7 +1,10 @@
 package com.anjiplus.sell.service.impl;
 
 import com.anjiplus.sell.dataobject.ProductInfo;
+import com.anjiplus.sell.dto.CartDTO;
 import com.anjiplus.sell.enums.ProductStatusEnum;
+import com.anjiplus.sell.enums.ResultEnum;
+import com.anjiplus.sell.exception.SellException;
 import com.anjiplus.sell.repository.ProductInfoRepository;
 import com.anjiplus.sell.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +13,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ProductServiceImpl implements ProductService {
@@ -35,5 +39,41 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public ProductInfo save(ProductInfo productInfo) {
         return repository.save(productInfo);
+    }
+
+    /*加库存*/
+    @Override
+    public void increaseStock(List<CartDTO> carDTOList) {
+        for (CartDTO cartDTO: carDTOList){
+            ProductInfo productInfo = repository.findById(cartDTO.getProductId()).get();
+            if (productInfo == null) {
+                throw new SellException(ResultEnum.PRODUCT_NOT_EXIST);
+            }
+            Integer result = productInfo.getProductStock() + cartDTO.getProductQuantity();
+            //设置新库存
+            productInfo.setProductStock(result);
+            //更新
+            repository.save(productInfo);
+
+        }
+
+    }
+    /*减库存*/
+    @Override
+    public void decreaseStock(List<CartDTO> cartDTOList) {
+        for (CartDTO cartDTO: cartDTOList){
+            ProductInfo productInfo = repository.findById(cartDTO.getProductId()).get();
+            if (productInfo == null){
+                throw new SellException(ResultEnum.PRODUCT_NOT_EXIST);
+            }
+            Integer result = productInfo.getProductStock() - cartDTO.getProductQuantity();
+            //结果小于0 库存不足
+            if (result < 0){
+                throw new SellException(ResultEnum.PRODUCT_STOCK_ERROR);
+            }
+            productInfo.setProductStock(result);
+
+            repository.save(productInfo);
+        }
     }
 }
