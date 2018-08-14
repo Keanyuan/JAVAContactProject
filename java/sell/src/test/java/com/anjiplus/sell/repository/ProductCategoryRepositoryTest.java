@@ -37,7 +37,7 @@ public class ProductCategoryRepositoryTest {
 //        ProductCategory productCategory =  repository.findById(2).get();
 //        productCategory.setCategoryName("一本书");
 //        repository.save(productCategory);
-        ProductCategory productCategory =  new ProductCategory("每日最佳", 7);
+        ProductCategory productCategory =  new ProductCategory("午餐类", 5);
         ProductCategory result =  repository.save(productCategory);
         Assert.assertNotNull(result);
     }

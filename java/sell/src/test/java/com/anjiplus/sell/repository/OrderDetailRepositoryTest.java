@@ -31,7 +31,7 @@ public class OrderDetailRepositoryTest {
     public void saveTest(){
         OrderDetail orderDetail = new OrderDetail();
         orderDetail.setDetailId("1000000331");
-        orderDetail.setOrderId("123457");
+        orderDetail.setOrderId("1000001");
         orderDetail.setProductIcon("http://xxxx.jpg");
         orderDetail.setProductId("11111112");
         orderDetail.setProductName("皮皮虾");

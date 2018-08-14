@@ -30,7 +30,7 @@ public class OrderMasterRepositoryTest {
     @Autowired
     private OrderMasterRepository repository;
 
-    private final String OPENID = "110110";
+    private final String OPENID = "13222656656";
 
     @Test
     public void saveTest(){
