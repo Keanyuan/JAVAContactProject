@@ -24,7 +24,7 @@
         <!--滚动策略 按天配置-->
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!--路径-->
-            <fileNamePattern>/Users/kean/Logger/sell/info.%d.log</fileNamePattern>
+            <fileNamePattern>/Users/kean_qi/Logger/sell/info.%d.log</fileNamePattern>
         </rollingPolicy>
     </appender>
 
@@ -43,7 +43,7 @@
         <!--滚动策略 按天配置-->
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!--路径-->
-            <fileNamePattern>/Users/kean/Logger/sell/error.%d.log</fileNamePattern>
+            <fileNamePattern>/Users/kean_qi/Logger/sell/error.%d.log</fileNamePattern>
         </rollingPolicy>
     </appender>
 <!--使用上边配置-->
