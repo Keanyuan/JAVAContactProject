@@ -25,14 +25,14 @@ server:
 #  level:
 #    com.anjiplus.sell.LoggerTest: debug
 wechat:
-  mpAppId: wxd898fcb01713c658
-  mpAppSecret: 47ccc303338cee6e62894fxxxxxxxxxxx
-  openAppId: wx6ad144e54af67d87
-  openAppSecret: 91a2ff6d38a2bbccfb7e9f9079108e2e
-  mchId: 1483469312
+  mpAppId: wx0fd8a86920ade6d1
+  mpAppSecret: 9cf8d968fc72c72b720c7e66fb1d53d3
+  openAppId: wx0fd8a86920ade6d1
+  openAppSecret: 9cf8d968fc72c72b720c7e66fb1d53d3
+  mchId: wx0fd8a86920ade6d1
   mchKey: 06C56A89949D617xxxxxxxxxxx
   keyPath: /var/weixin_cert/h5.p12
-  notifyUrl: http://sell.natapp4.cc/sell/pay/notify
+  notifyUrl: http://keansell.natapp1.cc/sell/pay/notify
   templateId:
     orderStatus: e-Cqq67QxD6YNI41iRiqawEYdFavW_7pc7LyEMb-yeQ
 

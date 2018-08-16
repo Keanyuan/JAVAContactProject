@@ -104,5 +104,10 @@ public class OrderServiceImplTest {
 
     @Test
     public void findList1()  throws Exception {
+        PageRequest request = PageRequest.of(0, 2);
+        Page<OrderDTO> orderDTOPage = orderService.findList(request);
+        log.info("orderDTOPage.getContent():  {}", orderDTOPage.getContent());
+        Assert.assertNotEquals(0, orderDTOPage.getTotalElements());
+        Assert.assertTrue("列表个数", orderDTOPage.getTotalElements() > 0);
     }
 }
