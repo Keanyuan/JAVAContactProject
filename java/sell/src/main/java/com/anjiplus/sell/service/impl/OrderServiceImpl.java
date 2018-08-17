@@ -14,7 +14,9 @@ import com.anjiplus.sell.repository.OrderDetailRepository;
 import com.anjiplus.sell.repository.OrderMasterRepository;
 import com.anjiplus.sell.repository.ProductCategoryRepository;
 import com.anjiplus.sell.service.OrderService;
+import com.anjiplus.sell.service.PayService;
 import com.anjiplus.sell.service.ProductService;
+import com.anjiplus.sell.service.PushMessageService;
 import com.anjiplus.sell.utils.KeyUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
@@ -50,7 +52,11 @@ public class OrderServiceImpl implements OrderService {
     @Autowired
     private OrderMasterRepository orderMasterRepository;
 
+    @Autowired
+    private PushMessageService pushMessageService;
 
+    @Autowired
+    private PayService payService;
     @Override
     @Transactional
     public OrderDTO create(OrderDTO orderDTO)  {
@@ -89,6 +95,9 @@ public class OrderServiceImpl implements OrderService {
         orderDTO.setOrderId(orderId);
         BeanUtils.copyProperties(orderDTO, orderMaster);
         orderMaster.setOrderAmount(orderAmount);
+        orderDTO.setOrderStatus(OrderStatusEnum.NEW.getCode());
+        orderDTO.setPayStatus(PayStatusEnum.WAIT.getCode());
+        orderDTO.setOrderAmount(orderAmount);
         orderMaster.setOrderStatus(OrderStatusEnum.NEW.getCode());
         orderMaster.setPayStatus(PayStatusEnum.WAIT.getCode());
         orderMasterRepository.save(orderMaster);
@@ -99,6 +108,8 @@ public class OrderServiceImpl implements OrderService {
                 map(e -> new CartDTO(e.getProductId(), e.getProductQuantity())).
                 collect(Collectors.toList());
         productService.decreaseStock(cartDTOList);
+
+        pushMessageService.orderStatus(orderDTO);
 
         return orderDTO;
     }
@@ -167,7 +178,7 @@ public class OrderServiceImpl implements OrderService {
         if (orderDTO.getPayStatus().equals(PayStatusEnum.SUCCESS.getCode())) {
             //退款
             //TODO
-//            payService.refund(orderDTO);
+            payService.refund(orderDTO);
         }
 
         return orderDTO;
@@ -192,6 +203,7 @@ public class OrderServiceImpl implements OrderService {
             log.error("【完结订单】更新失败, orderMaster={}", orderMaster);
             throw new SellException(ResultEnum.ORDER_UPDATE_FAIL);
         }
+        pushMessageService.orderStatus(orderDTO);
 
         return orderDTO;
     }
