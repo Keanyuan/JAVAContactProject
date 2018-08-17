@@ -90,7 +90,7 @@
                     提醒
                 </h4>
             </div>
-            <div class="modal-body">
+            <div class="modal-body" id="neworder">
                 你有新的订单
             </div>
             <div class="modal-footer">
@@ -110,8 +110,9 @@
 <script src="https://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script>
     var websocket = null;
+    var message = "";
     if('WebSocket' in window) {
-        websocket = new WebSocket('ws://192.168.214.87:8080/sell/webSocket');
+        websocket = new WebSocket('ws://keansell.natapp1.cc/sell/webSocket');
     }else {
         alert('该浏览器不支持websocket!');
     }
@@ -125,7 +126,9 @@
     }
 
     websocket.onmessage = function (event) {
-        console.log('收到消息:' + event.data)
+        console.log('收到消息:' + event.data);
+        var dom = document.getElementById('neworder');
+        dom.innerHTML = event.data;
         //弹窗提醒, 播放音乐
         $('#myModal').modal('show');
 
@@ -133,7 +136,7 @@
     }
 
     websocket.onerror = function () {
-        // alert('websocket通信发生错误！');
+        alert('websocket通信发生错误！');
     }
 
     window.onbeforeunload = function () {

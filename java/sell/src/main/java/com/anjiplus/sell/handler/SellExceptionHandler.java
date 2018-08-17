@@ -1,14 +1,22 @@
 package com.anjiplus.sell.handler;
 
 import com.anjiplus.sell.config.ProjectUrlConfig;
+import com.anjiplus.sell.enums.ResultEnum;
+import com.anjiplus.sell.exception.SellException;
 import com.anjiplus.sell.exception.SellerAuthorizeException;
+import com.anjiplus.sell.utils.ResultVOUtil;
+import com.anjiplus.sell.vo.ResultVO;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.NoSuchElementException;
 
 /**
  * @Auther: kean_qi
@@ -36,7 +44,26 @@ public class SellExceptionHandler {
         return  new ModelAndView("login/login",map);
     }
 
-
-
-
+    @ExceptionHandler(value = SellException.class)
+    @ResponseBody
+    public ResultVO handlerSellerException(SellException e) {
+        return ResultVOUtil.error(e.getCode(), e.getMessage());
     }
+
+
+    @ExceptionHandler(value = NoSuchElementException.class)
+    @ResponseBody
+    public ResultVO handlerNoSuchException(NoSuchElementException e) {
+        return ResultVOUtil.error(ResultEnum.PRODUCT_NOT_EXIST.getCode(), ResultEnum.PRODUCT_NOT_EXIST.getMessage());
+    }
+
+
+    //    @ResponseStatus(HttpStatus.FORBIDDEN)  返回网络状态
+//    @ExceptionHandler(value = NoSuchElementException.class)
+//    @ResponseStatus(HttpStatus.FORBIDDEN)
+//    public ResultVO handlderNoSuchException(NoSuchElementException e) {
+//        return ResultVOUtil.error(ResultEnum.PRODUCT_NOT_EXIST.getCode(), ResultEnum.PRODUCT_NOT_EXIST.getMessage());
+//    }
+
+
+}

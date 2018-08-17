@@ -13,10 +13,7 @@ import com.anjiplus.sell.exception.SellException;
 import com.anjiplus.sell.repository.OrderDetailRepository;
 import com.anjiplus.sell.repository.OrderMasterRepository;
 import com.anjiplus.sell.repository.ProductCategoryRepository;
-import com.anjiplus.sell.service.OrderService;
-import com.anjiplus.sell.service.PayService;
-import com.anjiplus.sell.service.ProductService;
-import com.anjiplus.sell.service.PushMessageService;
+import com.anjiplus.sell.service.*;
 import com.anjiplus.sell.utils.KeyUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
@@ -57,6 +54,9 @@ public class OrderServiceImpl implements OrderService {
 
     @Autowired
     private PayService payService;
+
+    @Autowired
+    private WebSocket webSocket;
     @Override
     @Transactional
     public OrderDTO create(OrderDTO orderDTO)  {
@@ -100,6 +100,7 @@ public class OrderServiceImpl implements OrderService {
         orderDTO.setOrderAmount(orderAmount);
         orderMaster.setOrderStatus(OrderStatusEnum.NEW.getCode());
         orderMaster.setPayStatus(PayStatusEnum.WAIT.getCode());
+        orderDTO.setBuyerOpenid("o87bg0tzNHuCaHL3lnR-kgcuUsAM");
         orderMasterRepository.save(orderMaster);
 
 
@@ -109,8 +110,10 @@ public class OrderServiceImpl implements OrderService {
                 collect(Collectors.toList());
         productService.decreaseStock(cartDTOList);
 
+        //发生websocket
         pushMessageService.orderStatus(orderDTO);
 
+        webSocket.sendMessage("你有新订单： "+ orderDTO.getOrderId());
         return orderDTO;
     }
 

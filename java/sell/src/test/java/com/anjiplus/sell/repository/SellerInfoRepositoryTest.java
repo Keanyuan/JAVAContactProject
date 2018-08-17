@@ -28,9 +28,9 @@ public class SellerInfoRepositoryTest {
         sellerInfo.setSellerId(KeyUtil.genUniqueKey());
         sellerInfo.setUsername("admin");
         sellerInfo.setPassword("admin");
-        sellerInfo.setOpenid("abc");
+        sellerInfo.setOpenid("o87bg0tzNHuCaHL3lnR-kgcuUsAM");
         SellerInfo res = sellerInfoRepository.save(sellerInfo);
-        Assert.assertNotNull(sellerInfo);
+        Assert.assertNotNull(res);
     }
 
     @Test
