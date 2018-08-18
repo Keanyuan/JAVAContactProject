@@ -48,3 +48,7 @@ projecturl:
 #logging:
 #  level:
 #    com.anjiplus.sell.dataobject.mapper: trace
+
+#配置xml
+mybatis:
+  mapper-locations: classpath:mapper/*.xml

@@ -15,12 +15,12 @@ import java.util.Map;
 public interface ProductCategoryMapper {
 
 
-    @Insert("insert into product_category(category_name, category_type) values (#{category_name, jdbcType=VARCHAT}, #{category_type, jdbcType=INTEGER})")
+    @Insert("insert into product_category(category_name, category_type) values (#{category_name, jdbcType=VARCHAR}, #{category_type, jdbcType=INTEGER})")
     int insertByMap(Map<String, Object> map);
 
 
 
-    @Insert("insert into product_category(category_name, category_type) values (#{categoryName, jdbcType=VARCHAT}, #{categoryType, jdbcType=INTEGER})")
+    @Insert("insert into product_category(category_name, category_type) values (#{categoryName, jdbcType=VARCHAR}, #{categoryType, jdbcType=INTEGER})")
     int insertByObject(ProductCategory productCategory);
 
     @Select("select * from product_category where category_type = #{categoryType}")
@@ -54,4 +54,7 @@ public interface ProductCategoryMapper {
     @Delete("delete from product_category where category_type= #{categoryType}")
     int deleteByCatrgoryType(Integer catrgoryType);
 
+
+    //声明
+    ProductCategory selectfindByCatrgoryType(Integer categoryType);
 }
