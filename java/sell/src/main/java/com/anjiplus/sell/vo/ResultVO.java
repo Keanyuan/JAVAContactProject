@@ -2,11 +2,15 @@ package com.anjiplus.sell.vo;
 
 import lombok.Data;
 
+import java.io.Serializable;
+
 /*
 * HTTP 返回的请求最外层对象
 * */
 @Data
-public class ResultVO<T> {
+public class ResultVO<T> implements Serializable {
+
+    private static final long serialVersionUID = 9013246807411199661L;
 
     /** 错误码. */
     private Integer code;

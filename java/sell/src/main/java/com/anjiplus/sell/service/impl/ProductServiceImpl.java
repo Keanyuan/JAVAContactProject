@@ -8,6 +8,8 @@ import com.anjiplus.sell.exception.SellException;
 import com.anjiplus.sell.repository.ProductInfoRepository;
 import com.anjiplus.sell.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -21,7 +23,13 @@ public class ProductServiceImpl implements ProductService {
     @Autowired
     private ProductInfoRepository repository;
 
+    /**
+     * Redis缓存
+     * @param productId
+     * @return
+     */
     @Override
+//    @Cacheable(cacheNames = "productList", key = "123")
     public ProductInfo findOne(String productId) {
         return repository.findById(productId).get();
     }
@@ -36,7 +44,13 @@ public class ProductServiceImpl implements ProductService {
         return repository.findAll(pageable);
     }
 
+    /**
+     * Redis更新缓存
+     * @param productInfo
+     * @return
+     */
     @Override
+//    @CachePut(cacheNames = "productList", key = "123")
     public ProductInfo save(ProductInfo productInfo) {
         return repository.save(productInfo);
     }

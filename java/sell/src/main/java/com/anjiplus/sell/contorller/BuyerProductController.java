@@ -11,6 +11,7 @@ import com.anjiplus.sell.vo.ProductVO1;
 import com.anjiplus.sell.vo.ResultVO;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -31,6 +32,10 @@ public class BuyerProductController {
     private CategoryService categoryService;
 
     @GetMapping("/list")
+//    @Cacheable(cacheNames = "productList", key = "123")
+//    condition 添加一个条件  满足的话 进行缓存
+//    unless 条件二 除非是什么条件 进行缓存
+//    @Cacheable(cacheNames = "productList", key = "#productId", condition = "#productId.length() > 0", unless = "#result.getCode() != 0")
     public ResultVO list(){
         //1.先查询所有上架商品
         List<ProductInfo> productInfoList = productService.findUpAll();

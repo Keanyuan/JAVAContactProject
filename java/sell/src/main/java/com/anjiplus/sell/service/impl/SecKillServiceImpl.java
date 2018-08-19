@@ -1,8 +1,10 @@
 package com.anjiplus.sell.service.impl;
 
 import com.anjiplus.sell.exception.SellException;
+import com.anjiplus.sell.service.RedisLock;
 import com.anjiplus.sell.service.SecKillService;
 import com.anjiplus.sell.utils.KeyUtil;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
@@ -16,6 +18,9 @@ import java.util.Map;
 @Service
 public class SecKillServiceImpl implements SecKillService {
 
+    private static final int TIMEOUT = 10 * 1000; //超时时间10秒
+    @Autowired
+    private RedisLock redisLock;
     /**
      * 国庆活动，皮蛋粥特价， 限量100000份
      */
@@ -47,7 +52,14 @@ public class SecKillServiceImpl implements SecKillService {
     }
 
     @Override
-    public synchronized void orderProductMockDiffUser(String productId) {
+    public void orderProductMockDiffUser(String productId) {
+
+        //加锁
+        long time = System.currentTimeMillis() + TIMEOUT;
+        if (!redisLock.lock(productId, String.valueOf(time))) {
+            throw new SellException(101, "人太多，请稍后");
+        }
+
         //1.查询该商品库存，为0则活动结束
         int stockNum = stock.get(productId);
         if (stockNum == 0) {
@@ -65,6 +77,8 @@ public class SecKillServiceImpl implements SecKillService {
 
             stock.put(productId, stockNum);
 
+            //解锁
+            redisLock.unlock(productId, String.valueOf(time));
         }
     }
 }

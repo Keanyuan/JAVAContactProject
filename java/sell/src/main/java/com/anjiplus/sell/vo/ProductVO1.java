@@ -3,14 +3,16 @@ package com.anjiplus.sell.vo;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
+import java.io.Serializable;
 import java.util.List;
 
 /*
 * 商品（包含类目）
 * */
 //@Data
-public class ProductVO1 {
+public class ProductVO1 implements Serializable {
 
+    private static final long serialVersionUID = 6503920656511197183L;
     @JsonProperty("name")
     private String categoryName;
 
