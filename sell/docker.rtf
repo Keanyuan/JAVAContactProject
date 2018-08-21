@@ -1,0 +1,158 @@
+{\rtf1\ansi\ansicpg936\cocoartf1561\cocoasubrtf600
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fnil\fcharset134 PingFangSC-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;\red38\green38\blue38;
+\red250\green250\blue250;\red83\green85\blue2;\red115\green0\blue2;\red11\green84\blue83;}
+{\*\expandedcolortbl;;\csgray\c0;\csgray\c100000;\cssrgb\c20000\c20000\c20000;
+\cssrgb\c98431\c98431\c98431;\cssrgb\c40000\c40000\c0;\cssrgb\c53333\c0\c0;\cssrgb\c0\c40000\c40000;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf2 \cb3 \CocoaLigature0 //
+\f1 \'d4\'cb\'d0\'d0
+\f0 congtainer\
+docker run -p 8080:80 -d nginx\
+\
+
+\f1 //\'c1\'d0\'b3\'f6images
+\f0 \
+docker images\
+\
+//
+\f1 \'c1\'d0\'b3\'f6
+\f0 congtainer\
+docker ps\
+
+\f1 \
+//\'b8\'b4\'d6\'c6
+\f0 \
+docker cp index.html b913aaae7c22://usr/share/nginx/html\
+\
+//
+\f1 \'cd\'a3\'d6\'b9
+\f0 \
+docker stop b913aaae7c22\
+\
+//
+\f1 \'c1\'d0\'b3\'f6\'c0\'fa\'ca\'b7
+\f0 images\
+ps -a\
+\
+
+\f1 //\'c9\'be\'b3\'fd\'b6\'d4\'d3\'a6
+\f0 congtainer\
+docker rm b913aaae7c22\
+\
+
+\f1 //\'c9\'be\'b3\'fdimages
+\f0 \
+docker rmi b913aaae7c22\
+\
+//
+\f1 \'b1\'a3\'b4\'e6\'d0\'c2\'b5\'c4
+\f0 congtainer 
+\f1 \'d0\'ce\'b3\'c9\'d0\'c2\'b5\'c4\'be\'b5\'cf\'f1
+\f0 \
+docker commit -m 'add html' a029c6ef2497 nginx-fun\
+\
+\pard\pardeftab720\partightenfactor0
+
+\fs24 \cf4 \cb5 \expnd0\expndtw0\kerning0
+\CocoaLigature1 docker pull training\cf6 /\cf4 webapp  \cf7 # 
+\f1 \'d4\'d8\'c8\'eb\'be\'b5\'cf\'f1
+\f0\fs22 \cf2 \cb3 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural\partightenfactor0
+\
+\pard\pardeftab720\partightenfactor0
+
+\fs24 \cf4 \cb5 \expnd0\expndtw0\kerning0
+\CocoaLigature1 docker port \cf8 7a38a1ad55c6 #
+\f1 \'b2\'e9\'bf\'b4\'b6\'cb\'bf\'da\'ba\'c5
+\f0 \
+\
+\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural\partightenfactor0
+
+\fs22 \cf2 \cb3 \kerning1\expnd0\expndtw0 \CocoaLigature0 touch Dockerfile\
+\
+vi Dockerfile\
+\
+FROM alpine:latest\
+MAINTAINER xbf\
+CMD echo "hello docker!"\
+\
+docker build -t hello_docker .\
+\
+docker images\
+\
+docker run 122b09892e4evi\
+\
+WORKDIR 
+\f1 \'d6\'b8\'b6\'a8\'c2\'b7\'be\'b6
+\f0 \
+MAINTAINER 
+\f1 \'ce\'ac\'bb\'a4\'d5\'df\
+ENV \'c9\'e8\'b6\'a8\'bb\'b7\'be\'b3\'b1\'e4\'c1\'bf\
+ENTRYPOINT \'c8\'dd\'c6\'f7\'c8\'eb\'bf\'da\
+USER \'d6\'b8\'b6\'a8\'d3\'c3\'bb\'a7\
+VOLUME mount point\
+\
+\
+
+\f0 docker run -p 80:80 -d -v $PWD/html:/usr/share/nginx/html nginxps\
+\
+docker create -v $PWD/data:/var/mydata --name data_container ubuntu\
+\
+docker run -it --volumes-from data_container ubuntu /bin/bash\
+\
+mount\
+\
+
+\f1 \'b2\'e9\'d5\'d2
+\f0 \
+cd /var/mydata\
+\
+
+\f1 \'b4\'b4\'bd\'a8\'ce\'c4\'bc\'fe
+\f0 \
+\
+
+\f1 \'b7\'b5\'bb\'d8\'b2\'e9\'bf\'b4\'b1\'be\'b5\'d8\'c4\'bf\'c2\'bc\
+\'bf\'b4\'b5\'bd\'bb\'e1\'d3\'d0\'b9\'d2\'d4\'d8\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural\partightenfactor0
+
+\fs30 \'be\'b5\'cf\'f1
+\fs22 \
+Host		\'cb\'de\'d6\'f7\'bb\'fa\
+images 	\'be\'b5\'cf\'f1\
+container 	\'c8\'dd\'c6\'f7\
+registry 	\'b2\'d6\'bf\'e2\
+daemon 	\'ca\'d8\'bb\'a4\'b3\'cc\'d0\'f2\
+client 	\'bf\'cd\'bb\'a7\'b6\'cb
+\f0 \
+\
+//
+\f1 \'cb\'d1\'cb\'f7\'be\'b5\'cf\'f1
+\f0 \
+docker search whalesay\
+//
+\f1 \'c0\'ad\'c8\'a1\'be\'b5\'cf\'f1
+\f0 \
+docker pull whalesay\
+//
+\f1 \'cd\'c6\'cb\'cd\'be\'b5\'cf\'f1
+\f0 \
+docker
+\f1  push myname/whalesay\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural\partightenfactor0
+
+\f0 \
+ docker build -t keanqi/hello-nginx .\
+\
+docker run -d -p 80:80 keanqi/hello-nginx\
+\
+curl http://localhost}
