@@ -1,0 +1,65 @@
+{\rtf1\ansi\ansicpg936\cocoartf1561\cocoasubrtf600
+{\fonttbl\f0\fnil\fcharset134 PingFangSC-Regular;\f1\fnil\fcharset0 AndaleMono;}
+{\colortbl;\red255\green255\blue255;\red47\green255\blue18;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c15686\c99608\c7843;\csgray\c0\c90000;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 1\'a1\'a2\'d2\'bb\'cf\'b5\'c1\'d0\'ce\'a2\'d0\'a1\'b5\'c4\'b7\'fe\'ce\'f1\'d7\'e9\'b3\'c9\
+2\'a1\'a2\'c5\'dc\'bd\'f8\'d7\'d4\'bc\'ba\'b5\'c4\'bd\'f8\'b3\'cc\'c0\'ef\
+3\'a1\'a2\'c3\'bf\'b8\'f6\'b7\'fe\'ce\'f1\'ce\'aa\'b6\'c0\'c1\'a2\'b5\'c4\'d2\'b5\'ce\'f1\'bf\'aa\'b7\'a2\
+4\'a1\'a2\'b6\'c0\'c1\'a2\'b2\'bf\'ca\'f0\
+5\'a1\'a2\'b7\'d6\'b2\'bc\'ca\'bd\'b5\'c4\'b9\'dc\'c0\'ed\
+\
+\
+\'b5\'a5\'d2\'bb\'d3\'a6\'d3\'c3\'bc\'dc\'b9\'b9 \'a1\'aa> \'b4\'b9\'d6\'b1\'bc\'dc\'b9\'b9 \'a1\'aa>  \'b7\'d6\'b2\'bc\'ca\'bd\'b7\'fe\'ce\'f1\'bc\'dc\'b9\'b9  \'a1\'aa> \'c1\'f7\'b6\'af\'ca\'bd\'bc\'c6\'cb\'e3\'bc\'dc\'b9\'b9\
+\
+\'ce\'a2\'d0\'c5\'b5\'e3\'b2\'cd\'cf\'b5\'cd\'b3\'a3\'ba\
+\'b5\'a5\'cc\'e5\'bc\'dc\'b9\'b9\
+\'bb\'f9\'d3\'daAjax\'c7\'b0\'ba\'f3\'b6\'cb\'b7\'d6\'c0\'eb\
+\'b7\'d6\'b2\'bc\'ca\'bd\'a3\'a8\'cb\'ae\'c6\'bd\'c0\'a9\'d5\'b9&\'b7\'fe\'ce\'f1\'b2\'f0\'b7\'d6\'a3\'a9\
+\
+ \'b7\'d6\'b2\'bc\'ca\'bd\'b6\'a8\'d2\'e5\'a3\'ba\'d6\'bc\'d4\'da\'d6\'a7\'b3\'d6\'d3\'a6\'d3\'c3\'b3\'cc\'d0\'f2\'ba\'cd\'b7\'fe\'ce\'f1\'b5\'c4\'bf\'aa\'b7\'a2\'a3\'ac\'bf\'c9\'d2\'d4\'c0\'fb\'d3\'c3\'ce\'ef\'c0\'ed\'bc\'dc\'b9\'b9 \'d3\'c9\'b6\'e0\'b8\'f6\'d7\'d4\'d6\'ce\'b5\'c4\'b4\'a6\'c0\'ed\'d4\'aa\'cb\'d8\'a3\'ac \'b2\'bb\'b9\'b2\'cf\'ed\'d6\'f7\'c4\'da\'b4\'e6\'a3\'ac \'b5\'ab\'cd\'a8\'b9\'fd\'cd\'f8\'c2\'e7\'b7\'a2\'cb\'cd\'cf\'fb\'cf\'a2\'ba\'cf\'d7\'f7\'a1\'a3\
+\
+\
+\'b7\'fe\'ce\'f1\'d7\'a2\'b2\'e1\'b7\'a2\'cf\'d6\
+\'b7\'fe\'ce\'f1\'cd\'f8\'b9\'d8\'a3\'a8service gateway\'a3\'a9\
+\'ba\'f3\'b6\'cb\'cd\'a8\'d3\'c3\'b7\'fe\'ce\'f1\'a3\'a8\'d6\'d0\'bc\'e4\'b2\'e3\'b7\'fe\'ce\'f1 Middle Tier Service\'a3\'a9\
+\'c7\'b0\'b6\'ce\'b7\'fe\'ce\'f1\'a3\'a8\'b1\'df\'d4\'b5\'b7\'fe\'ce\'f1Edge Service\'a3\'a9\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1 \cf2 \cb3 \CocoaLigature0 mvn clean package\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf2 java -jar target/eureka-0.0.1-SNAPSHOT.jar\
+\
+\
+lsof -i:8761\
+\
+kill -9 5119\
+\
+nohup java -jar target/eureka-0.0.1-SNAPSHOT.jar > /dev/null 2>&1 &\
+\
+ ps -ef |grep eureka\
+\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0 \cf0 \cb1 \CocoaLigature1 \
+\
+\
+\'b7\'d6\'b2\'bc\'ca\'bd\'cf\'b5\'cd\'b3\'d6\'d0\'b7\'fe\'ce\'f1\'b7\'a2\'cf\'d6\'a3\'ba\
+		\'d7\'a2\'b2\'e1\'d6\'d0\'d0\'c4\
+A						B\
+						B\
+						B\
+						B\
+		\'b4\'fa\'c0\'ed\
+\
+\'b7\'fe\'ce\'f1\'b6\'cb\'b7\'a2\'cf\'d6\'a3\'ba\'b4\'fa\'c0\'ed\'b0\'ef\'d6\'da\'b6\'e0A\'d6\'d0\'cc\'f4\'d1\'a1\'b3\'f6B\'b7\'fe\'ce\'f1\'b9\'a9A\'ca\'b9\'d3\'c3\
+\
+\
+\
+\
+}
