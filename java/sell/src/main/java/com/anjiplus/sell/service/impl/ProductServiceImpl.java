@@ -13,6 +13,7 @@ import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
@@ -57,6 +58,7 @@ public class ProductServiceImpl implements ProductService {
 
     /*加库存*/
     @Override
+    @Transactional
     public void increaseStock(List<CartDTO> carDTOList) {
         for (CartDTO cartDTO: carDTOList){
             ProductInfo productInfo = repository.findById(cartDTO.getProductId()).get();
@@ -74,6 +76,7 @@ public class ProductServiceImpl implements ProductService {
     }
     /*减库存*/
     @Override
+    @Transactional
     public void decreaseStock(List<CartDTO> cartDTOList) {
         for (CartDTO cartDTO: cartDTOList){
             ProductInfo productInfo = repository.findById(cartDTO.getProductId()).get();
