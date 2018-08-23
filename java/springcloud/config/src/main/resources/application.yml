@@ -8,7 +8,7 @@ spring:
           uri: https://github.com/Keanyuan/spring-cloud-config-repo.git
           username: keanyuan
           password: as9787105
-          basedir: /Users/kean_qi/MavenBuild/config-repo
+          basedir: /Users/kean/MavenBuild/config-repo
 
 
 eureka:

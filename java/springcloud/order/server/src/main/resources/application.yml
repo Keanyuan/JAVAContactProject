@@ -2,7 +2,7 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
-
+#spring.cloud.stream.defaultBinder=boss
 spring:
   application:
     name: order
@@ -13,6 +13,13 @@ spring:
     password: root
   jpa:
     show-sql: true
+  cloud:
+    stream:
+      rabbit:
+        bindings:
+          myMessageInput:
+            group: order
+            content-type: application/json
 server:
   port: 8082
 
