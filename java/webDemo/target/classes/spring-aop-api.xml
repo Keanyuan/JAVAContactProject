@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/aop
+       http://www.springframework.org/schema/aop/spring-aop-4.0.xsd">
+    <context:component-scan base-package="com.anjiPlus.aopAdvice.schema"/>
+
+    <bean id="bizLogicImplTarget" class="com.anjiPlus.api.BizLogicImpl"></bean>
+    <bean id="moocBeforeAdvice" class="com.anjiPlus.api.MoocBeforeAdvice"></bean>
+    <bean id="moocAfterReturningAdvice" class="com.anjiPlus.api.MoocAfterReturningAdvice"></bean>
+    <bean id="moocMethodInterceptor" class="com.anjiPlus.api.MoocMethodInterceptor"></bean>
+    <bean id="moocThrowsAdvice" class="com.anjiPlus.api.MoocThrowsAdvice"></bean>
+
+
+    <!--<bean id="pointcutBean" class="com.anjiPlus.support.NameMatchMethodPointcut">-->
+        <!--<property name="mappedNames">-->
+            <!--<list>-->
+                <!--<value>sa*</value>-->
+            <!--</list>-->
+        <!--</property>-->
+    <!--</bean>-->
+
+    <!--<bean id="defaultAdvisor" class="com.anjiPlus.support.DefaultPointcutAdvisor">-->
+        <!--<property name="advice" ref="moocBeforeAdvice"/>-->
+        <!--<property name="pointcut" ref="pointcutBean"/>-->
+    <!--</bean>-->
+
+    <!--<bean id="bizLogicImpl" class="org.springframework.aop.framework.ProxyFactoryBean">-->
+        <!--<property name="target" ref="bizLogicImplTarget"/>-->
+        <!--<property name="interceptorNames">-->
+            <!--<list>-->
+                <!--<value>defaultAdvisor</value>-->
+                <!--<value>moocAfterReturningAdvice</value>-->
+                <!--<value>moocMethodInterceptor</value>-->
+                <!--<value>defaultAdvisot</value>-->
+                <!--<value>moocThrowsAdvice</value>-->
+            <!--</list>-->
+        <!--</property>-->
+    <!--</bean>-->
+
+
+
+    <!--<bean id="defaultAdvisor" class="com.anjiPlus.support.DefaultPointcutAdvisor"></bean>-->
+
+    <!--<bean id="bizLogicImpl" class="org.springframework.aop.framework.ProxyFactoryBean">-->
+        <!--<property name="proxyInterfaces">-->
+            <!--<value>com.anjiPlus.api.BizLogic</value>-->
+        <!--</property>-->
+        <!--<property name="target" ref="bizLogicImplTarget"/>-->
+        <!--<property name="interceptorNames">-->
+            <!--<list>-->
+                <!--<value>moocBeforeAdvice</value>-->
+                <!--<value>moocAfterReturningAdvice</value>-->
+                <!--<value>moocMethodInterceptor</value>-->
+                <!--<value>moocThrowsAdvice</value>-->
+                <!--&lt;!&ndash;<value>mooc*</value>&ndash;&gt;-->
+            <!--</list>-->
+        <!--</property>-->
+    <!--</bean>-->
+
+
+    <bean id="baseProxyBean" class="org.springframework.aop.framework.ProxyFactoryBean" lazy-init="true" abstract="true"></bean>
+
+    <!--指定父类 baseProxyBean-->
+    <bean id="bizLogicImpl" parent="baseProxyBean">
+        <!--设置target 目标-->
+        <property name="target">
+            <bean class="com.anjiPlus.api.BizLogicImpl"></bean>
+        </property>
+        <!--设置接口代理-->
+        <property name="proxyInterfaces">
+            <value>com.anjiPlus.api.BizLogic</value>
+        </property>
+        <!--设置拦截器名称-->
+        <property name="interceptorNames">
+            <list>
+                <value>moocBeforeAdvice</value>
+                <value>moocAfterReturningAdvice</value>
+                <value>moocMethodInterceptor</value>
+                <value>moocThrowsAdvice</value>
+            </list>
+        </property>
+    </bean>
+
+</beans>

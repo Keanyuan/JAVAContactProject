@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                        http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+    <!--自定义bean命名策略，实现BeanNameGenerator接口，并一定要包含一个无参数构造器-->
+    <context:component-scan base-package="org.example" name-generator="org.example.MyNameGenerator"/>
+    <!--自定义scope作用域策略，实现ScopeMetadataResolver接口并提供一个无参构造器-->
+    <context:component-scan base-package="org.example" name-generator="org.example.MyNameGenerator"/>
+    <!--可以使用scoped-proxy属性制定代理属性，有三个可选值：no, interfaces, targetClass-->
+    <context:component-scan base-package="org.example" scoped-proxy="interfaces"/>
+</beans>
