@@ -1,37 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bfd45281-e138-4b7f-8807-c347606043e3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../springcloud/product/src/main/java/com/anjiplus/product/ProductApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springcloud/product/src/main/java/com/anjiplus/product/controller/ProductController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springcloud/product/src/main/java/com/anjiplus/product/controller/ServerController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springcloud/product/src/main/java/com/anjiplus/product/dataobject/ProductCategory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springcloud/product/src/main/java/com/anjiplus/product/dataobject/ProductInfo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springcloud/product/src/main/java/com/anjiplus/product/dto/CartDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springcloud/product/src/main/java/com/anjiplus/product/enums/CodeEnum.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springcloud/product/src/main/java/com/anjiplus/product/enums/ProductStatusEnum.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springcloud/product/src/main/java/com/anjiplus/product/enums/ResultEnum.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springcloud/product/src/main/java/com/anjiplus/product/exception/SellException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springcloud/product/src/main/java/com/anjiplus/product/exception/SellerAuthorizeException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springcloud/product/src/main/java/com/anjiplus/product/repository/ProductCategoryRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springcloud/product/src/main/java/com/anjiplus/product/repository/ProductInfoRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springcloud/product/src/main/java/com/anjiplus/product/service/CategoryService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springcloud/product/src/main/java/com/anjiplus/product/service/ProductService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springcloud/product/src/main/java/com/anjiplus/product/service/impl/CategoryServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springcloud/product/src/main/java/com/anjiplus/product/service/impl/ProductServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springcloud/product/src/main/java/com/anjiplus/product/utils/EnumUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springcloud/product/src/main/java/com/anjiplus/product/utils/ResultVOUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springcloud/product/src/main/java/com/anjiplus/product/vo/ProductInfoVO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springcloud/product/src/main/java/com/anjiplus/product/vo/ProductVO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springcloud/product/src/main/java/com/anjiplus/product/vo/ResultVO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springcloud/product/src/main/resources/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springcloud/product/src/test/java/com/anjiplus/product/ProductApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springcloud/product/src/test/java/com/anjiplus/product/repository/ProductInfoRepositoryTest.java" beforeDir="false" />
-    </list>
+    <list default="true" id="bfd45281-e138-4b7f-8807-c347606043e3" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-1341253476">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
@@ -41,6 +24,12 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-1458" />
+    <option name="y" value="400" />
+    <option name="width" value="1298" />
+    <option name="height" value="830" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -86,12 +75,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1534988344818</updated>
-      <workItem from="1534988347499" duration="612000" />
+      <workItem from="1534988347499" duration="2694000" />
     </task>
     <servers />
   </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="2082000" />
+  </component>
   <component name="ToolWindowManager">
-    <frame x="-1444" y="48" width="1298" height="830" extended-state="0" />
+    <frame x="-1458" y="400" width="1298" height="830" extended-state="0" />
     <layout>
       <window_info id="Designer" />
       <window_info id="Image Layers" />

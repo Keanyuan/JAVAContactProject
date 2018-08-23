@@ -43,6 +43,23 @@ nohup java -jar target/eureka-0.0.1-SNAPSHOT.jar > /dev/null 2>&1 &\
  ps -ef |grep eureka\
 \
 \
+
+\f0 \'b0\'b2\'d7\'b0
+\f1 rabbitmq
+\f0 \'a3\'ba
+\f1 \
+docker pull rabbitmq:3.7.7-management\
+\
+docker run -d --hostname my-rabbit --name rabbit -p 15672:15672 -p 5672:5672 rabbitmq:3.7.7-management\
+\
+docker ps\
+\
+http://localhost:15672/#/queues\
+\
+http://127.0.0.1:8083/
+\f0 monitor
+\f1 \
+\
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
 
 \f0 \cf0 \cb1 \CocoaLigature1 \

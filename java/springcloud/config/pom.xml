@@ -4,17 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.anjiplus</groupId>
-    <artifactId>product</artifactId>
+    <artifactId>config</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <modules>
-        <module>common</module>
-        <module>server</module>
-        <module>client</module>
-    </modules>
+    <packaging>jar</packaging>
 
-    <packaging>pom</packaging>
-
-    <name>product</name>
+    <name>config</name>
     <description>Demo project for Spring Boot</description>
 
     <parent>
@@ -29,8 +23,30 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
         <spring-cloud.version>Finchley.SR1</spring-cloud.version>
-        <product-common.version>0.0.1-SNAPSHOT</product-common.version>
     </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-config-server</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <!--spring cloud bus  rabbitmq消息刷新-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bus-amqp</artifactId>
+        </dependency>
+    </dependencies>
 
     <dependencyManagement>
         <dependencies>
@@ -41,13 +57,17 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-            <!--common版本-->
-            <dependency>
-                <groupId>com.anjiplus</groupId>
-                <artifactId>product-common</artifactId>
-                <version>${product-common.version}</version>
-            </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
 
 </project>
