@@ -1,5 +1,6 @@
 package com.anjiplus.product.controller;
 
+import com.anjiplus.product.common.DecreaseStockInput;
 import com.anjiplus.product.dataobject.ProductCategory;
 import com.anjiplus.product.dataobject.ProductInfo;
 import com.anjiplus.product.dto.CartDTO;
@@ -41,10 +42,10 @@ public class ProductController {
      */
     @GetMapping("/list")
     public ResultVO list(){
-        //1.先查询所有上架商品
+        //1.先查询所有上架商品信息
         List<ProductInfo> productInfoList = productService.findUpAll();
 
-        //2.查询类目（一次性查询
+        //2.查询类目（一次性查询）
         List<Integer> categoryTypeList = productInfoList.stream()
                 .map(ProductInfo::getCategoryType)
                 .collect(Collectors.toList());
@@ -91,11 +92,11 @@ public class ProductController {
 
     /**
      * 扣库存（订单服务调用）
-     * @param cartDTOList
+     * @param decreaseStockInputList
      */
     @PostMapping("/decreaseStock")
-    public void decreaseStock(@RequestBody List<CartDTO> cartDTOList){
-        productService.decreaseStock(cartDTOList);
+    public void decreaseStock(@RequestBody List<DecreaseStockInput> decreaseStockInputList){
+        productService.decreaseStock(decreaseStockInputList);
     }
 
 }

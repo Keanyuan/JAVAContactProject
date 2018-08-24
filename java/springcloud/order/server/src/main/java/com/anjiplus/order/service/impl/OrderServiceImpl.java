@@ -54,6 +54,12 @@ public class OrderServiceImpl implements OrderService {
                 .map(OrderDetail::getProductId).collect(Collectors.toList());
         List<ProductInfoOutput> productInfoList = productClient.listForOrder(productList);
 
+        //读Redis
+        //减库存并将新值重新设置进Redis
+
+        //订单入库异常，需要手动回滚Redis
+
+
         // 计算总价
         for (OrderDetail orderDetail:  orderDTO.getOrderDetailList()) {
             for (ProductInfoOutput productInfo: productInfoList){

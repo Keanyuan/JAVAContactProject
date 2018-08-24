@@ -66,6 +66,12 @@
             <artifactId>product-client</artifactId>
         </dependency>
 
+        <!--接入配置中心-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-config-client</artifactId>
+        </dependency>
+
         <!--spring cloud bus  rabbitmq消息刷新-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -84,6 +90,12 @@
             <artifactId>fastjson</artifactId>
             <version>1.2.47</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+
     </dependencies>
 
 

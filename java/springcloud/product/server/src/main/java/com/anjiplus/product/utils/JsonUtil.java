@@ -1,7 +1,6 @@
-package com.anjiplus.order.utils;
+package com.anjiplus.product.utils;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -21,7 +20,6 @@ public class JsonUtil {
 //        return gson.toJson(object);
 //    }
 
-
     private static ObjectMapper objectMapper = new ObjectMapper();
 
     /**
@@ -38,12 +36,6 @@ public class JsonUtil {
         return null;
     }
 
-    /**
-     * json转对象
-     * @param string
-     * @param classType
-     * @return
-     */
     public static Object fromJson(String string, Class classType){
 
         try {
@@ -54,25 +46,4 @@ public class JsonUtil {
 
         return null;
     }
-
-    /**
-     * json 转对象
-     * @param string
-     * @param typeReference
-     * @return
-     */
-    public static Object fromJson(String string, TypeReference typeReference){
-
-        try {
-            return objectMapper.readValue(string, typeReference);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        return null;
-    }
-
-
-
-
 }

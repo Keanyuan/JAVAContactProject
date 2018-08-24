@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: order
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: CONFIG
+      profile: dev
+    stream:
+      rabbit:
+        bindings:
+          myMessageInput:
+            group: order
+            content-type: application/json
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+server:
+  port: 8082
+
+#PRODUCT:
+#    ribbon:
+#      NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule

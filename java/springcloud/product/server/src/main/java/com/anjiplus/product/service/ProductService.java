@@ -1,5 +1,6 @@
 package com.anjiplus.product.service;
 
+import com.anjiplus.product.common.DecreaseStockInput;
 import com.anjiplus.product.dataobject.ProductInfo;
 import com.anjiplus.product.dto.CartDTO;
 
@@ -12,6 +13,5 @@ public interface ProductService {
     List<ProductInfo> findList(List<String> productIdList);
 
     //减库存
-    void decreaseStock(List<CartDTO> cartDTOList);
-
+    public void decreaseStock(List<DecreaseStockInput> decreaseStockInputList);
 }
