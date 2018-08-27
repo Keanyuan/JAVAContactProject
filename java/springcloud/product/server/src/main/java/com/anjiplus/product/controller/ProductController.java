@@ -39,8 +39,10 @@ public class ProductController {
      * 2.获取类目type列表
      * 3.查询类目
      * 4.构造函数
+     * allowCredentials 允许cookie跨域  单个跨域
      */
     @GetMapping("/list")
+//    @CrossOrigin(allowCredentials = "true")
     public ResultVO list(){
         //1.先查询所有上架商品信息
         List<ProductInfo> productInfoList = productService.findUpAll();

@@ -5,6 +5,8 @@ import com.anjiplus.order.dataobject.OrderMaster;
 import com.anjiplus.order.dto.OrderDTO;
 import com.anjiplus.order.enums.OrderStatusEnum;
 import com.anjiplus.order.enums.PayStatusEnum;
+import com.anjiplus.order.enums.ResultEnum;
+import com.anjiplus.order.exception.SellException;
 import com.anjiplus.order.repository.OrderDetailRepository;
 import com.anjiplus.order.repository.OrderMasterRepository;
 import com.anjiplus.order.service.OrderService;
@@ -17,6 +19,7 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.CollectionUtils;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
@@ -98,6 +101,40 @@ public class OrderServiceImpl implements OrderService {
         orderMaster.setOrderStatus(OrderStatusEnum.NEW.getCode());
         orderMaster.setPayStatus(PayStatusEnum.WAIT.getCode());
         orderMasterRepository.save(orderMaster);
+
+        return orderDTO;
+    }
+
+    @Override
+    @Transactional
+    public OrderDTO finish(String orderId) {
+        //1.查询订单
+        OrderMaster orderMaster = orderMasterRepository.findById(orderId).get();
+        if (orderMaster == null) {
+            throw new SellException(ResultEnum.ORDER_NOT_EXIST);
+        }
+
+        //2.判断订单状态
+        if (OrderStatusEnum.NEW.getCode() != orderMaster.getOrderStatus()) {
+            throw new SellException(ResultEnum.ORDER_STATUS_ERROR);
+        }
+
+        //3.修改订单状态为完结
+        orderMaster.setOrderStatus(OrderStatusEnum.FINISHED.getCode());
+        orderMasterRepository.save(orderMaster);
+
+        //查询订单详情
+        List<OrderDetail> orderDetailList = orderDetailRepository.findByOrderId(orderMaster.getOrderId());
+
+        //如果详情不存在抛异常
+        if (CollectionUtils.isEmpty(orderDetailList)){
+            throw new SellException(ResultEnum.ORDERDETAIL_NOT_EXIST);
+        }
+
+        //设置订单
+        OrderDTO orderDTO = new OrderDTO();
+        BeanUtils.copyProperties(orderMaster, orderDTO);
+        orderDTO.setOrderDetailList(orderDetailList);
 
         return orderDTO;
     }
