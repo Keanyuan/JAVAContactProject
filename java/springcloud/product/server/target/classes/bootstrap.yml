@@ -1,0 +1,27 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+spring:
+  application:
+    name: product
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: CONFIG
+      profile: dev
+
+server:
+  port: 8081
+
+
+logging:
+  level:
+    org.springframework.cloud.openfeign: debug
+
+#PRODUCT:
+#    ribbon:
+#      NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+
