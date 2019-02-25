@@ -1,6 +1,7 @@
 package com.anji.plus.mystudy.network;
 
 import java.io.IOException;
+import java.io.PrintStream;
 import java.net.*;
 
 /**
@@ -10,14 +11,76 @@ import java.net.*;
  */
 public class NetworkDemo {
     public static void main(String[] args) {
-        ipandaddress();
+        connectSpecifyHost();
     }
 
+    //网络抓取
+    private static void urlInput(){
+
+    }
+
+    //使用 Socket 连接到指定主机
+    private static void connectSpecifyHost(){
+        InetAddress address;
+        try {
+            Socket socket = new Socket("www.w3cschool.cn", 80);
+            address = socket.getInetAddress();
+            System.out.println("连接到 " + address);
+            socket.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    //查看主机指定文件的最后修改时间
+    private static void lastChangeTimestamp(){
+        try {
+            URL u = new URL("http://127.0.0.1/pom.xml");
+            URLConnection uc = u.openConnection();
+            uc.setUseCaches(false);
+            long timestamp = uc.getLastModified();
+            System.out.println("java.bmp 文件最后修改时间 : " + timestamp);
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    //使用 Socket 类的 accept() 方法
+    // 和 ServerSocket 类的
+    // MultiThreadServer(socketname) 方法来实现多线程服务器程序
+    private static void multiThreadServer(){
+        try {
+            ServerSocket ssock = new ServerSocket(1234);
+            System.out.println("Listening");
+            while (true){
+                Socket socket = ssock.accept();
+                System.out.println("Connected");
+                new Thread(new MultiThreadServer(socket)).start();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    //获取远程文件的大小
     private static void  getContentfile(){
         int size;
         try {
-            URL url = new URL("//www.w3cschool.cn/wp-content/themes/w3cschool/assets/img/newlogo.png");
+            URL url = new URL("http://www.pptbz.com/pptpic/UploadFiles_6909/201203/2012031220134655.jpg");
+            URLConnection conn = url.openConnection();
+            size = conn.getContentLength();
+            if (size < 0) {
+                System.out.println("无法获取文件大小。");
+            } else {
+                System.out.println("文件大小为： " + size + "bytes");
+            }
+            conn.getInputStream().close();
+
         } catch (MalformedURLException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
@@ -65,5 +128,33 @@ public class NetworkDemo {
 
         System.out.println(address.getHostName() + " = " + address.getHostAddress());
         System.exit(0);
+    }
+}
+
+
+class MultiThreadServer implements Runnable{
+    Socket csocket;
+
+    public MultiThreadServer(Socket csocket) {
+        this.csocket = csocket;
+    }
+
+
+
+    @Override
+    public void run() {
+        try {
+            PrintStream pstream = new PrintStream
+                    (csocket.getOutputStream());
+            for (int i = 100; i >= 0; i--) {
+                pstream.println(i +
+                        " bottles of beer on the wall");
+            }
+            pstream.close();
+            csocket.close();
+        }
+        catch (IOException e) {
+            System.out.println(e);
+        }
     }
 }
