@@ -1,2 +1,0 @@
-aString1
-aString2
