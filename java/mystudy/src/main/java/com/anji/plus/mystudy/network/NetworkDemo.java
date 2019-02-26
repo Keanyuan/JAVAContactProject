@@ -1,8 +1,10 @@
 package com.anji.plus.mystudy.network;
 
-import java.io.IOException;
-import java.io.PrintStream;
+import java.io.*;
 import java.net.*;
+import java.util.Date;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * @Auther: kean_qi
@@ -11,11 +13,99 @@ import java.net.*;
  */
 public class NetworkDemo {
     public static void main(String[] args) {
-        connectSpecifyHost();
+        serverSocket();
     }
 
+    //建立服务器端
+    //服务器建立通信ServerSocket
+    //服务器建立Socket接收客户端连接
+    //建立IO输入流读取客户端发送的数据
+    //建立IO输出流向客户端发送数据消息
+    private static void serverSocket(){
+        try {
+            ServerSocket serverSocket = new ServerSocket(8888);
+            System.out.println("启动服务器....");
+            Socket s = serverSocket.accept();
+            System.out.println("客户端： " + s.getInetAddress().getLocalHost() + "已连接到服务器");
+            BufferedReader br = new BufferedReader(new InputStreamReader(s.getInputStream()));
+            //读取客户端发送来的消息
+            String mess = br.readLine();
+            System.out.println("客户端："+mess);
+            BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(s.getOutputStream()));
+            bw.write(mess+"\n");
+            bw.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    //解析URL
+    private static void parsingNetwork(){
+        try {
+            URL url = new URL("http://www.w3cschool.cn/html/html-tutorial.html");
+            System.out.println("URL 是 " + url.toString());
+            System.out.println("协议是 " + url.getProtocol());
+            System.out.println("文件名是 " + url.getFile());
+            System.out.println("主机是 " + url.getHost());
+            System.out.println("路径是 " + url.getPath());
+            System.out.println("端口号是 " + url.getPort());
+            System.out.println("默认端口号 " + url.getDefaultPort());
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    //获取 URL响应头的日期信息
+    private static void httpCongetDate(){
+        try {
+            URL url = new URL("http://www.w3cschool.cn");
+            HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
+            long date = httpURLConnection.getDate();
+            if (date == 0){
+                System.out.println("无法获取信息");
+            } else {
+                Date date1 = new Date(date);
+                System.out.println("Date: " + date1);
+            }
+
+            //获取 URL 响应头信息
+            Map headers = httpURLConnection.getHeaderFields();
+            Set<String> keys = headers.keySet();
+            for (String key : keys) {
+                String val = httpURLConnection.getHeaderField(key);
+                System.out.println(key + "   " + val);
+            }
+
+            System.out.println(httpURLConnection.getLastModified());
+
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
     //网络抓取
     private static void urlInput(){
+        try {
+            URL url = new URL("http://mirror.anji-plus.com");
+            BufferedReader reader = new BufferedReader(new InputStreamReader(url.openStream()));
+            BufferedWriter writer = new BufferedWriter(new FileWriter("data.html"));
+            String line;
+            while ((line = reader.readLine()) != null) {
+                System.out.println(line);
+                writer.write(line);
+                writer.newLine();
+            }
+            reader.close();
+            writer.close();
+
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
     }
 
