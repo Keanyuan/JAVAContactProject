@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+    <!--设置为 MyBatis3Simple， 主要是为了避免生成与 Exampl巳相关的代码和方法，
+     如果需要 Example相关的代码， 也可以设置为 MyBatis3。-->
+    <context id="MySqlContext" targetRuntime="MyBatis3" defaultModelType="flat">
+
+        <!--因为此处使用的数据库为 MySQL， 所以前后分隔符都设置为“ 、 ”-->
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+
+        <property name="javaFileEncoding" value="UTF-8"/>
+
+        <!--注释生成器 commentGenerator 中配置了生成数据库的注释信息，
+        并且禁止在注释中生成日期。-->
+        <commentGenerator>
+            <property name="suppressDate" value="true"/>
+            <property name="addRemarkComments" value="true"/>
+        </commentGenerator>
+
+        <!--jdbcConnection 简单地配置了要连接的数据源信息。-->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/mybatis?characterEncoding=utf8&amp;useSSL=true"
+                        userId="root"
+                        password="root">
+        </jdbcConnection>
+
+        <!--javaModelGenerator 配置生成的包名为 test.model，
+        这个包名可 以根据自己代码的规范进行修改，
+        targetProject 设置在 src\main\java 中
+        -->
+        <javaModelGenerator targetPackage="test.model" targetProject="src/main/java">
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+
+        <sqlMapGenerator targetPackage="text.xml" targetProject="src/main/resources"/>
+
+        <!-- javaClientGenerator 配置生成 Mapper 接口的位置，
+        这 里采用的 XMLMAPPER 类型，接口和 XML 完全分离-->
+        <javaClientGenerator type="XMLMAPPER" targetPackage="test.dao" targetProject="src/main/java"/>
+
+        <!-- table 使用通配符气”匹配数据库中所有的表,
+        所有表都有主键自增的 id 字段，
+        sqlStatement 针对当前数据库配置 MySQL。-->
+        <table tableName="country">
+            <generatedKey column="id" sqlStatement="MySql"/>
+        </table>
+    </context>
+</generatorConfiguration>
