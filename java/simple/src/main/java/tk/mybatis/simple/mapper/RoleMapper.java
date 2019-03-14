@@ -70,6 +70,11 @@ public interface RoleMapper {
     int deleteById(Long id);
 
 
+    /**
+     * 查询角色和对应权限
+     * @return
+     */
+    List<SysRole> selectAllRoleAndPrivileges();
 }
 
 

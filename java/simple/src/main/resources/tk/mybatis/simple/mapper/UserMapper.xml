@@ -32,7 +32,7 @@
 
     <!--两层嵌套的映射 userRoleListMap -》 rolePrivilegeListMap -》 privilegeMap -->
     <resultMap id="userRoleListMap1" extends="userMap" type="tk.mybatis.simple.model.SysUser">
-        <collection property="roleList" columnPrefix="role_" resultMap="tk.mybatis.simple.mapper.RoleMapper.role.rolePrivilegeListMap"/>
+        <collection property="roleList" columnPrefix="role_" resultMap="tk.mybatis.simple.mapper.RoleMapper.rolePrivilegeListMap"/>
     </resultMap>
 
     <select id="selectById" resultMap="userMap">

@@ -130,5 +130,19 @@ public class SysRoleMapperTest extends BaseMapperTest {
     }
 
 
+    @Test
+    public void testSelectAllRoleAndPrivileges(){
+        SqlSession sqlSession = getSqlSession();
+        try {
+            RoleMapper roleMapper = sqlSession.getMapper(RoleMapper.class);
+            List<SysRole> roleList = roleMapper.selectAllRoleAndPrivileges();
+            Assert.assertNotNull(roleList);
+
+        }finally {
+            sqlSession.close();
+        }
+    }
+
+
 
 }
