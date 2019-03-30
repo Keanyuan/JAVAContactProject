@@ -32,7 +32,7 @@
 
     <!--两层嵌套的映射 userRoleListMap -》 rolePrivilegeListMap -》 privilegeMap -->
     <resultMap id="userRoleListMap1" extends="userMap" type="tk.mybatis.simple.model.SysUser">
-        <collection property="roleList" columnPrefix="role_" resultMap="tk.mybatis.simple.mapper.RoleMapper.role.rolePrivilegeListMap"/>
+        <collection property="roleList" columnPrefix="role_" resultMap="tk.mybatis.simple.mapper.RoleMapper.rolePrivilegeListMap"/>
     </resultMap>
 
     <select id="selectById" resultMap="userMap">
@@ -139,7 +139,9 @@
 
     <select id="selectAllUserAndRoles1" resultMap="userRoleListMap1">
         select
-        u.id, u.user_name, u.user_email, u.user_info, u.head_img, u.create_time
+        u.id, u.user_name, u.user_email, u.user_info, u.head_img, u.create_time,
+        r.id role_id, r.role_name role_role_name, r.enabled role_enabled, r.create_by role_create_by, r.create_time role_create_time,
+        p.id role_privilege_id, p.privilege_name role_privilege_privilege_name, p.privilege_url role_privilege_privilege_url
         from sys_user u
         inner join sys_user_role ur on u.id = ur.user_id
         inner join sys_role r on r.id = ur.role_id
