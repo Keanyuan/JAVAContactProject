@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-for</title>
+    <script type="text/javascript" src="../assects/vue.js"></script>
+    <style>
+        #app ul{
+            list-style: none;
+        }
+        #app ul li{
+            /*float: left;*/
+            margin: 1px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>v-if 判断是否加载</h1>
+<hr>
+<div id="app">
+    先在js里定义了items数组，然后在模板中用v-for循环出来，需要注意的是，你需要那个html标签循环，v-for就写在那个上边。
+    <ul>
+        <li v-for="item in sortItems">
+            {{item}}
+        </li>
+    </ul>
+    <ul>
+        <li v-for="student in sortStudents">
+            {{student.name}} - {{student.age}}
+        </li>
+    </ul>
+</div>
+<script type="text/javascript">
+    var app = new Vue({
+        el: '#app',
+        data: {
+            items: [20,23,18,65,6,19,54,56,41],
+            students: [
+                {name:'zhangsan',age:32},
+                {name:'Panda',age:30},
+                {name:'lisi',age:22},
+                {name:'kean',age:25},
+                {name:'senda',age:16},
+            ],
+        },
+        computed:{
+            //在computed里新声明了一个对象sortItems，
+            // 如果不重新声明会污染原来的数据源，
+            // 这是Vue不允许的，所以你要重新声明一个对象
+            sortItems:function () {
+                return this.items.sort(this.sortNumber);
+            },
+            sortStudents:function(){
+                //根据年龄排序
+                return this.sortByKey(this.students, 'age');
+            }
+        },
+        methods:{
+            sortNumber: function(a, b){
+                return a-b;
+            },
+            sortByKey:function(array, key){
+                return array.sort(function (a, b) {
+                    var x= a[key];
+                    var y = b[key];
+                    return ((x<y) ? -1 : ((x>y) ?  1 : 0));
+                });
+            }
+        }
+    })
+</script>
+</body>
+</html>
