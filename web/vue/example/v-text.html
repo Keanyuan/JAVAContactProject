@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-text & v-html</title>
+    <script type="text/javascript" src="../assects/vue.js"></script>
+</head>
+<body>
+
+<h1>v-if 判断是否加载</h1>
+<hr>
+<div id="app">
+    <h1>v-text & v-html 案例</h1>
+    <p>如果在javascript中写有html标签，</p>
+    <p>用v-text是输出不出来的，</p>
+    <p>这时候我们就需要用v-html标签了。但这个标签最好不要用</p>
+    <p>在html中输出data中的值了，我们已经用的是{{xxx}},这种情况是有弊端的，就是当我们网速很慢或者javascript出错时，会暴露我们的{{xxx}}。Vue给我们提供的v-text,就是解决这个问题的。</p>
+    <hr>
+    <span>{{message}}</span> = <span v-text="message"></span><br/>
+    <!--带html标签需要用v-html-->
+    <span v-html="msgHtml"></span>
+</div>
+<script type="text/javascript">
+    var app = new Vue({
+        el: '#app',
+        data: {
+            message: 'hello vue!',
+            msgHtml: '<h2> hello Vue!</h2>'
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-if & v-show & v-else</title>
+    <script type="text/javascript" src="../assects/vue.js"></script>
+</head>
+<body>
+
+<h1>v-on：绑定事件监听器</h1>
+<hr>
+<div id="app">
+    <p>v-on 就是监听事件，可以用v-on指令监听DOM事件来触发一些javascript代码。除了绑定click之外，我们还可以绑定其它事件，比如键盘回车事件v-on:keyup.enter,现在我们增加一个输入框，然后绑定回车事件，回车后把文本框里的值加到我们的count上。</p>
+    <p>比赛得分：{{count}}</p>
+    <button v-on:click="jiafen">加分</button>
+    <button v-on:click="jianfen">减分</button>
+    <button @click="jianfen">减分</button>
+    <input type="text" @change="onEnter" v-model="secondCount">
+    <input type="text" @keyup.enter="onEnter" v-model="secondCount">
+
+
+</div>
+<script type="text/javascript">
+    var app = new Vue({
+        el: '#app',
+        data: {
+            count: 1,
+            secondCount:8,
+        },
+        methods:{
+            jiafen:function () {
+                this.count++;
+            },
+            jianfen:function () {
+                if(this.count>0){
+                    this.count--;
+                }
+            },
+            onEnter:function () {
+                this.count=this.count + parseInt(this.secondCount);
+            }
+        }
+
+    })
+</script>
+</body>
+</html>
