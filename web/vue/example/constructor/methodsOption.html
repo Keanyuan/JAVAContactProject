@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Methods Option 方法选项</title>
+    <script type="text/javascript" src="../../assects/vue.js"></script>
+</head>
+<body>
+
+<h1>Methods Option 方法选项</h1>
+<hr>
+<div id="app">
+    <p>{{a}}</p>
+    <p><button @click="add(2, $event)">原始add</button></p>
+
+    <!--按钮封装成组件-->
+    <p><btn @click.native="add(2, $event)"></btn></p>
+
+</div>
+<!--这种不经常使用，如果你出现了这种情况，说明你的代码组织不够好。-->
+<p><button onclick="app.add(2)">外部调用构造器里的方法</button></p>
+
+
+<script type="text/javascript">
+
+    var btn = {
+        template: '<button>组件Add</button>'
+    }
+
+    var app = new Vue({
+        el: '#app',
+        components:{
+            "btn": btn,
+        },
+        data: {
+            a: 1,
+        },
+        computed:{
+
+        },
+        methods:{
+            add:function (num, e) {
+                if(num!='') {this.a+=num;}
+                else {this.a ++;}
+                console.log(e);
+            }
+        }
+    })
+</script>
+</body>
+</html>

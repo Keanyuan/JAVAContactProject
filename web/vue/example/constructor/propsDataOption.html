@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>propsData Option 全局扩展的数据传递</title>
+    <script type="text/javascript" src="../../assects/vue.js"></script>
+</head>
+<body>
+
+<h1>propsData Option 全局扩展的数据传递</h1>
+<hr>
+
+<header></header>
+<div id="app">
+
+</div>
+<script type="text/javascript">
+
+    var header_a = Vue.extend({
+        template: '<p>{{message}}-{{a}}</p>',
+        data: function () {
+            return {
+                message: 'hello, I\'m header'
+            }
+        },
+        props: ['a']
+    });
+    new  header_a({propsData:{a: 12}}).$mount('header');
+
+    var app = new Vue({
+        el: '#app',
+        data: {
+            items: [20,23,18,65,6,19,54,56,41],
+        },
+        computed:{
+
+        },
+        methods:{
+
+        }
+    })
+</script>
+</body>
+</html>

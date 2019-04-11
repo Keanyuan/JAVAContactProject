@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mixins 混入选项操作</title>
+    <script type="text/javascript" src="../../assects/vue.js"></script>
+</head>
+<body>
+
+<h1>Mixins 混入选项操作</h1>
+<hr>
+
+<div id="app">
+    <p>{{num}}</p>
+    <p><button @click="add">add</button></p>
+</div>
+<script type="text/javascript">
+
+    Vue.mixin({
+        //全局混入最先执行
+        updated:function () {
+            console.log('我是全局被混入的');
+        }
+    });
+
+    var addLog = {
+        //声明周期
+        updated: function () {
+            console.log('数据发送变化, 变成： ' + this.num + '.');
+        }
+    }
+
+    var app = new Vue({
+        el: '#app',
+        data: {
+            num: 1,
+        },
+        computed: {},
+        watch: {
+
+        },
+        methods: {
+            add:function () {
+                this.num++;
+            }
+        },
+        mixins:[addLog],//混入
+        updated:function () {
+            //混入的先执行，原生的后执行
+            console.log('构造器里的updated方法。');
+        }
+    })
+</script>
+</body>
+</html>

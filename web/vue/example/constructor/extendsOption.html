@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="../../assects/vue.js"></script>
+    <title>Extends Optin Demo</title>
+</head>
+<body>
+<h1>Extends Optin Demo</h1>
+<hr>
+<p>delimiters的作用是改变我们插值的符号。Vue默认的插值是双大括号{{}}。但有时我们会有需求更改这个插值的形式。delimiters: ['${','}']</p>
+
+<div id="app">
+    ${message}
+    <p><button @click="add">add</button></p>
+</div>
+<script type="text/javascript">
+    var extendsObj={
+        updated:function(){
+            console.log("我是被扩展出来的");
+        },
+        methods:{
+            add:function(){
+                console.log('我是被扩展出来的方法！');
+            }
+        }
+    };
+    var app=new Vue({
+        el:'#app',
+        data:{
+            message:'hello Vue!'
+        },
+        methods:{
+            add:function(){
+                console.log('我是原生方法');
+            }
+        },
+        extends: extendsObj,
+        delimiters: ['${','}']
+    })
+</script>
+</body>
+</html>
