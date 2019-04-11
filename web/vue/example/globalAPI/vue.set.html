@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue.set全局操作</title>
+    <script type="text/javascript" src="../../assects/vue.js"></script>
+</head>
+<body>
+
+<h1>Vue.set全局操作</h1>
+<hr>
+<h3>
+    <p>由于Javascript的限制，Vue不能自动检测以下变动的数组。</p>
+    <p>当你利用索引直接设置一个项时，vue不会为我们自动更新。</p>
+    <p>当你修改数组的长度时，vue不会为我们自动更新。</p>
+    <p>//需要用Vue.set(app.arr,1,’ddd’)来设置改变，</p>
+    <p>vue才会给我们自动更新，这就是Vue.set存在的意义。</p>
+</h3>
+<div id="app">
+    <p>{{count}}</p>
+    <ul>
+        <li v-for="item in arr">{{item}}</li>
+    </ul>
+</div>
+<p>
+    <button onclick="add()">add</button>
+</p>
+
+
+<script type="text/javascript">
+
+    function add() {
+
+        // Vue.set(outData, 'count', 2);
+
+        // app.count++;
+
+        // outData.count ++;
+        // app.arr[1] = app.arr[1] == 'bbb' ? 'ddd': 'bbb';
+
+        //需要用Vue.set(app.arr,1,’ddd’)来设置改变，
+        // vue才会给我们自动更新，这就是Vue.set存在的意义。
+        Vue.set(app.arr, 1, app.arr[1] == 'bbb' ? 'ddd' : 'bbb');
+    }
+
+    var outData = {
+        count: 1,
+        // goods: 'car',
+        arr: ['aaa', 'bbb', 'ccc']
+    }
+
+    var app = new Vue({
+        el: '#app',
+        data: outData,
+        computed: {},
+        methods: {}
+    })
+</script>
+</body>
+</html>

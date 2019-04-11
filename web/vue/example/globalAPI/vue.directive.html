@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue.directive 自定义指令</title>
+    <script type="text/javascript" src="../../assects/vue.js"></script>
+</head>
+<body>
+
+<h1>Vue.directive 自定义指令</h1>
+<hr>
+    <div id="app">
+
+        <div v-kean="color">{{num}}</div>
+        <p><button @click="add">add</button></p>
+    </div>
+    <p>
+        <button onclick="unbind()">解绑</button>
+    </p>
+<script type="text/javascript">
+    // Vue.directive('kean', function (el, binding) {
+    //     //el: 指令所绑定的元素，可以用来直接操作DOM。
+    //     // binding: 一个对象，包含指令的很多信息。
+    //     // vnode: Vue编译生成的虚拟节点。
+    //     console.log(el);
+    //     console.log(binding);
+    //     console.log(binding.name);
+    //     console.log(binding.expression);
+    //     console.log(binding.value);
+    //
+    //     el.style = 'color:'+  binding.value;
+    // });
+
+    function unbind(){
+        //解绑
+        app.$destroy();
+    }
+
+    Vue.directive('kean', {
+        bind:function(el, binding){//被绑定
+            console.log('1 - bind');
+            el.style = 'color:'+  binding.value;
+
+        },
+        inserted:function(){//绑定到节点
+
+            console.log('2 - inserted');
+        },
+        update:function(){//组件更新
+            console.log('3 - update');
+        },
+        componentUpdated:function(){//组件更新完成
+            console.log('4 - componentUpdated');
+        },
+        unbind:function(){//解绑
+            console.log('5 - unbind');
+        }
+    });
+    var app = new Vue({
+        el: '#app',
+        data: {
+            num: 10,
+            color:'red'
+        },
+        computed:{
+
+        },
+        methods:{
+            add:function () {
+                this.num ++;
+            }
+        }
+    })
+</script>
+</body>
+</html>

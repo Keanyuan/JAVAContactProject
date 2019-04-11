@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Component 初识组件</title>
+    <script type="text/javascript" src="../../assects/vue.js"></script>
+</head>
+<body>
+
+<h1>Component 初识组件</h1>
+<hr>
+<div id="app">
+    <!--在html里插入component标签，
+    并绑定who数据，根据who的值不同，
+    调用不同的组件。-->
+    <component :is="who"></component>
+    <button @click="changeComponent">changeComponent</button>
+</div>
+
+<script type="text/javascript">
+
+    var componentA={
+        template:'<div style="color: red">I\'m  componentA</div>',
+    }
+
+    var componentB={
+        template:'<div style="color: green">I\'m  componentB</div>',
+    }
+    var componentC={
+        template:'<div style="color: fuchsia">I\'m  componentC</div>',
+    }
+
+
+    var app = new Vue({
+        el: '#app',
+        data: {
+            who: 'componentA'
+        },
+        computed: {},
+        methods: {
+            changeComponent: function () {
+                if(this.who == 'componentA'){
+                    this.who = 'componentB';
+                } else if(this.who == 'componentB'){
+                    this.who = 'componentC';
+                } else {
+                    this.who = 'componentA';
+                }
+            }
+        },
+        components: {
+            'componentA': componentA,
+            'componentB': componentB,
+            'componentC': componentC,
+        },
+    })
+</script>
+</body>
+</html>

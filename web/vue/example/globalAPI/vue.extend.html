@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue.extend构造器的延伸</title>
+    <script type="text/javascript" src="../../assects/vue.js"></script>
+</head>
+<body>
+
+<h1>Vue.extend构造器的延伸</h1>
+<hr>
+<author></author>
+<div id="author"></div>
+
+<script type="text/javascript">
+
+    var authorExtend = Vue.extend({
+        template:"<p><a :href='authorUrl'>{{authorName}}</a></p>",
+        data: function () {
+            return {
+                authorName: 'kean',
+                authorUrl: 'http://www.baidu.com',
+            }
+        }
+    });
+    new authorExtend().$mount('author');
+
+    new authorExtend().$mount('#author');
+
+</script>
+
+</body>
+</html>

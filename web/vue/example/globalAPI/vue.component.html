@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Component 初识组件</title>
+    <script type="text/javascript" src="../../assects/vue.js"></script>
+</head>
+<body>
+
+<h1>Component 初识组件</h1>
+<hr>
+<div id="app">
+    <jpand></jpand>
+    <panda></panda>
+</div>
+
+<script type="text/javascript">
+
+    <!--全局构造器-->
+    Vue.component('jpand', {
+        template: '<div style="color: brown">我是全局组件</div>',
+    });
+
+
+    var app = new Vue({
+        el: '#app',
+        data: {},
+        computed: {},
+        methods: {},
+        components:{
+            'panda': {
+                template: '<div style="color:red;">我是局部注册的panda标签</div>'
+            },
+        },
+    })
+</script>
+</body>
+</html>

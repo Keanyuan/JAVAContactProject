@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue的生命周期（钩子函数)</title>
+    <script type="text/javascript" src="../../assects/vue.js"></script>
+</head>
+<body>
+
+<h1>Vue的生命周期（钩子函数)</h1>
+<hr>
+<h3>
+
+</h3>
+<div id="app">
+    <p>{{message}}</p>
+    <p><button @click="jia">加分</button></p>
+</div>
+
+<button onclick="app.$destroy()">销毁</button>
+
+
+
+<script type="text/javascript">
+
+
+    var app = new Vue({
+        el: '#app',
+        data: {
+            message: 1
+        },
+        computed: {},
+        methods: {
+            jia:function () {
+                this.message ++;
+            }
+        },
+        beforeCreate: function () {
+            console.log('1- beforeCreate 初始化之后 ' + this.message)
+        },
+        created: function () {
+            console.log('2-created 创建完成 ' + this.message);
+        },
+        beforeMount: function () {
+            console.log('3-beforeMount 挂载之前 ' + this.message);
+
+        },
+        mounted: function () {
+            console.log('4-mounted 被创建 ' + this.message);
+
+        },
+        beforeUpdate: function () {
+            console.log('5-beforeUpdate 数据更新前 ' + this.message);
+
+        },
+        updated: function () {
+            console.log('6-updated 被更新后 ' + this.message);
+
+        },
+        activated: function () {
+            console.log('7-activated 激活 ' + this.message);
+
+        },
+        deactivated: function () {
+            console.log('8-deactivated 停用 ' + this.message);
+
+        },
+        beforeDestroy: function () {
+            console.log('9-beforeDestroy 销毁之前 ' + this.message);
+
+        },
+        destroyed: function () {
+            console.log('10-destroyed 销毁之后 ' + this.message)
+
+        }
+
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Component 初识组件</title>
+    <script type="text/javascript" src="../../assects/vue.js"></script>
+</head>
+<body>
+
+<h1>Component 初识组件</h1>
+<hr>
+<div id="app">
+    <panda></panda>
+</div>
+
+<script type="text/javascript">
+
+
+    <!--子组件-->
+    var city = {
+        template: '<div style="color: green">SiChuan of China.</div>'
+    }
+
+    //父组件
+    var pandaComponent = {
+        template: '<div style="color: red">' +
+        '<p>Panda from China.</p>' +
+        '<city></city>' +
+        '</div>',
+        components: {
+            'city': city
+        }
+    }
+
+    var app = new Vue({
+        el: '#app',
+        data: {
+            message: 'SiChuan'
+        },
+        computed: {},
+        methods: {},
+        components: {
+            'panda': pandaComponent
+        },
+    })
+</script>
+</body>
+</html>

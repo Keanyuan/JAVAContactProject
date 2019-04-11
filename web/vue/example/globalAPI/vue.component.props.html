@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Component 初识组件</title>
+    <script type="text/javascript" src="../../assects/vue.js"></script>
+</head>
+<body>
+
+<h1>Component 初识组件</h1>
+<hr>
+<div id="app">
+    <!--  :from-where 绑定数值 -->
+    <panda here="China" :from-where="message"></panda>
+</div>
+
+<script type="text/javascript">
+    var app = new Vue({
+        el: '#app',
+        data: {
+            message: 'SiChuan'
+        },
+        computed: {},
+        methods: {},
+        components:{
+            'panda': {
+                template: '<div style="color:red;">Panda from {{fromWhere}},  {{here}}.</div>',
+                //通过 props添加属性   fromWhere 驼峰命名 使用需要加'-'
+                props: ['here', 'fromWhere']
+            },
+        },
+    })
+</script>
+</body>
+</html>

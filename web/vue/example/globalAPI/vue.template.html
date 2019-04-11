@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Template 制作模版</title>
+    <script type="text/javascript" src="../../assects/vue.js"></script>
+</head>
+<body>
+
+<h1>Template 制作模版</h1>
+<hr>
+
+<div id="app">
+
+</div>
+
+<!--这种写法更像是在写HTML代码，就算不会写Vue的人，也可以制作页面。-->
+<template id="demo2">
+    <h2 style="color: brown">我是template标签模板</h2>
+</template>
+
+<!--这种写模板的方法，可以让模板文件从外部引入。-->
+<script type="text/x-handlebars-template" id="demo3">
+    <h2 style="color: green">我是script标签模板</h2>
+</script>
+
+<script type="text/javascript">
+    var app = new Vue({
+        el: '#app',
+        data: {},
+        computed: {},
+        methods: {},
+        //直接在构造器里的template选项后边编写。
+        // 这种写法比较直观，
+        // 但是如果模板html代码太多，
+        // 不建议这么写。
+        // template: '<h1 style="color: red">我是选项模板</h1>'
+
+        //这种写法更像是在写HTML代码，就算不会写Vue的人，
+        // 也可以制作页面。
+        // template: '#demo2',
+
+        //写在script标签里的模板
+        template: '#demo3',
+
+    })
+</script>
+</body>
+</html>
