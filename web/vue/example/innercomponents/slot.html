@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>内置组件 -slot讲解</title>
+    <script type="text/javascript" src="../../assects/vue.js"></script>
+    <script type="text/javascript" src="../../assects/jquery.js"></script>
+</head>
+<body>
+
+<h1>内置组件 -slot讲解</h1>
+<hr>
+
+<div id="app">
+    <kean>
+        <span slot="bolgUrl">{{bolgUrl}}</span>
+        <span slot="netName">{{netName}}</span>
+        <span slot="skill">{{skill}}</span>
+
+    </kean>
+</div>
+
+<template id="tmp">
+    <div>
+        <p>博客地址：<slot name="bolgUrl"></slot></p>
+        <p>网名：<slot name="netName"></slot></p>
+        <p>技术类型：<slot name="skill"></slot></p>
+    </div>
+</template>
+<script type="text/javascript">
+
+    var kean = {
+        template: '#tmp'
+    }
+
+    var app = new Vue({
+        el: '#app',
+        data: {
+            bolgUrl: 'http://ja.com',
+            netName: 'ja',
+            skill: 'web 前端'
+        },
+        computed: {},
+        watch: {
+
+        },
+        methods: {
+
+        },
+        components: {
+            'kean': kean
+        }
+
+    })
+
+
+</script>
+</body>
+</html>

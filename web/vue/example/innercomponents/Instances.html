@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>实例属性</title>
+    <script type="text/javascript" src="../../assects/vue.js"></script>
+    <script type="text/javascript" src="../../assects/jquery.js"></script>
+</head>
+<body>
+
+<h1>实例属性</h1>
+<hr>
+
+<div id="app">
+    <p>{{num}}</p>
+    <button @click="add">add</button>
+</div>
+
+<button onclick="calli()">calli</button>
+<script type="text/javascript">
+    var app = new Vue({
+        el: '#app',
+        data: {
+            num: 1,
+        },
+        computed: {},
+        watch: {
+
+        },
+        methods: {
+            add:function () {
+                $('#app').html('我是jquery');
+            },
+            call:function () {
+                this.num++;
+            }
+        },
+
+    })
+
+    function calli(){
+        //jquery 可以直接调用外部
+        app.call();
+    }
+
+</script>
+</body>
+</html>

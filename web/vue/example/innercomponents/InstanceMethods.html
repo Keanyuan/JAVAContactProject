@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>实例方法</title>
+    <script type="text/javascript" src="../../assects/vue.js"></script>
+    <script type="text/javascript" src="../../assects/jquery.js"></script>
+</head>
+<body>
+
+<h1>实例方法</h1>
+<hr>
+
+<div id="app"></div>
+
+<p><button onclick="destory()">destory</button></p>
+
+<p><button onclick="reload()">reload</button></p>
+
+
+<p><button onclick="tick()">tick</button></p>
+<script type="text/javascript">
+    var myK = Vue.extend({
+        template: '<p>{{message}}</p>',
+        data: function () {
+            return {
+                message: 'hello vue'
+            }
+        },
+        mounted: function () {
+            console.log('mount 被创建');
+        },
+        destroyed:function () {
+            console.log('destory 被销毁');
+
+        },
+        updated: function () {
+            console.log('updated 被更新');
+
+        }
+    });
+
+    var vm = new myK().$mount('#app');
+
+    function destory() {
+        //销毁扩展
+        vm.$destroy();
+    }
+
+    function reload() {
+        //更新
+        vm.$forceUpdate();
+    }
+
+    //
+    function tick(){
+        vm.message="update message info ";
+        //当Vue构造器里的data值被修改完成后会调用这个方法，
+        // 也相当于一个钩子函数吧，
+        // 和构造器里的updated生命周期很像。
+        vm.$nextTick(function(){
+            console.log('message更新完后我被调用了');
+        })
+    }
+</script>
+</body>
+</html>
