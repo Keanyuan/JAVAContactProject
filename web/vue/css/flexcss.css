@@ -1,0 +1,455 @@
+.directionbox {
+    display: -webkit-flex;
+    display: flex;
+    margin: 0px;
+    padding: 10px;
+    list-style: none;
+    background-color: #eee;
+}
+
+.directionbox li {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #aaa;
+    text-align: center;
+}
+
+#directionbox1 {
+    flex-direction: row;
+    -webkit-flex-direction: row;
+}
+
+#directionbox2 {
+    flex-direction: row-reverse;
+    -webkit-flex-direction: row-reverse;
+}
+
+#directionbox3 {
+    flex-direction: column;
+    -webkit-flex-direction: column;
+}
+
+#directionbox4 {
+    flex-direction: column-reverse;
+    -webkit-flex-direction: column-reverse;
+}
+
+.title {
+    color: red;
+}
+
+/*wrapbox*/
+
+.wrapbox {
+    display: -webkit-flex;
+    display: flex;
+    margin: 0px;
+    padding: 10px;
+    list-style: none;
+    background-color: #eee;
+}
+
+.wrapbox li {
+    width: 400px;
+    height: 100px;
+    border: 1px solid #aaa;
+    text-align: center;
+}
+
+#wrapbox1 {
+    flex-wrap: nowrap;
+    -webkit-flex-wrap: nowrap;
+}
+
+#wrapbox2 {
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+}
+
+#wrapbox3 {
+    flex-wrap: wrap-reverse;
+    -webkit-flex-wrap: wrap-reverse;
+}
+
+/* flex-flow: <‘flex-direction’> || <‘flex-wrap’> */
+
+.flowbox {
+    display: -webkit-flex;
+    display: flex;
+    margin: 0px;
+    padding: 10px;
+    list-style: none;
+    background-color: #eee;
+}
+
+.flowbox li {
+    width: 400px;
+    height: 100px;
+    border: 1px solid #aaa;
+    text-align: center;
+}
+
+#flowbox1 {
+    flex-flow: row nowrap;
+    -webkit-flex-flow: row nowrap;
+}
+
+#flowbox2 {
+    flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
+}
+
+#flowbox3 {
+    flex-flow: row wrap-reverse;
+    -webkit-flex-flow: row wrap-reverse;
+}
+
+/*justifycontentbox*/
+
+.justifycontentbox {
+    display: -webkit-flex;
+    display: flex;
+    margin: 0px;
+    padding: 10px;
+    list-style: none;
+    background-color: #eee;
+}
+
+.justifycontentbox li {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #aaa;
+    text-align: center;
+}
+
+#justifycontentbox1 {
+    justify-content: flex-start;
+    -webkit-justify-content: flex-start;
+}
+
+#justifycontentbox2 {
+    justify-content: flex-end;
+    -webkit-justify-content: flex-end;
+}
+
+#justifycontentbox3 {
+    justify-content: center;
+    -webkit-justify-content: center;
+}
+
+#justifycontentbox4 {
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+}
+
+#justifycontentbox5 {
+    justify-content: space-around;
+    -webkit-justify-content: space-around;
+}
+
+/*alignitemsbox*/
+
+.alignitemsbox {
+    display: -webkit-flex;
+    display: flex;
+    margin: 0px;
+    padding: 10px;
+    list-style: none;
+    background-color: #eee;
+    height: 200px;
+
+}
+
+.alignitemsbox li {
+    width: 100px;
+    height: 50px;
+    margin: 5px;
+    border: 1px solid #aaa;
+    text-align: center;
+    background-color: antiquewhite;
+}
+
+.alignitemsbox li:nth-child(1) {
+    padding: 10px;
+}
+
+.alignitemsbox li:nth-child(2) {
+    padding: 15px 10px;
+}
+
+.alignitemsbox li:nth-child(3) {
+    padding: 20px 10px;
+}
+
+#alignitemsbox1 {
+    align-items: flex-start;
+    -webkit-align-items: flex-start;
+}
+
+#alignitemsbox2 {
+    align-items: flex-end;
+    -webkit-align-items: flex-end;
+}
+
+#alignitemsbox3 {
+    align-items: center;
+    -webkit-align-items: center;
+}
+
+#alignitemsbox4 {
+    align-items: baseline;
+    -webkit-align-items: baseline;
+}
+
+#alignitemsbox4 {
+    align-items: stretch;
+    -webkit-align-items: stretch;
+}
+
+/*aligncontentbox*/
+
+.aligncontentbox {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    background-color: #eee;
+    height: 200px;
+    width: 200px;
+
+}
+
+.aligncontentbox li {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #aaa;
+    text-align: center;
+    background-color: antiquewhite;
+}
+
+#aligncontentbox1 {
+    align-content: flex-start;
+    -webkit-align-content: flex-start;
+}
+
+#aligncontentbox2 {
+    align-content: flex-end;
+    -webkit-align-content: flex-end;
+}
+
+#aligncontentbox3 {
+    align-content: center;
+    -webkit-align-content: center;
+}
+
+#aligncontentbox4 {
+    align-content: space-between;
+    -webkit-align-content: space-between;
+}
+
+#aligncontentbox5 {
+    align-content: space-around;
+    -webkit-align-content: space-around;
+}
+
+#aligncontentbox6 {
+    align-content: stretch;
+    -webkit-align-content: stretch;
+}
+
+/*orderbox*/
+
+.orderbox {
+    display: -webkit-flex;
+    display: flex;
+    margin: 0px;
+    padding: 10px;
+    list-style: none;
+    background-color: #eee;
+}
+
+.orderbox li {
+    width: 100px;
+    line-height: 100px;
+    border: 1px solid #aaa;
+    text-align: center;
+    background-color: antiquewhite;
+}
+
+#orderbox1 li:nth-child(3) {
+    order: -1;
+    -webkit-order: -1;
+
+}
+
+/*flexgrowbox*/
+
+.flexgrowbox {
+    display: -webkit-flex;
+    display: flex;
+    width: 600px;
+    margin: 0;
+    padding: 10px;
+    list-style: none;
+    background-color: #eee;
+}
+
+.flexgrowbox li {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #aaa;
+    text-align: center;
+}
+
+#flexgrowbox li:nth-child(2) {
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+}
+
+#flexgrowbox li:nth-child(3) {
+    -webkit-flex-grow: 2;
+    flex-grow: 2;
+}
+
+/*flexshrinkbox*/
+
+#flexshrinkbox {
+    display: -webkit-flex;
+    display: flex;
+    width: 400px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#flexshrinkbox li {
+    width: 200px;
+}
+
+#flexshrinkbox li:nth-child(1) {
+    background: #888;
+}
+
+#flexshrinkbox li:nth-child(2) {
+    background: #ccc;
+}
+
+#flexshrinkbox li:nth-child(3) {
+    -webkit-flex-shrink: 3;
+    flex-shrink: 3;
+    background: #aaa;
+}
+
+/*flexbasisbox*/
+.flexbasisbox {
+    display: -webkit-flex;
+    display: flex;
+    width: 600px;
+    margin: 0;
+    padding: 10px;
+    list-style: none;
+    background-color: #eee;
+}
+
+.flexbasisbox li {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #aaa;
+    text-align: center;
+}
+
+#flexbasisbox li:nth-child(3) {
+    -webkit-flex-basis: 600px;
+    flex-basis: 600px;
+}
+
+
+/*flexbox*/
+.flexbox {
+    display: -webkit-flex;
+    display: flex;
+    max-width: 400px;
+    height: 100px;
+    margin: 10px 0 0;
+    padding: 0;
+    border-radius: 5px;
+    list-style: none;
+    background-color: #eee;
+}
+.flexbox li {
+    background-color: #aaa;
+    text-align: center;
+}
+
+.flexbox li:nth-child(1){background-color: #999;}
+.flexbox li:nth-child(2){background-color: #aaa;}
+.flexbox li:nth-child(3){background-color: #ccc;}
+
+#flexbox1 li:nth-child(1){-webkit-flex: 1; flex: 1;}
+#flexbox1 li:nth-child(2){-webkit-flex: 1; flex: 1;}
+#flexbox1 li:nth-child(3){-webkit-flex: 1; flex: 1;}
+
+#flexbox2 li:nth-child(1){-webkit-flex: 1 0 100px; flex: 1 0 100px;}
+#flexbox2 li:nth-child(2){-webkit-flex: 2 0 100px; flex: 2 0 100px;}
+#flexbox2 li:nth-child(3){-webkit-flex: 3 0 100px; flex: 3 0 100px;}
+
+#flexbox3{max-width: 800px;}
+
+#flexbox3 li:nth-child(1){-webkit-flex: 1 1 300px; flex: 1 1 300px;}
+#flexbox3 li:nth-child(2){-webkit-flex: 1 2 500px; flex: 1 2 500px;}
+#flexbox3 li:nth-child(3){-webkit-flex: 1 3 600px; flex: 1 3 600px;}
+
+
+/*alignselfbox*/
+
+.alignselfbox{
+    display: -webkit-flex;;
+    display: flex;
+    -webkit-align-items: flex-end;
+    height: 200px;
+    margin: 0;
+    padding: 10px;
+    border-radius: 5px;
+    list-style: none;
+    background-color: #eee;
+}
+
+.alignselfbox li{
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #aaa;
+    text-align: center;
+}
+
+#alignselfbox li:nth-child(1){
+    -webkit-align-self: flex-start;
+    align-self: flex-start;
+}
+
+#alignselfbox li:nth-child(2){
+    -webkit-align-self: flex-end;
+    align-self: flex-end;
+}
+#alignselfbox li:nth-child(3){
+    -webkit-align-self: center;
+    align-self: center;
+}
+#alignselfbox li:nth-child(4){
+    -webkit-align-self: baseline;
+    align-self: baseline;
+}
+#alignselfbox li:nth-child(5){
+    -webkit-align-self: stretch;
+    align-self: stretch;
+}
+#alignselfbox li:nth-child(6){
+    -webkit-align-self: auto;
+    align-self: auto;
+}
+#alignselfbox li:nth-child(7){
+    -webkit-align-self: baseline;
+    align-self: baseline;
+}
