@@ -1,0 +1,1 @@
+document.getElementById('title').innerHTML = 'hello webpackage entry2';
