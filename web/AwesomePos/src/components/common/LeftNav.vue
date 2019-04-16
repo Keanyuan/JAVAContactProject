@@ -14,9 +14,9 @@
         </router-link>
       </li>
       <li>
-        <router-link to="/page/goods">
+        <router-link to="/FlexBox">
           <i class="icon iconfont icon-hanbao"></i>
-          <div>商品</div>
+          <div>FlexBox</div>
         </router-link>
       </li>
       <li>

@@ -2,26 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="65295ff5-0e68-4cb0-979a-38e8f972c44d" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/../AwesomePos/src/components/common/LeftNav.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../AwesomePos/src/components/page/Error.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../AwesomePos/src/components/page/Page.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../AwesomePos/src/components/page/Pos.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../vue_route/src/components/Error.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../vue_route/src/components/Hi1.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../vue_route/src/components/Hi2.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../vue_route/src/components/Params.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../vue_x/src/components/Count.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../vue_x/src/vuex/store.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/flexcss.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/flexbox/flexbox.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AwesomePos/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../AwesomePos/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AwesomePos/src/components/common/LeftNav.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../AwesomePos/src/components/common/LeftNav.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AwesomePos/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../AwesomePos/src/router/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vue1/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../vue1/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vue1/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../vue1/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vue1/src/components/HelloWorld.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../vue1/src/components/HelloWorld.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vue1/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../vue1/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,47 +22,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
+      <file leaf-file-name="flexbox.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/example/flexbox/flexbox.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="68" selection-start-line="68" selection-end-line="68" />
+            <state relative-caret-position="240">
+              <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/example/globalAPI/vue.lifecycle.html">
+      <file leaf-file-name="flexcss.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/css/flexcss.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="747">
-              <caret line="74" column="9" selection-start-line="37" selection-start-column="8" selection-end-line="74" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/example/innercomponents/Instances.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="20" selection-end-line="47" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/example/innercomponents/examplesEvent.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="705">
-              <caret line="47" column="32" selection-start-line="47" selection-start-column="31" selection-end-line="47" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/example/innercomponents/slot.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="41" column="10" selection-start-line="41" selection-start-column="10" selection-end-line="41" selection-end-column="10" />
+            <state relative-caret-position="156">
+              <caret line="443" column="30" lean-forward="true" selection-start-line="443" selection-start-column="30" selection-end-line="443" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -81,12 +47,14 @@
       <list>
         <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>extend</find>
+      <find>flexgrowbox</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -131,15 +99,30 @@
         <option value="$PROJECT_DIR$/example/innercomponents/Instances.html" />
         <option value="$PROJECT_DIR$/example/innercomponents/InstanceMethods.html" />
         <option value="$PROJECT_DIR$/example/innercomponents/examplesEvent.html" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/example/innercomponents/slot.html" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/example/flexbox/flexbox.html" />
+        <option value="$PROJECT_DIR$/css/flexcss.css" />
       </list>
     </option>
   </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER">
+    <package-json value="$PROJECT_DIR$/package.json" />
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/package.json" />
+    </packageJsonPaths>
+  </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="98" />
-    <option name="y" value="23" />
-    <option name="width" value="727" />
+    <option name="x" value="621" />
+    <option name="y" value="43" />
+    <option name="width" value="803" />
     <option name="height" value="740" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -163,13 +146,18 @@
             <path>
               <item name="vue" type="b2602c69:ProjectViewProjectNode" />
               <item name="vue" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vue" type="462c0819:PsiDirectoryNode" />
               <item name="example" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="vue" type="b2602c69:ProjectViewProjectNode" />
               <item name="vue" type="462c0819:PsiDirectoryNode" />
               <item name="example" type="462c0819:PsiDirectoryNode" />
-              <item name="globalAPI" type="462c0819:PsiDirectoryNode" />
+              <item name="flexbox" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="vue" type="b2602c69:ProjectViewProjectNode" />
@@ -189,6 +177,7 @@
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
   </component>
   <component name="RecentsManager">
@@ -231,39 +220,79 @@
       <workItem from="1554989849163" duration="3953000" />
       <workItem from="1555057815116" duration="4005000" />
       <workItem from="1555213587510" duration="553000" />
+      <workItem from="1555293717560" duration="6453000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26310000" />
+    <option name="totallyTimeSpent" value="32763000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="98" y="23" width="727" height="740" extended-state="0" />
+    <frame x="621" y="43" width="803" height="740" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22946176" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4989154" visible="true" weight="0.20716113" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.28395063" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info id="npm" sideWeight="0.5010846" side_tool="true" weight="0.20716113" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.2830482" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="68" selection-start-line="68" selection-end-line="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/innercomponents/Instances.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="20" selection-end-line="47" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/innercomponents/examplesEvent.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="47" column="32" selection-start-line="47" selection-start-column="31" selection-end-line="47" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/innercomponents/slot.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="41" column="10" selection-start-line="41" selection-start-column="10" selection-end-line="41" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/globalAPI/vue.lifecycle.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1110">
+          <caret line="74" column="9" selection-start-line="37" selection-start-column="8" selection-end-line="74" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/example/neibuzhiling/v-bind.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -406,9 +435,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="85995" lean-forward="true" selection-start-line="1" selection-start-column="85995" selection-end-line="1" selection-end-column="85995" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -456,22 +482,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/example/innercomponents/slot.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
+        <state relative-caret-position="615">
           <caret line="41" column="10" selection-start-line="41" selection-start-column="10" selection-end-line="41" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="68" selection-start-line="68" selection-end-line="68" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/example/globalAPI/vue.lifecycle.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="747">
-          <caret line="74" column="9" selection-start-line="37" selection-start-column="8" selection-end-line="74" selection-end-column="9" />
+        <state relative-caret-position="945">
+          <caret line="63" column="34" lean-forward="true" selection-start-line="63" selection-start-column="34" selection-end-line="63" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="84" column="7" selection-start-line="84" selection-start-column="7" selection-end-line="84" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/flexbox/flexbox.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/flexcss.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="443" column="30" lean-forward="true" selection-start-line="443" selection-start-column="30" selection-end-line="443" selection-end-column="30" />
         </state>
       </provider>
     </entry>
