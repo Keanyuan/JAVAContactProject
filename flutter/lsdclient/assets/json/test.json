@@ -1,0 +1,135 @@
+{
+  "data": [
+    {
+      "letter" : "A",
+      "name" : "安吉物流",
+      "id": 1,
+      "isSelect" : 0
+    },
+    {
+      "letter" : "A",
+      "name" : "安盛物流",
+      "id": 2,
+      "isSelect" : 0
+    },
+    {
+      "letter" : "A",
+      "name" : "安长物流",
+      "id": 3,
+      "isSelect" : 0
+    },
+    {
+      "letter" : "A",
+      "name" : "安洋物流",
+      "id": 4,
+      "isSelect" : 0
+    },
+    {
+      "letter" : "A",
+      "name" : "安加物流",
+      "id": 5,
+      "isSelect" : 0
+    },
+    {
+      "letter" : "A",
+      "name" : "安吉物流",
+      "id": 6,
+      "isSelect" : 0
+    },
+    {
+      "letter" : "A",
+      "name" : "安盛物流",
+      "id": 7,
+      "isSelect" : 0
+    },
+    {
+      "letter" : "A",
+      "name" : "安吉物流",
+      "id": 8,
+      "isSelect" : 0
+    },
+    {
+      "letter" : "A",
+      "name" : "安盛物流",
+      "id": 9,
+      "isSelect" : 0
+    },
+    {
+      "letter" : "A",
+      "name" : "安吉物流",
+      "id": 10,
+      "isSelect" : 0
+    },
+    {
+      "letter" : "A",
+      "name" : "安盛物流",
+      "id": 11,
+      "isSelect" : 0
+    },
+    {
+      "letter" : "B",
+      "name" : "北洋物流",
+      "id": 12,
+      "isSelect" : 0
+    },
+    {
+      "letter" : "B",
+      "name" : "北北物流",
+      "id": 13,
+      "isSelect" : 0
+    },
+    {
+      "letter" : "B",
+      "name" : "宝华物流",
+      "id": 14,
+      "isSelect" : 0
+    },
+    {
+      "letter" : "B",
+      "name" : "包包物流",
+      "id": 15,
+      "isSelect" : 0
+    },{
+      "letter" : "B",
+      "name" : "包长物流",
+      "id": 16,
+      "isSelect" : 0
+    },
+    {
+      "letter" : "C",
+      "name" : "长征物流",
+      "id": 17,
+      "isSelect" : 0
+    },
+    {
+      "letter" : "C",
+      "name" : "长长物流",
+      "id": 18,
+      "isSelect" : 0
+    },
+    {
+      "letter" : "C",
+      "name" : "长端物流",
+      "id": 19,
+      "isSelect" : 0
+    },
+    {
+      "letter" : "C",
+      "name" : "长江物流",
+      "id": 20,
+      "isSelect" : 0
+    },
+    {
+      "letter" : "C",
+      "name" : "长成物流",
+      "id": 21,
+      "isSelect" : 0
+    },
+    {
+      "letter" : "C",
+      "name" : "长加物流",
+      "id": 22,
+      "isSelect" : 0
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+name: lsdclient
+description: A new Flutter application for lsd app.
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^0.1.2
+  convert: ^2.1.1
+  crypto: ^2.0.6
+  dio: ^2.1.2
+  #使用Redux存储来构建Flutter小部件
+  flutter_redux: ^0.5.2
+  #加载框样式
+  flutter_spinkit: ^3.0.0
+  #json模板
+  json_annotation: ^1.2.0
+  #本地化
+  flutter_localizations:
+    sdk: flutter
+  #本地存储
+  shared_preferences: ^0.4.3
+  #Dart常用工具类库
+  common_utils: ^1.1.1
+#  flustars: ^0.2.5
+  #toast
+  oktoast: ^2.1.6
+  #rx
+  rxdart: ^0.18.1
+  #使用Dart流解耦应用程序的简单事件总线
+  event_bus: ^1.1.0
+  #网络链接
+  connectivity: ^0.4.3+2
+  #刷新框架
+#  pull_to_refresh: ^1.1.6
+  #版本对比
+  version: ^1.0.3
+  #图片加载
+#  cached_network_image: ^0.8.0
+
+  webview_flutter: ^0.3.7+1
+
+  flutter_umeng_analytics: ^0.0.2
+#  flutter_bugly: ^0.2.2
+
+
+  keyboard_visibility: ^0.5.6
+
+  flutter_page_indicator: ^0.0.3
+  transformer_page_view: ^0.1.6
+
+  aj_flutter_plugin:
+    git:
+      url: https://github.com/Keanyuan/aj_flutter_plugin
+
+  aj_flutter_auto_orientation:
+    git:
+#      url: http://gitlab.anji-allways.com/mobileteam/modules.git
+      url: http://10.108.10.69/mobileteam/modules.git
+      path: aj_flutter_auto_orientation
+  aj_flutter_update:
+    git:
+#      url: http://gitlab.anji-allways.com/mobileteam/modules.git
+      url: http://10.108.10.69/mobileteam/modules.git
+      path: aj_flutter_update
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+
+
+flutter:
+  uses-material-design: true
+  assets:
+  - assets/images/
+  - assets/json/
+
+  fonts:
+  - family: Lobster
+    fonts:
+    - asset: assets/fonts/Lobster-1.4.otf
+  - family: ajIconFont
+    fonts:
+    - asset: assets/fonts/fonticon/iconfont.ttf
