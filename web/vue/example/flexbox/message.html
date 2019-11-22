@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>客服</title>
+		<style type="text/css">
+			html,
+			body {
+				height: 100%;
+			}
+
+			/*  left：用左浮动 and 定宽*/
+			.wrapper {
+				min-width: 1000px;
+				height: 100%;
+				background-color: #CCCCCC;
+				min-height: 600px;
+			}
+			/* main left：用左浮动 and 定宽 */
+
+			.kf-left-pannel {
+				position: relative;
+				float: left;
+				width: 104px;
+				background-color: #999999;
+				height: 100%;
+				overflow: auto;
+				text-align: center;
+			}
+
+			.kf-contact-pannel {
+				position: relative;
+				float: left;
+				width: 260px;
+				height: 100%;
+				border-right: 1px solid #888888;
+				overflow: hidden;
+			}
+			/*  main right: 设置margin-left和margin-right值，给left-panel和right-panel留出空间*/
+
+			.kf-content-pannel {
+				position: relative;
+				margin-left: 364px;
+				margin-right: 260px;
+				background-color: #FAEBD7;
+				height: 100%;
+				overflow: hidden;
+			}
+			/* right：这个很好理解了，绝对定位，宽度正好是上面content留下的margin-right值 */
+
+			.kf-right-pannel {
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 260px;
+				border-right: 1px solid #FF7F50;
+				background-color: #CCCCCC;
+				overflow: auto;
+
+			}
+			
+			/* 顶部标题去 */
+			.dialog-title{
+				height: 48px;
+				line-height: 48px;
+				padding-left: 16px;
+				font-size: 30px;
+				color: #D2691E;
+				overflow: hidden;
+			}
+			/* 对话内容区 */
+			.dialog-content-news{
+				position: absolute;
+				top: 48px;
+				left: 0;
+				bottom: 161px;
+				width: 100%;
+				border-top: 1px solid #FF0000;
+				overflow: hidden;
+			}
+			/* 底部输入框区域 */
+			.dialog-input-pannel{
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+				height: 160px;
+				border-top: 1px solid #FF0000;
+				
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="wrapper">
+			<!-- left -->
+			<div class="kf-left-pannel">
+
+			</div>
+			<!-- main left -->
+			<div class="kf-contact-pannel">
+
+			</div>
+			<!-- main-right -->
+			<div class="kf-content-pannel">
+				<!-- 顶部标题区 -->
+				<div class="dialog-title dialog-content-title">
+					
+				</div>
+				<!-- 对话内容区 -->
+				<div class="dialog-content-news">
+					
+				</div>
+				<!-- 底部输入框区域 -->
+				<div class="dialog-input-pannel">
+					
+				</div>
+			</div>
+			<!-- right -->
+			<div class="kf-right-pannel">
+
+			</div>
+
+		</div>
+	</body>
+</html>

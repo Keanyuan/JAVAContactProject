@@ -1,0 +1,114 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/home/home",
+			"style": {
+				"navigationBarTitleText": "首页",
+				"navigationStyle": "custom"
+			}
+		}, {
+			"path": "pages/order/order",
+			"style": {
+				"navigationBarTitleText": "订餐",
+				"navigationStyle": "default"
+			}
+		}, {
+			"path": "pages/health/health",
+			"style": {
+				"navigationBarTitleText": "健身",
+				"navigationStyle": "default"
+			}
+		}, {
+			"path": "pages/health/date_select_page",
+			"style": {
+				"navigationBarTitleText": "健身",
+				"navigationStyle": "default"
+			}
+		}, {
+			"path": "pages/health/health-detail",
+			"style": {
+				"navigationBarTitleText": "健身详情",
+				"navigationStyle": "custom"
+			}
+		}, {
+			"path": "pages/health/health_shop",
+			"style": {
+				"navigationBarTitleText": "订餐店铺",
+				"navigationStyle": "default",
+				"disableScroll": true
+				
+			}
+		}, {
+			"path": "pages/health/health_order_list",
+			"style": {
+				"navigationBarTitleText": "订餐",
+				"navigationStyle": "default",
+				"disableScroll": true
+			}
+		}, {
+			"path": "pages/me/me",
+			"style": {
+				"navigationBarTitleText": "我的",
+				"navigationStyle": "custom"
+			}
+		}, {
+			"path": "pages/order_list/order_list",
+			"style": {
+				"navigationBarTitleText": "订餐",
+				"navigationStyle": "default"
+			}
+		}, {
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "登录",
+				"navigationStyle": "default"
+			}
+		},
+		{
+			"path": "pages/me/setting",
+			"style": {
+				"navigationBarTitleText": "设置",
+				"navigationStyle": "default"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "瘾食",
+		"navigationBarBackgroundColor": "#ffffff",
+		"backgroundColor": "#ffffff"
+		// "navigationBarShadow": "#E6E6E6",
+		// "backgroundColorBottom": "#ffffff"
+	},
+	"tabBar": {
+		"color": "#818181",
+		"selectedColor": "#FD300D",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [{
+				"pagePath": "pages/home/home",
+				"iconPath": "static/tabbar/tabbar_home_normal.png",
+				"selectedIconPath": "static/tabbar/tabbar_home_select.png",
+				"text": "首页"
+			},
+			{
+				"pagePath": "pages/order/order",
+				"iconPath": "static/tabbar/tabbar_ordering_normal.png",
+				"selectedIconPath": "static/tabbar/tabbar_ordering_select.png",
+				"text": "订餐"
+			},
+			{
+				"pagePath": "pages/health/health",
+				"iconPath": "static/tabbar/tabbar_health_normal.png",
+				"selectedIconPath": "static/tabbar/tabbar_health_select.png",
+				"text": "健身"
+			},
+			{
+				"pagePath": "pages/me/me",
+				"iconPath": "static/tabbar/tabbar_myinfo_normal.png",
+				"selectedIconPath": "static/tabbar/tabbar_myinfo_select.png",
+				"text": "我的"
+			}
+		]
+	}
+}

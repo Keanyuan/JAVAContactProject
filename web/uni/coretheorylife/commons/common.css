@@ -1,0 +1,183 @@
+.comm-gradient::before {
+	content: "";
+	display: block;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1));
+}
+
+
+.normal-color {
+	background-color: #FF3660;
+}
+
+.normal-transport-color {
+	background-color: #FD300D;
+}
+
+.line-color {
+	background-color: #E6E6E6;
+}
+
+.main-page {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+
+
+/* 字体白色 */
+.text-white-color {
+	color: #FFFFFF;
+}
+
+/* 字体 标题 */
+.text-title-color {
+	color: #2C272D;
+}
+
+/* 字体二级 */
+.text-level-two-color {
+	color: #969696;
+}
+
+/* 字体三级 */
+.text-level-three-color {
+	color: #3C3C3C;
+}
+
+/* 字体右边 */
+.text-level-arrow-color {
+	color: #6D819C;
+}
+
+/* 字体 */
+.text-level-placehoder-color {
+	color: #E6E6E6;
+
+}
+
+
+
+
+
+.text-font-size-10 {
+	font-size: 20rpx;
+}
+
+.text-font-size-11 {
+	font-size: 22rpx;
+}
+
+.text-font-size-12 {
+	font-size: 24rpx;
+}
+
+.text-font-size-13 {
+	font-size: 26rpx;
+}
+
+.text-font-size-14 {
+	font-size: 28rpx;
+}
+
+.text-font-size-15 {
+	font-size: 30rpx;
+}
+
+.text-font-size-16 {
+	font-size: 32rpx;
+}
+
+.text-font-size-18 {
+	font-size: 36rpx;
+}
+
+.margin-left-10 {
+	margin-left: 20rpx;
+}
+
+.margin-left-20 {
+	margin-left: 40rpx;
+}
+
+.margin-left-right-10 {
+	margin-left: 20rpx;
+	margin-right: 20rpx;
+}
+
+.margin-left-right-20 {
+	margin-left: 40rpx;
+	margin-right: 40rpx;
+}
+
+
+
+.margin-bottm-20 {
+	margin-bottom: 40rpx;
+}
+
+
+
+.padding-bottm-10 {
+	padding-bottom: 20rpx;
+}
+
+.padding-bottm-20 {
+	padding-bottom: 40rpx;
+}
+.padding-bottm-100 {
+	padding-bottom: 0rpx;
+}
+
+
+.margin-top-20 {
+	margin-top: 40rpx;
+}
+.margin-top-10 {
+	margin-top: 20rpx;
+}
+
+.padding-top-10 {
+	padding-top: 20rpx;
+}
+
+.padding-top-20 {
+	padding-top: 40rpx;
+}
+
+
+.dlbutton {
+	color: #FFFFFF;
+	font-size: 34rpx;
+	width: 80%;
+	height: 80rpx;
+	border-radius: 50rpx;
+	line-height: 80rpx;
+	text-align: center;
+	margin-top: 60rpx;
+	align-self: center;
+}
+
+.normal-bgColor {
+	background: linear-gradient(-90deg, #FF3660, #FD300D);
+}
+
+.none-bgColor {
+	background: linear-gradient(-90deg, #E6E6E6, #E6E6E6);
+}
+
+.dlbutton-hover {
+	background: linear-gradient(-90deg, #FD300D, #FD300D);
+}
+
+
+
+.v-flex{
+	flex: 1; 
+}
