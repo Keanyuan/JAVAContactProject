@@ -152,6 +152,12 @@ const copyObj = function(a) {
 	return c;
 }
 
+const numToFixed = function(num){
+	return Number(num.toString().match(/^\d+(?:\.\d{0,2})?/));
+}
+
+
+
 /*
  * String转UTF8
  */
@@ -306,5 +312,6 @@ export default {
 	getSetting,
 	getAfterWeekDate,
 	aesEncrypt,
-	aesDecrypt
+	aesDecrypt,
+	numToFixed
 }

@@ -131,13 +131,16 @@
 									var isLocalTrue = false;
 									var foodItem;
 									//对本地列表遍历 与每个item匹配
-									for (let var1 in localCanItem.foodItem) {
-										if(localCanItem.foodItem[var1].id == this.requestList[index].foodList[i].id){
-											foodItem = localCanItem.foodItem[var1];
-											isLocalTrue = true;
-											break;
+									if(localCanItem && localCanItem.foodItem.length > 0){										
+										for (let var1 in localCanItem.foodItem) {
+											if(localCanItem.foodItem[var1].id == this.requestList[index].foodList[i].id){
+												foodItem = localCanItem.foodItem[var1];
+												isLocalTrue = true;
+												break;
+											}
 										}
 									}
+									
 									//数据处理
 									this.requestList[index].foodList[i].goodsNum = isLocalTrue ? foodItem.goodsNum : 0;
 									this.requestList[index].foodList[i].date = this.storeModel.date;
@@ -259,12 +262,14 @@
 				var foodItem = [];
 				var calTotals = 0.0;
 				var prices = 0.0;
+				var goodsNum = 0;
 				if (this.categoryData.length > 0) {
 					for (let index in this.categoryData) {
 						var tabItem = this.categoryData[index].listData;
 						if (tabItem.length > 0) {
 							for (let i in tabItem) {
 								if (tabItem[i].goodsNum > 0) {
+									goodsNum += tabItem[i].goodsNum;
 									if (tabItem[i].cal > 0) {
 										tabItem[i].calTotal = tabItem[i].goodsNum * tabItem[i].cal;
 										calTotals += tabItem[i].calTotal;
@@ -283,10 +288,6 @@
 				}
 				let health_locals = this.$util.getStorageSync(this.$code.health_locals);
 				console.log(health_locals);
-				
-				// this.$util.setStorage(this.$code.health_locals, [], () => {
-				// 	uni.navigateBack()
-				// })
 				if (foodItem.length > 0) {
 					var canItem = {
 						canName: this.storeModel.canName,
@@ -294,6 +295,7 @@
 						date: this.storeModel.date,
 						shopName: this.storeModel.storeInfoModel.shopName,
 						subOrderSeq: '',
+						goodsNum: goodsNum,
 						isSelect: false,
 						foodItem: foodItem,
 						calTotal: calTotals,
@@ -312,6 +314,10 @@
 								isDateTrue = true;
 								//判断 数据中是否存在当前日期的数据
 								var canItems = health_locals[ind].canItems;
+								var calTotal = 0;
+								var goodsNum = 0;
+								var prices = 0;
+								
 								for (let i in canItems) {
 									console.log(canItems[i].canId);
 									console.log(canItem.canId);
@@ -323,35 +329,45 @@
 										if (isDateTrue && isCanTrue) {
 											health_locals[ind].canItems[i] = canItem;
 										}
-
-										break;
-									}
+									} 
+									calTotal += health_locals[ind].canItems[i].calTotal;
+									goodsNum += health_locals[ind].canItems[i].goodsNum;
+									prices += health_locals[ind].canItems[i].price;
 								}
 								// ② todo如果日期存在 餐不存在 添加到日期
 								if (isDateTrue && !isCanTrue) {
 									console.log(2);
 									
 									health_locals[ind].canItems.push(canItem);
+									
+									calTotal += canItem.calTotal;
+									goodsNum += canItem.goodsNum;
+									prices += canItem.price;
 								}
+								health_locals[ind].calTotal = calTotal;
+								health_locals[ind].goodsNum = goodsNum;
+								health_locals[ind].priceTotal = prices;
 								break;
 							}
 						}
 						// ③ 如果日期不存在且餐存在 添加到日期
-						if (!isDateTrue && isCanTrue) {
+						if (!isDateTrue && !isCanTrue) {
 							console.log(3);
 							
 							var dateItem = {
 								date: this.storeModel.date,
 								calTotal: 0,
 								priceTotal: 0,
+								goodsNum: 0,
 								isSelect: false,
 								canItems: []
 							}
 							dateItem.calTotal = canItem.calTotal;
 							dateItem.priceTotal = canItem.price;
+							dateItem.goodsNum = canItem.goodsNum;
 							dateItem.canItems.push(canItem);
 							health_locals.push(dateItem);
-						}
+						} 
 
 					} else {
 						//④ 如果日期不存在且整个数据不存在
@@ -362,11 +378,13 @@
 							date: this.storeModel.date,
 							calTotal: 0,
 							priceTotal: 0,
+							goodsNum: 0,
 							isSelect: false,
 							canItems: []
 						}
 						dateItem.calTotal = canItem.calTotal;
 						dateItem.priceTotal = canItem.price;
+						dateItem.goodsNum = canItem.goodsNum;
 						dateItem.canItems.push(canItem);
 						health_locals.push(dateItem);
 
@@ -377,7 +395,7 @@
 					// this.$util.getStorageSync(this.$code.health_locals);
 
 					this.$util.setStorage(this.$code.health_locals, health_locals, () => {
-						uni.navigateBack()
+						uni.navigateBack({delta: 2})
 					})
 
 				} else {

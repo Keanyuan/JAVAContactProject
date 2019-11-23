@@ -2,7 +2,7 @@
 	<view class="food-item">
 		<view v-if="selected" @click="selectClick">
 			<view class="food-select-item__main">
-				<text class="food-select-item__title">12088</text>
+				<text class="food-select-item__title">{{title}}</text>
 				<text class="food-select-item__des">Calories</text>
 			</view>
 			<view class="food-select-item__cancle cuIcon-close" @click.stop="cancleClick"></view>
@@ -17,10 +17,8 @@
 	export default {
 		props: {
 			title: {
-				type: Object,
-				default: function(e) {
-					return {}
-				}
+				type: String,
+				default: ""
 			},
 			// 是否已选择
 			selected: {
