@@ -36,7 +36,20 @@
 				"navigationBarTitleText": "订餐店铺",
 				"navigationStyle": "default",
 				"disableScroll": true
-				
+			}
+		}, {
+			"path": "pages/health/health_cart",
+			"style": {
+				"navigationBarTitleText": "购物车",
+				"navigationStyle": "default",
+				"disableScroll": true
+			}
+		},{
+			"path": "pages/health/health_makesure",
+			"style": {
+				"navigationBarTitleText": "确认订单",
+				"navigationStyle": "default",
+				"disableScroll": true
 			}
 		}, {
 			"path": "pages/health/health_order_list",

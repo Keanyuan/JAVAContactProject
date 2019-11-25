@@ -290,8 +290,11 @@ const openSetting = function() {
 }
 
 
-
-
+// 四舍五入
+const format45 = function(val,v2) {
+    if (isNaN(val) || val == undefined || val == null) { return null; }
+    return Math.round(val * v2) / v2;
+}
 
 
 
@@ -313,5 +316,6 @@ export default {
 	getAfterWeekDate,
 	aesEncrypt,
 	aesDecrypt,
-	numToFixed
+	numToFixed,
+	format45
 }
