@@ -36,7 +36,7 @@
 			// 购物车
 			makeSureClick() {
 				if(this.prices <= 0)return;
-				console.log("makeSureClick 取消");
+				console.log("下单 ");
 				this.$emit('makeSureClick');
 			},
 		}

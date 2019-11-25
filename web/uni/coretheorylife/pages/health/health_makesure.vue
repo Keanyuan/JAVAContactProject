@@ -1,6 +1,10 @@
 <template>
 	<view class="main">
+		<!-- header -->
 		
+		<!-- content -->
+		
+		<!-- bottom -->
 		<makesure-bottom :calTotal="calTotal" :prices="prices"  btitle="去结算" @makeSureClick="makeSureClick"></makesure-bottom>
 	</view>
 </template>
@@ -101,7 +105,6 @@
 					let dateItem = this.health_locals[var1];
 					// 修改日期选择 dateItem.isSelect
 					var dateSelectCount = 0;
-
 					for (let var2 in dateItem.canItems) {
 						// 餐Item 每一餐
 						let canItem = dateItem.canItems[var2];

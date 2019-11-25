@@ -93,6 +93,9 @@
 				const index = e.detail.current;
 				this.swiperCurrent = index;
 			},
+			navToDetailPage(e){
+				
+			},
 			diancan() {
 				uni.navigateTo({
 					url: './date_select_page?item=' + this.storeInfoModelStr
