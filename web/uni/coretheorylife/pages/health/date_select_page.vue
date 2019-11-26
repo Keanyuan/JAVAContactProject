@@ -1,6 +1,9 @@
 <template>
 	<view class="main">
 		<view v-if="showCalendar">
+			<view style="width: 100%; height: 40rpx; background-color: #FFFFFF;">
+				<text style="color: #F43F3B;">仅限当前开始一周内的点餐</text>
+			</view>
 			<!-- 插入模式 -->
 			<uni-calendar :selected="dateInfo.selected" @change="calenderChange" :startDate="dateInfo.startDate" :endDate="dateInfo.endDate" :lunar="dateInfo.lunar" />
 		</view>
@@ -71,7 +74,7 @@ export default {
 				date: '',
 				startDate: '',
 				endDate: '',
-				lunar: true,
+				lunar: false,
 				range: true,
 				insert: false,
 				selected: []

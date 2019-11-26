@@ -83,9 +83,11 @@
 				this.getList('more', this.page);
 			},
 			listClick(index) {
-				console.log(index);
+				var item = JSON.stringify(this.itemsInfo[index]);
+				item = this.$util.aesEncrypt(item);
 				uni.navigateTo({
-					url: "../order_list/order_list"
+					// url: "./date_select_page"
+					url: './order_list/order_list?item=' + item
 				})
 			},
 			async getLocation() {
