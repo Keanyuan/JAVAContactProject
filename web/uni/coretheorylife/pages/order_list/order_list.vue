@@ -63,7 +63,7 @@
 				// this.storeModel = JSON.parse(item);
 				this.storeModel = JSON.parse(item);
 				console.log(this.storeModel);
-				this.getData(options.shopId);
+				this.getData(this.storeModel.id);
 			}
 		},
 

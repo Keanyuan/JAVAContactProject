@@ -83,11 +83,11 @@
 				this.getList('more', this.page);
 			},
 			listClick(index) {
+				console.log(this.itemsInfo[index]);
 				var item = JSON.stringify(this.itemsInfo[index]);
 				item = this.$util.aesEncrypt(item);
 				uni.navigateTo({
-					// url: "./date_select_page"
-					url: './order_list/order_list?item=' + item
+					url: '../order_list/order_list?item=' + item
 				})
 			},
 			async getLocation() {
