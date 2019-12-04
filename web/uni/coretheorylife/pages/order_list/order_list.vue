@@ -16,6 +16,9 @@
 				</swiper-item>
 			</swiper>
 		</view>
+		<view class="empty-content" v-if="tabBars.length == 0">
+			<m-loading></m-loading>
+		</view>
 		<view class="bottom-button">
 			<my-button title="完成" @click="wancheng"></my-button>
 		</view>
@@ -26,6 +29,7 @@
 	import cusTab from "@/components/cus-tab/cus-tab.vue";
 	import cusScroll from "@/components/cus-tab/cus-scroll.vue";
 	import myButton from '@/components/my-button.vue'
+	import mLoading from '@/components/m-loading.vue'
 
 	import orderListItem from '@/pages/order_list/order-list-item.vue';
 
@@ -37,7 +41,8 @@
 			orderListItem,
 			cusTab,
 			cusScroll,
-			myButton
+			myButton,
+			mLoading
 		},
 		data() {
 			return {
@@ -50,7 +55,8 @@
 				requestList: [],
 				tabBars: [],
 				categoryData: [],
-				storeModel: ''
+				storeModel: '',
+				loading: true,
 			}
 
 		},
@@ -63,6 +69,9 @@
 				// this.storeModel = JSON.parse(item);
 				this.storeModel = JSON.parse(item);
 				console.log(this.storeModel);
+				uni.setNavigationBarTitle({
+					title: this.storeModel.shopName
+				})
 				this.getData(this.storeModel.id);
 			}
 		},
@@ -106,6 +115,7 @@
 						this.categoryData = [];
 						let health_locals = this.$util.getStorageSync(this.$code.health_locals);
 						var localCanItem;
+
 						if (health_locals && health_locals.length > 0) {
 							for (let ind in health_locals) {
 								if (health_locals[ind].date == this.storeModel.date) {
@@ -121,26 +131,27 @@
 								}
 							}
 						}
-						
+
 
 						if (this.requestList.length > 0) {
+							this.loading = false;
 							for (let index in this.requestList) {
 
 								for (let i in this.requestList[index].foodList) {
-									
+
 									var isLocalTrue = false;
 									var foodItem;
 									//对本地列表遍历 与每个item匹配
-									if(localCanItem && localCanItem.foodItem.length > 0){										
+									if (localCanItem && localCanItem.foodItem.length > 0) {
 										for (let var1 in localCanItem.foodItem) {
-											if(localCanItem.foodItem[var1].id == this.requestList[index].foodList[i].id){
+											if (localCanItem.foodItem[var1].id == this.requestList[index].foodList[i].id) {
 												foodItem = localCanItem.foodItem[var1];
 												isLocalTrue = true;
 												break;
 											}
 										}
 									}
-									
+
 									//数据处理
 									this.requestList[index].foodList[i].goodsNum = isLocalTrue ? foodItem.goodsNum : 0;
 									this.requestList[index].foodList[i].date = this.storeModel.date;
@@ -317,7 +328,7 @@
 								var calTotal = 0;
 								var goodsNum = 0;
 								var prices = 0;
-								
+
 								for (let i in canItems) {
 									console.log(canItems[i].canId);
 									console.log(canItem.canId);
@@ -329,7 +340,7 @@
 										if (isDateTrue && isCanTrue) {
 											health_locals[ind].canItems[i] = canItem;
 										}
-									} 
+									}
 									calTotal += health_locals[ind].canItems[i].calTotal;
 									goodsNum += health_locals[ind].canItems[i].goodsNum;
 									prices += health_locals[ind].canItems[i].price;
@@ -337,9 +348,9 @@
 								// ② todo如果日期存在 餐不存在 添加到日期
 								if (isDateTrue && !isCanTrue) {
 									console.log(2);
-									
+
 									health_locals[ind].canItems.push(canItem);
-									
+
 									calTotal += canItem.calTotal;
 									goodsNum += canItem.goodsNum;
 									prices += canItem.price;
@@ -353,7 +364,7 @@
 						// ③ 如果日期不存在且餐存在 添加到日期
 						if (!isDateTrue && !isCanTrue) {
 							console.log(3);
-							
+
 							var dateItem = {
 								date: this.storeModel.date,
 								calTotal: 0,
@@ -367,12 +378,12 @@
 							dateItem.goodsNum = canItem.goodsNum;
 							dateItem.canItems.push(canItem);
 							health_locals.push(dateItem);
-						} 
+						}
 
 					} else {
 						//④ 如果日期不存在且整个数据不存在
 						console.log(4);
-						
+
 						health_locals = [];
 						var dateItem = {
 							date: this.storeModel.date,
@@ -395,7 +406,9 @@
 					// this.$util.getStorageSync(this.$code.health_locals);
 
 					this.$util.setStorage(this.$code.health_locals, health_locals, () => {
-						uni.navigateBack({delta: 2})
+						uni.navigateBack({
+							delta: 2
+						})
 					})
 
 				} else {
@@ -407,7 +420,7 @@
 	}
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 	page {
 		width: 100%;
 		height: 100%;
@@ -458,5 +471,29 @@
 		display: flex;
 		justify-content: space-around;
 		flex-direction: row;
+	}
+
+	.empty-content {
+		background: #323943;
+		text-align: center;
+		width: 100%;
+		height: 100vh;
+		margin: 0 auto;
+		box-sizing: border-box;
+		font-family: sans-serif;
+		color: rgba(200, 200, 200, 0.5);
+
+		// padding: 30rpx;
+		// text-align: center;
+
+		// image {
+		// 	width: 200rpx;
+		// 	height: 200rpx;
+		// 	margin: 160rpx auto 60rpx;
+		// }
+
+		// view {
+		// 	color: #999999;
+		// }
 	}
 </style>
