@@ -29,7 +29,7 @@
 	import cusTab from "@/components/cus-tab/cus-tab.vue";
 	import cusScroll from "@/components/cus-tab/cus-scroll.vue";
 	import myButton from '@/components/my-button.vue'
-	import mLoading from '@/components/m-loading.vue'
+	import mLoading from '@/components/my-loading/m-loading.vue'
 
 	import orderListItem from '@/pages/order_list/order-list-item.vue';
 
@@ -474,13 +474,13 @@
 	}
 
 	.empty-content {
-		background: #323943;
+		background: #F1F1F1;
 		text-align: center;
 		width: 100%;
-		height: 100vh;
-		margin: 0 auto;
-		box-sizing: border-box;
-		font-family: sans-serif;
+		height: 80vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		color: rgba(200, 200, 200, 0.5);
 
 		// padding: 30rpx;

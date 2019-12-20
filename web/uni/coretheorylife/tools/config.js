@@ -1,4 +1,5 @@
-const host = "http://www.coretheorylife.com/ctfbe"; //生产环境
+// const host = "http://www.coretheorylife.com/ctfbe"; //生产环境
+const host = "http://test.coretheorylife.com/ctfbe"; //生产环境
 
 
 const pro_host = "https://www.ajhroro.com/ajhzuul"; //生产环境

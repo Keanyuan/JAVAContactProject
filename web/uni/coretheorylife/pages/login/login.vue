@@ -35,7 +35,7 @@
 				phoneno: '',
 				verco: '',
 				vernum: '',
-				baseUrl: "http://www.coretheorylife.com/ctfbe/user/verificationCode?codeId=",
+				baseUrl: "/user/verificationCode?codeId=",
 				codeId: "",
 				vercoimgSrc: "",
 				second: 0,
@@ -72,7 +72,7 @@
 		methods: {
 			getRandomPicVercode() {
 				this.codeId = this.getRandomMd5()
-				this.vercoimgSrc = this.baseUrl + this.codeId;
+				this.vercoimgSrc = this.$config.host + this.baseUrl + this.codeId;
 			},
 			getRandomMd5() {
 				let randomIndex = this.$util.random(100000, 100000000);

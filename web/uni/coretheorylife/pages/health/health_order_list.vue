@@ -50,7 +50,7 @@
 				requestList: [],
 				tabBars: [],
 				categoryData: [],
-				storeModel: ''
+				storeModel: '',
 			}
 
 		},
@@ -121,26 +121,26 @@
 								}
 							}
 						}
-						
+
 
 						if (this.requestList.length > 0) {
 							for (let index in this.requestList) {
 
 								for (let i in this.requestList[index].foodList) {
-									
+
 									var isLocalTrue = false;
 									var foodItem;
 									//对本地列表遍历 与每个item匹配
-									if(localCanItem && localCanItem.foodItem.length > 0){										
+									if (localCanItem && localCanItem.foodItem.length > 0) {
 										for (let var1 in localCanItem.foodItem) {
-											if(localCanItem.foodItem[var1].id == this.requestList[index].foodList[i].id){
+											if (localCanItem.foodItem[var1].id == this.requestList[index].foodList[i].id) {
 												foodItem = localCanItem.foodItem[var1];
 												isLocalTrue = true;
 												break;
 											}
 										}
 									}
-									
+
 									//数据处理
 									this.requestList[index].foodList[i].goodsNum = isLocalTrue ? foodItem.goodsNum : 0;
 									this.requestList[index].foodList[i].date = this.storeModel.date;
@@ -167,6 +167,8 @@
 								})
 							}
 							this.getList('refresh', pageStart);
+						} else {
+
 						}
 					},
 					fail: (res) => {
@@ -317,7 +319,7 @@
 								var calTotal = 0;
 								var goodsNum = 0;
 								var prices = 0;
-								
+
 								for (let i in canItems) {
 									console.log(canItems[i].canId);
 									console.log(canItem.canId);
@@ -329,7 +331,7 @@
 										if (isDateTrue && isCanTrue) {
 											health_locals[ind].canItems[i] = canItem;
 										}
-									} 
+									}
 									calTotal += health_locals[ind].canItems[i].calTotal;
 									goodsNum += health_locals[ind].canItems[i].goodsNum;
 									prices += health_locals[ind].canItems[i].price;
@@ -337,9 +339,9 @@
 								// ② todo如果日期存在 餐不存在 添加到日期
 								if (isDateTrue && !isCanTrue) {
 									console.log(2);
-									
+
 									health_locals[ind].canItems.push(canItem);
-									
+
 									calTotal += canItem.calTotal;
 									goodsNum += canItem.goodsNum;
 									prices += canItem.price;
@@ -353,7 +355,7 @@
 						// ③ 如果日期不存在且餐存在 添加到日期
 						if (!isDateTrue && !isCanTrue) {
 							console.log(3);
-							
+
 							var dateItem = {
 								date: this.storeModel.date,
 								calTotal: 0,
@@ -367,12 +369,12 @@
 							dateItem.goodsNum = canItem.goodsNum;
 							dateItem.canItems.push(canItem);
 							health_locals.push(dateItem);
-						} 
+						}
 
 					} else {
 						//④ 如果日期不存在且整个数据不存在
 						console.log(4);
-						
+
 						health_locals = [];
 						var dateItem = {
 							date: this.storeModel.date,
@@ -395,7 +397,9 @@
 					// this.$util.getStorageSync(this.$code.health_locals);
 
 					this.$util.setStorage(this.$code.health_locals, health_locals, () => {
-						uni.navigateBack({delta: 2})
+						uni.navigateBack({
+							delta: 2
+						})
 					})
 
 				} else {
