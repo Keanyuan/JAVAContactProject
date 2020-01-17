@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.anjiplus.mybatis.mapper.AccountMapper">
+    <!--根据账号和密码查询账户信息-->
+    <select id="selByAccnoPwd" resultType="com.anjiplus.mybatis.pojo.Account" parameterType="com.anjiplus.mybatis.pojo.Account">
+        select * from account where accno=#{accNo} and password=${password}
+    </select>
+    <!--根据账号和姓名查询账户信息-->
+    <select id="selByAccnoName" resultType="com.anjiplus.mybatis.pojo.Account" parameterType="com.anjiplus.mybatis.pojo.Account">
+        select * from account where accno=#{accNo} and name=#{name}
+    </select>
+
+    <!--根据accNo修改账号余额-->
+    <update id="updateBananceByAccno" parameterType="com.anjiplus.mybatis.pojo.Account">
+        update account set banance=banance+#{banance,jdbcType=DOUBLE} where accno=#{accNo}
+    </update>
+
+</mapper>

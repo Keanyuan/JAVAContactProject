@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <context id="MysqlContext" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+
+        <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+            <property name="mappers" value="com.anjiplus.mybatis.utils.MyMapper"/>
+        </plugin>
+
+        <!-- 数据库的相关配置 -->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/gjp?characterEncoding=utf8&amp;useSSL=true"
+                        userId="root"
+                        password="root">
+        </jdbcConnection>
+
+        <!-- 对于生成的pojo所在包 实体类生成的位置 -->
+        <javaModelGenerator targetPackage="com.anjiplus.mybatis.pojo" targetProject="src/main/java"/>
+
+		<!-- 对于生成的mapper所在目录 -->
+        <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources"/>
+
+		<!-- 配置mapper对应的java映射 Mapper 接口文件的位置 -->
+        <javaClientGenerator targetPackage="com.anjiplus.mybatis.mapper" targetProject="src/main/java"
+                             type="XMLMAPPER"/>
+
+
+        <!--需要创建表的类-->
+        <table tableName="sys_user"></table>
+        <!--<table tableName="people"></table>-->
+
+    </context>
+</generatorConfiguration>

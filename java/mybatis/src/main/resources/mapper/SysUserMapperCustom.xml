@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<!--映射SysUserMapperCustom类mapper-->
+<mapper namespace="com.anjiplus.mybatis.mapper.SysUserMapperCustom" >
+  <!--自定义根据用户ID查询用户信息 查询什么写什么-->
+  <!--
+  id：  方法名
+  resultType： 定义参数类型 如果返回的是List 在resultType中写list的泛型，因为mybatis对jdbc封装，一行一行读取数据
+  parameterType：1. 1. 基本数据类型：int,string,long,Date; 1. 2. 复杂数据类型：类和Map
+  -->
+  <select id="queryUserSimplyInfoById"
+          resultType="com.anjiplus.mybatis.pojo.SysUser"
+          parameterType="java.lang.String">
+    select
+      id,
+      username,
+      nickname
+    from
+      sys_user
+    where
+	  id = #{id,jdbcType=VARCHAR}
+  </select>
+
+</mapper>

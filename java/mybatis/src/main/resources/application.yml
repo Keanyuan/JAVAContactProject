@@ -1,0 +1,38 @@
+spring:
+#  profiles:
+#    active: dev
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/gjp?characterEncoding=utf8&useSSL=true
+    username: root
+    password: root
+    druid:
+      initial-size: 1
+      min-idle: 1
+      max-active: 20
+      test-on-borrow: true
+      stat-view-servlet:
+        allow: true
+
+
+
+server:
+  port: 9001
+  tomcat:
+    uri-encoding: utf-8
+
+#mybatis 配置
+mybatis:
+  type-aliases-package: com.anjiplus.mybatis.pojo
+  mapper-locations: classpath:mapper/*.xml
+#mapper通用配置
+mapper:
+  mappers: com.anjiplus.mybatis.utils.MyMapper
+  not-empty: false
+  identity: MYSQL
+#分页配置
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql

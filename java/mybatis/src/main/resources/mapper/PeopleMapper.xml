@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.anjiplus.mybatis.mapper.PeopleMapper">
+    <!--selectAll-->
+    <select id="selectPeopleAll" resultType="com.anjiplus.mybatis.pojo.People">
+    select * from people
+    </select>
+
+    <select id="queryPeopleInfoById" resultType="com.anjiplus.mybatis.pojo.People" parameterType="java.lang.Integer">
+    select * from people where id = #{id,jdbcType=INTEGER}
+    </select>
+
+    <insert id="insertPeopleInfo" parameterType="com.anjiplus.mybatis.pojo.People">
+        insert into people values (default, #{name}, #{age})
+    </insert>
+
+
+    <select id="selectByPage" resultType="com.anjiplus.mybatis.pojo.People" parameterType="map">
+        select * from people limit #{pageStart},#{pageSize}
+    </select>
+
+    <select id="selCount" resultType="java.lang.Integer">
+        select count(*) from people
+    </select>
+</mapper>

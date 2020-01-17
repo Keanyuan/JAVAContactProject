@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC   "-//mybatis.org//DTD Config 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <typeAliases>
+        <!--别名  在mapper中使用 SysUser 或 People -->
+        <package name="com.anjiplus.mybatis.pojo"/>
+        <!--别名  在mapper中使用 pojo.SysUser 或 pojo.People-->
+        <!--<typeAlias type="com.anjiplus.mybatis.pojo" alias="pojo"/>-->
+    </typeAliases>
+    <plugins>
+        <plugin interceptor="com.anji.mirror.common.paginator.OffsetLimitInterceptor">
+            <property name="dialectClass" value="com.anji.mirror.common.paginator.dialect.MySQLDialect" />
+        </plugin>
+    </plugins>
+</configuration>
