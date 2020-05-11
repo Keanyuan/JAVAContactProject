@@ -18,6 +18,12 @@
 				"navigationBarTitleText": "健身",
 				"navigationStyle": "default"
 			}
+		},{
+			"path": "pages/health/web_controller",
+			"style": {
+				"navigationBarTitleText": "web",
+				"navigationStyle": "default"
+			}
 		}, {
 			"path": "pages/health/date_select_page",
 			"style": {

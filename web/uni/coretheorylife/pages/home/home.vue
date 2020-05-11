@@ -131,7 +131,10 @@
 				console.log(index);
 			},
 			navToDetailPage(e) {
-				console.log(e);
+				console.log("------" + e);
+				uni.navigateTo({
+					url: 'pages/health/web_controller'
+				})
 			},
 			async getLocation() {
 				let res = await locationUtil.getLocation()
